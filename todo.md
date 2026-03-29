@@ -1,0 +1,39 @@
+# Bluevista Congress App - Site Web - TODO
+
+## Phase 1: Structure de Base et Design System
+- [x] Configurer la palette de couleurs professionnelle dans index.css
+- [x] Créer le composant Header avec navigation principale
+- [x] Créer le composant Footer avec liens et informations de contact
+- [x] Configurer le layout global et la structure de navigation
+
+## Phase 2: Page d'Accueil (Landing Page)
+- [x] Section "Above the Fold" avec titre, sous-titre et CTA
+- [x] Section "Pourquoi Choisir Bluevista" avec 3 avantages clés
+- [x] Section "Nos Offres" avec aperçu des packs Essentiel et Premium
+- [x] Section "Ils Nous Font Confiance" avec logos et témoignages
+- [x] Section "Appel à l'Action" pour rendez-vous
+
+## Phase 3: Section Nos Offres
+- [x] Page "Nos Offres" avec détails Pack Essentiel (950€)
+- [x] Page "Nos Offres" avec détails Pack Premium/Médical (1850€)
+- [x] Tableau comparatif des fonctionnalités
+- [x] Formulaire de demande de devis
+
+## Phase 4: Cas Clients et À Propos
+- [x] Page "Cas Clients" - Étude de cas Nice Shoulder Course
+- [x] Page "Cas Clients" - Étude de cas Congrès ESPOIR Oncologie
+- [x] Page "À Propos" - Histoire de Bluevista Production depuis 2004
+- [x] Page "À Propos" - Présentation de l'équipe et des valeurs
+
+## Phase 5: FAQ et Contact
+- [x] Page FAQ avec catégories de questions
+- [x] Formulaire de contact
+- [x] Intégration prise de rendez-vous / démo personnalisée
+- [x] Page de confirmation après soumission
+
+## Phase 6: Optimisation et Finalisation
+- [ ] Optimiser le responsive design (mobile-first)
+- [ ] Tester la navigation et les liens
+- [ ] Finaliser les détails visuels et les micro-interactions
+- [ ] Créer le checkpoint final
+- [ ] Livrer le site à Giz

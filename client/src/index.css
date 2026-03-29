@@ -43,39 +43,40 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
+  /* Bluevista - Palette Professionnelle et Élégante */
+  --primary: oklch(0.45 0.25 260);           /* Bleu profond - Confiance & Technologie */
+  --primary-foreground: oklch(0.98 0.001 0);
+  --sidebar-primary: oklch(0.50 0.25 260);
+  --sidebar-primary-foreground: oklch(0.98 0.001 0);
+  --chart-1: oklch(0.60 0.20 260);
+  --chart-2: oklch(0.50 0.25 260);
+  --chart-3: oklch(0.45 0.25 260);
+  --chart-4: oklch(0.40 0.25 260);
+  --chart-5: oklch(0.35 0.25 260);
   --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --background: oklch(0.99 0.001 0);        /* Blanc pur */
+  --foreground: oklch(0.20 0.02 260);       /* Bleu très foncé */
+  --card: oklch(0.97 0.002 0);              /* Gris très clair */
+  --card-foreground: oklch(0.20 0.02 260);
+  --popover: oklch(0.99 0.001 0);
+  --popover-foreground: oklch(0.20 0.02 260);
+  --secondary: oklch(0.55 0.22 280);        /* Violet accent - Innovation */
+  --secondary-foreground: oklch(0.98 0.001 0);
+  --muted: oklch(0.70 0.01 260);            /* Gris clair */
+  --muted-foreground: oklch(0.50 0.02 260);
+  --accent: oklch(0.50 0.20 142);           /* Vert éco-responsable */
+  --accent-foreground: oklch(0.98 0.001 0);
+  --destructive: oklch(0.57 0.25 27);
+  --destructive-foreground: oklch(0.98 0.001 0);
+  --border: oklch(0.92 0.002 260);          /* Gris très léger */
+  --input: oklch(0.95 0.002 260);
+  --ring: oklch(0.50 0.25 260);
+  --sidebar: oklch(0.99 0.001 0);
+  --sidebar-foreground: oklch(0.20 0.02 260);
+  --sidebar-accent: oklch(0.55 0.22 280);
+  --sidebar-accent-foreground: oklch(0.98 0.001 0);
+  --sidebar-border: oklch(0.92 0.002 260);
+  --sidebar-ring: oklch(0.50 0.25 260);
 }
 
 .dark {
@@ -114,11 +115,37 @@
 }
 
 @layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
+  }
+
+  p {
+    @apply text-base md:text-lg leading-relaxed;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
@@ -158,6 +185,31 @@
   .flex {
     min-height: 0;
     min-width: 0;
+  }
+
+  /* Bluevista Custom Components */
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-secondary text-secondary-foreground font-semibold rounded-lg hover:bg-secondary/90 transition-all duration-200;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-primary text-primary font-semibold rounded-lg hover:bg-primary/5 transition-all duration-200;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:scale-105;
   }
 
   @media (min-width: 640px) {
