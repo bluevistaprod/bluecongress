@@ -2,6 +2,8 @@ import { Link } from 'wouter';
 import { Users, TrendingUp, Leaf } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ImageGallery from '@/components/ImageGallery';
+import { niceShoulderCourseGallery, congreEspoirGallery } from '@/data/galleryData';
 
 export default function CasClients() {
   return (
@@ -22,14 +24,7 @@ export default function CasClients() {
         <section className="section-padding bg-background">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-              <div>
-                <div className="bg-primary/10 rounded-2xl h-96 flex items-center justify-center mb-8">
-                  <div className="text-center">
-                    <p className="text-muted-foreground mb-4">Captures d'écran</p>
-                    <p className="text-lg font-semibold text-primary">Nice Shoulder Course</p>
-                  </div>
-                </div>
-              </div>
+              <ImageGallery images={niceShoulderCourseGallery} />
               <div>
                 <p className="text-accent font-semibold mb-2">ÉTUDE DE CAS</p>
                 <h2 className="text-4xl font-bold mb-6">Nice Shoulder Course 2024</h2>
@@ -152,14 +147,7 @@ export default function CasClients() {
                   Découvrir Plus
                 </Link>
               </div>
-              <div>
-                <div className="bg-primary/10 rounded-2xl h-96 flex items-center justify-center">
-                  <div className="text-center">
-                    <p className="text-muted-foreground mb-4">Captures d'écran</p>
-                    <p className="text-lg font-semibold text-primary">Congrès ESPOIR Oncologie</p>
-                  </div>
-                </div>
-              </div>
+              <ImageGallery images={congreEspoirGallery} />
             </div>
           </div>
         </section>

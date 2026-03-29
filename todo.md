@@ -37,3 +37,14 @@
 - [ ] Finaliser les détails visuels et les micro-interactions
 - [ ] Créer le checkpoint final
 - [ ] Livrer le site à Giz
+
+
+## Phase 7: Galerie d'Images et Réservation de Démo
+- [x] Créer un composant ImageGallery pour afficher les captures d'écran
+- [x] Créer des données de galerie pour Nice Shoulder Course
+- [x] Créer des données de galerie pour Congrès ESPOIR Oncologie
+- [x] Intégrer la galerie dans la page d'accueil (section visuels)
+- [x] Intégrer la galerie dans la page Cas Clients
+- [x] Créer un composant DemoBooking avec calendrier de réservation
+- [x] Intégrer le formulaire de réservation de démo dans la page Contact
+- [x] Tester la galerie et la réservation sur mobile et desktop

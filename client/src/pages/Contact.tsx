@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import DemoBooking from '@/components/DemoBooking';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -57,9 +58,17 @@ export default function Contact() {
           </div>
         </section>
 
+        {/* Demo Booking Section */}
+        <section className="section-padding bg-card">
+          <div className="container max-w-2xl">
+            <DemoBooking />
+          </div>
+        </section>
+
         {/* Contact Section */}
         <section className="section-padding bg-background">
           <div className="container">
+            <h2 className="text-4xl font-bold text-center mb-16">Autres Moyens de Nous Contacter</h2>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {/* Contact Info */}
               <div className="lg:col-span-1">
