@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 import { Users, TrendingUp, Leaf } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ImageGallery from '@/components/ImageGallery';
+import ImageGalleryMobile from '@/components/ImageGalleryMobile';
 import { niceShoulderCourseGallery, congreEspoirGallery } from '@/data/galleryData';
 
 export default function CasClients() {
@@ -23,8 +23,10 @@ export default function CasClients() {
         {/* Case Study 1: Nice Shoulder Course */}
         <section className="section-padding bg-background">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-              <ImageGallery images={niceShoulderCourseGallery} />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16">
+              <div className="flex justify-center">
+                <ImageGalleryMobile images={niceShoulderCourseGallery} />
+              </div>
               <div>
                 <p className="text-accent font-semibold mb-2">ÉTUDE DE CAS</p>
                 <h2 className="text-4xl font-bold mb-6">Nice Shoulder Course 2024</h2>
@@ -89,7 +91,7 @@ export default function CasClients() {
         {/* Case Study 2: Congrès ESPOIR */}
         <section className="section-padding bg-card">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div>
                 <p className="text-accent font-semibold mb-2">ÉTUDE DE CAS</p>
                 <h2 className="text-4xl font-bold mb-6">Congrès ESPOIR Oncologie</h2>
@@ -147,7 +149,9 @@ export default function CasClients() {
                   Découvrir Plus
                 </Link>
               </div>
-              <ImageGallery images={congreEspoirGallery} />
+              <div className="flex justify-center">
+                <ImageGalleryMobile images={congreEspoirGallery} />
+              </div>
             </div>
           </div>
         </section>

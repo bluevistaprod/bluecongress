@@ -55,3 +55,10 @@
 - [x] Modifier ImageGallery.tsx pour afficher les images réelles
 - [x] Vérifier que tous les tests passent
 - [x] Valider que le serveur de développement fonctionne correctement
+
+
+## Phase 9: Adaptation du Design pour Images Portrait
+- [x] Revoir le composant ImageGallery pour format portrait
+- [x] Créer des placeholders adaptés aux captures mobiles
+- [x] Tester le nouveau design sur mobile et desktop
+- [x] Valider que les images s'affichent correctement
