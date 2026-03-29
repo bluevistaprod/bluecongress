@@ -62,3 +62,11 @@
 - [x] Créer des placeholders adaptés aux captures mobiles
 - [x] Tester le nouveau design sur mobile et desktop
 - [x] Valider que les images s'affichent correctement
+
+
+## Phase 10: Correction de l'Aperçu Images Page d'Accueil
+- [x] Analyser le problème d'affichage des images coupées sur la page d'accueil
+- [x] Créer un composant d'aperçu optimisé avec cadres téléphoniques visibles
+- [x] Intégrer le nouvel aperçu dans la section galerie de la page d'accueil
+- [x] Tester l'affichage sur mobile et desktop
+- [x] Valider que les images sont lisibles et bien présentées

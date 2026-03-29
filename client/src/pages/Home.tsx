@@ -2,7 +2,7 @@ import { Link } from 'wouter';
 import { CheckCircle2, Zap, Leaf, Users } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ImageGallery from '@/components/ImageGallery';
+import ImageGalleryPreview from '@/components/ImageGalleryPreview';
 import { niceShoulderCourseGallery, congreEspoirGallery } from '@/data/galleryData';
 
 export default function Home() {
@@ -30,7 +30,7 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <ImageGallery images={niceShoulderCourseGallery.slice(0, 3)} />
+              <ImageGalleryPreview images={niceShoulderCourseGallery} maxImages={3} />
             </div>
           </div>
         </section>
