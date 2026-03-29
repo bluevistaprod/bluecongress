@@ -5,6 +5,7 @@ interface GalleryImage {
   id: string;
   title: string;
   description: string;
+  image?: string; // URL de l'image réelle
   placeholder: string; // Placeholder color or pattern
 }
 
@@ -48,6 +49,9 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
             className="cursor-pointer group"
           >
             <div className={`${image.placeholder} rounded-lg h-64 flex items-center justify-center overflow-hidden relative`}>
+              {image.image ? (
+                <img src={image.image} alt={image.title} className="w-full h-full object-cover" />
+              ) : null}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity">
                   <div className="bg-white/90 rounded-full p-3">
@@ -55,7 +59,7 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
                   </div>
                 </div>
               </div>
-              <p className="text-white text-center px-4 font-semibold">{image.title}</p>
+              {!image.image && <p className="text-white text-center px-4 font-semibold">{image.title}</p>}
             </div>
             <p className="text-sm text-muted-foreground mt-3">{image.description}</p>
           </div>
@@ -81,10 +85,14 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
             </button>
 
             {/* Image Container */}
-            <div className={`${images[selectedIndex].placeholder} rounded-lg h-96 md:h-[500px] flex items-center justify-center relative`}>
-              <p className="text-white text-center px-4 font-semibold text-xl">
-                {images[selectedIndex].title}
-              </p>
+            <div className={`${images[selectedIndex].placeholder} rounded-lg h-96 md:h-[500px] flex items-center justify-center relative overflow-hidden`}>
+              {images[selectedIndex].image ? (
+                <img src={images[selectedIndex].image} alt={images[selectedIndex].title} className="w-full h-full object-cover" />
+              ) : (
+                <p className="text-white text-center px-4 font-semibold text-xl">
+                  {images[selectedIndex].title}
+                </p>
+              )}
             </div>
 
             {/* Image Info */}
