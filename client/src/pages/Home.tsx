@@ -42,7 +42,7 @@ export default function Home() {
         <section className="section-padding bg-background">
           <div className="container">
             <img 
-              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/congress_hero_audience-BJCFzv3iMBLoNg7HDkuDwx.png" 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/congress_hero_audience_e87446c4.png" 
               alt="Medical Congress Audience" 
               className="w-full rounded-xl shadow-lg mb-16 object-cover h-96"
             />
@@ -221,7 +221,7 @@ export default function Home() {
                 </ul>
               </div>
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/congress_networking-BJCFzv3iMBLoNg7HDkuDwx.png" 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/congress_networking_2a89e37f.png" 
                 alt="Networking" 
                 className="w-full rounded-xl shadow-lg"
               />
@@ -229,7 +229,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/congress_speaker-BJCFzv3iMBLoNg7HDkuDwx.png" 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/congress_speaker_866c82f3.png" 
                 alt="Speaker" 
                 className="w-full rounded-xl shadow-lg"
               />
