@@ -4,6 +4,11 @@ import { useState } from 'react';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  
+  const handleNavClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsOpen(false);
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-background border-b border-border shadow-sm">
@@ -18,12 +23,12 @@ export default function Header() {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/" className="text-foreground hover:text-primary transition">Accueil</Link>
-          <Link href="/offres" className="text-foreground hover:text-primary transition">Nos Offres</Link>
-          <Link href="/cas-clients" className="text-foreground hover:text-primary transition">Cas Clients</Link>
-          <Link href="/faq" className="text-foreground hover:text-primary transition">FAQ</Link>
-          <Link href="/a-propos" className="text-foreground hover:text-primary transition">À Propos</Link>
-          <Link href="/contact" className="btn-primary">Contact</Link>
+          <Link href="/" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Accueil</Link>
+          <Link href="/offres" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Nos Offres</Link>
+          <Link href="/cas-clients" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Cas Clients</Link>
+          <Link href="/faq" onClick={handleNavClick} className="text-foreground hover:text-primary transition">FAQ</Link>
+          <Link href="/a-propos" onClick={handleNavClick} className="text-foreground hover:text-primary transition">À Propos</Link>
+          <Link href="/contact" onClick={handleNavClick} className="btn-primary">Contact</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -40,12 +45,12 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden border-t border-border">
           <div className="container py-4 flex flex-col gap-4">
-            <Link href="/" className="text-foreground hover:text-primary transition">Accueil</Link>
-            <Link href="/offres" className="text-foreground hover:text-primary transition">Nos Offres</Link>
-            <Link href="/cas-clients" className="text-foreground hover:text-primary transition">Cas Clients</Link>
-            <Link href="/faq" className="text-foreground hover:text-primary transition">FAQ</Link>
-            <Link href="/a-propos" className="text-foreground hover:text-primary transition">À Propos</Link>
-            <Link href="/contact" className="btn-primary w-full text-center">Contact</Link>
+            <Link href="/" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Accueil</Link>
+            <Link href="/offres" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Nos Offres</Link>
+            <Link href="/cas-clients" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Cas Clients</Link>
+            <Link href="/faq" onClick={handleNavClick} className="text-foreground hover:text-primary transition">FAQ</Link>
+            <Link href="/a-propos" onClick={handleNavClick} className="text-foreground hover:text-primary transition">À Propos</Link>
+            <Link href="/contact" onClick={handleNavClick} className="btn-primary w-full text-center">Contact</Link>
           </div>
         </div>
       )}
