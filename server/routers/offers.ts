@@ -1,7 +1,7 @@
 import { router, protectedProcedure } from '../_core/trpc';
 import { TRPCError } from '@trpc/server';
 import { z } from 'zod';
-import { getAllPacks, updateOfferPrice, updateOfferFeature, addFeatureToPack, removeFeatureFromPack, type Pack, type Feature } from '@shared/offersData';
+import { getAllOffers, updateOfferPrice, updateFeature, addFeature, removeFeature } from '../db';
 
 /**
  * Router tRPC pour la gestion des offres
@@ -23,7 +23,7 @@ export const offersRouter = router({
    * Récupérer toutes les offres (publique)
    */
   getAll: protectedProcedure.query(async () => {
-    return getAllPacks();
+    return getAllOffers();
   }),
 
   /**
@@ -37,8 +37,8 @@ export const offersRouter = router({
       })
     )
     .mutation(async ({ input }: { input: { packId: string; newPrice: number } }) => {
-      updateOfferPrice(input.packId, input.newPrice);
-      return { success: true, packs: getAllPacks() };
+      const result = await updateOfferPrice(input.packId, input.newPrice);
+      return { success: true, packs: result };
     }),
 
   /**
@@ -57,8 +57,13 @@ export const offersRouter = router({
       })
     )
     .mutation(async ({ input }: any) => {
-      updateOfferFeature(input.packId, input.featureId, input.updates);
-      return { success: true, packs: getAllPacks() };
+      // Convert boolean to int for database
+      const updates = {
+        ...input.updates,
+        included: input.updates.included !== undefined ? (input.updates.included ? 1 : 0) : undefined,
+      };
+      const result = await updateFeature(input.featureId, updates);
+      return { success: true, packs: result };
     }),
 
   /**
@@ -77,8 +82,13 @@ export const offersRouter = router({
       })
     )
     .mutation(async ({ input }: any) => {
-      addFeatureToPack(input.packId, input.feature);
-      return { success: true, packs: getAllPacks() };
+      const feature = {
+        ...input.feature,
+        offerId: input.packId,
+        included: input.feature.included ? 1 : 0,
+      };
+      const result = await addFeature(input.packId, feature);
+      return { success: true, packs: result };
     }),
 
   /**
@@ -92,7 +102,7 @@ export const offersRouter = router({
       })
     )
     .mutation(async ({ input }: { input: { packId: string; featureId: string } }) => {
-      removeFeatureFromPack(input.packId, input.featureId);
-      return { success: true, packs: getAllPacks() };
+      const result = await removeFeature(input.featureId);
+      return { success: true, packs: result };
     }),
 });

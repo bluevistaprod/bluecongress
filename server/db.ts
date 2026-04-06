@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users } from "../drizzle/schema";
+import { InsertUser, users, offers, features, type Offer, type Feature, type InsertOffer, type InsertFeature } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -90,3 +90,97 @@ export async function getUserByOpenId(openId: string) {
 }
 
 // TODO: add feature queries here as your schema grows.
+
+// Offers queries
+export async function getAllOffers() {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot get offers: database not available");
+    return [];
+  }
+
+  try {
+    const allOffers = await db.select().from(offers);
+    
+    // Get features for each offer
+    const offersWithFeatures = await Promise.all(
+      allOffers.map(async (offer) => {
+        const offerFeatures = await db.select().from(features).where(eq(features.offerId, offer.id));
+        return {
+          ...offer,
+          features: offerFeatures,
+          recommended: offer.recommended === 1,
+        };
+      })
+    );
+    
+    return offersWithFeatures;
+  } catch (error) {
+    console.error("[Database] Failed to get offers:", error);
+    return [];
+  }
+}
+
+export async function updateOfferPrice(offerId: string, newPrice: number) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot update offer: database not available");
+    return null;
+  }
+
+  try {
+    await db.update(offers).set({ price: newPrice }).where(eq(offers.id, offerId));
+    return getAllOffers();
+  } catch (error) {
+    console.error("[Database] Failed to update offer price:", error);
+    throw error;
+  }
+}
+
+export async function updateFeature(featureId: string, updates: Partial<Feature>) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot update feature: database not available");
+    return null;
+  }
+
+  try {
+    await db.update(features).set(updates).where(eq(features.id, featureId));
+    return getAllOffers();
+  } catch (error) {
+    console.error("[Database] Failed to update feature:", error);
+    throw error;
+  }
+}
+
+export async function removeFeature(featureId: string) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot remove feature: database not available");
+    return null;
+  }
+
+  try {
+    await db.delete(features).where(eq(features.id, featureId));
+    return getAllOffers();
+  } catch (error) {
+    console.error("[Database] Failed to remove feature:", error);
+    throw error;
+  }
+}
+
+export async function addFeature(offerId: string, feature: InsertFeature) {
+  const db = await getDb();
+  if (!db) {
+    console.warn("[Database] Cannot add feature: database not available");
+    return null;
+  }
+
+  try {
+    await db.insert(features).values(feature);
+    return getAllOffers();
+  } catch (error) {
+    console.error("[Database] Failed to add feature:", error);
+    throw error;
+  }
+}

@@ -25,4 +25,36 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * Table des offres (packs)
+ */
+export const offers = mysqlTable("offers", {
+  id: varchar("id", { length: 64 }).primaryKey(),
+  name: varchar("name", { length: 255 }).notNull(),
+  price: int("price").notNull(),
+  description: text("description"),
+  targetAudience: text("targetAudience"),
+  badge: varchar("badge", { length: 255 }),
+  recommended: int("recommended").default(0).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Offer = typeof offers.$inferSelect;
+export type InsertOffer = typeof offers.$inferInsert;
+
+/**
+ * Table des fonctionnalites
+ */
+export const features = mysqlTable("features", {
+  id: varchar("id", { length: 64 }).primaryKey(),
+  offerId: varchar("offerId", { length: 64 }).notNull(),
+  name: varchar("name", { length: 255 }).notNull(),
+  description: text("description"),
+  included: int("included").default(1).notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
+});
+
+export type Feature = typeof features.$inferSelect;
+export type InsertFeature = typeof features.$inferInsert;
