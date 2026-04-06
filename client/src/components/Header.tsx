@@ -14,7 +14,6 @@ export default function Header() {
             alt="Pulse Logo" 
             className="h-10 w-10"
           />
-          <div className="text-2xl font-bold gradient-text">Pulse</div>
         </Link>
         
         {/* Desktop Navigation */}
