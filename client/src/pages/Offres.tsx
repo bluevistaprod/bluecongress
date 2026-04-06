@@ -71,10 +71,24 @@ export default function Offres() {
                   </p>
 
                   <h3 className="text-lg font-bold mb-6">
-                    {pack.id === 'essential' ? 'Fonctionnalités incluses :' : 'Tout du Pack Essentiel, plus :'}
+                    {pack.id === 'essential' ? 'Fonctionnalités incluses :' : 'Fonctionnalités incluses :'}
                   </h3>
 
                   <ul className="space-y-4 mb-8">
+                    {pack.id === 'premium' && packs?.[0]?.features?.map((feature: any) => (
+                      <li key={feature.id} className="flex items-start gap-3">
+                        <CheckCircle2
+                          size={24}
+                          className="text-primary-foreground flex-shrink-0 mt-1"
+                        />
+                        <div>
+                          <p className="font-semibold">{feature.name}</p>
+                          <p className="text-sm text-primary-foreground/80">
+                            {feature.description}
+                          </p>
+                        </div>
+                      </li>
+                    ))}
                     {pack.features.map((feature: any) => (
                       <li key={feature.id} className="flex items-start gap-3">
                         <CheckCircle2
@@ -92,6 +106,28 @@ export default function Offres() {
                       </li>
                     ))}
                   </ul>
+
+                  {pack.id === 'premium' && (
+                    <div>
+                      <h3 className="text-lg font-bold mb-6 text-primary-foreground">Plus :</h3>
+                      <ul className="space-y-4 mb-8">
+                        {pack.features.map((feature: any) => (
+                          <li key={feature.id} className="flex items-start gap-3">
+                            <CheckCircle2
+                              size={24}
+                              className="text-primary-foreground flex-shrink-0 mt-1"
+                            />
+                            <div>
+                              <p className="font-semibold text-primary-foreground">{feature.name}</p>
+                              <p className="text-sm text-primary-foreground/80">
+                                {feature.description}
+                              </p>
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
 
                   <Link
                     href="/contact"
