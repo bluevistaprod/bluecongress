@@ -20,9 +20,9 @@ const adminProcedure = protectedProcedure.use(({ ctx, next }) => {
 
 export const offersRouter = router({
   /**
-   * Récupérer toutes les offres
+   * Récupérer toutes les offres (publique)
    */
-  getAll: adminProcedure.query(async () => {
+  getAll: protectedProcedure.query(async () => {
     return getAllPacks();
   }),
 
@@ -38,7 +38,7 @@ export const offersRouter = router({
     )
     .mutation(async ({ input }: { input: { packId: string; newPrice: number } }) => {
       updateOfferPrice(input.packId, input.newPrice);
-      return getAllPacks();
+      return { success: true, packs: getAllPacks() };
     }),
 
   /**
@@ -58,7 +58,7 @@ export const offersRouter = router({
     )
     .mutation(async ({ input }: any) => {
       updateOfferFeature(input.packId, input.featureId, input.updates);
-      return getAllPacks();
+      return { success: true, packs: getAllPacks() };
     }),
 
   /**
@@ -78,7 +78,7 @@ export const offersRouter = router({
     )
     .mutation(async ({ input }: any) => {
       addFeatureToPack(input.packId, input.feature);
-      return getAllPacks();
+      return { success: true, packs: getAllPacks() };
     }),
 
   /**
@@ -93,6 +93,6 @@ export const offersRouter = router({
     )
     .mutation(async ({ input }: { input: { packId: string; featureId: string } }) => {
       removeFeatureFromPack(input.packId, input.featureId);
-      return getAllPacks();
+      return { success: true, packs: getAllPacks() };
     }),
 });

@@ -4,13 +4,15 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { AlertCircle, CheckCircle2 } from 'lucide-react';
+import { AlertCircle, CheckCircle2, Plus, Trash2 } from 'lucide-react';
 
 export default function Admin() {
   const { data: user } = trpc.auth.me.useQuery();
   const [activeTab, setActiveTab] = useState<'prices' | 'features'>('prices');
   const [editingPackId, setEditingPackId] = useState<string | null>(null);
+  const [editingFeatureId, setEditingFeatureId] = useState<string | null>(null);
   const [prices, setPrices] = useState<Record<string, number>>({});
+  const [featureEdits, setFeatureEdits] = useState<Record<string, any>>({});
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
 
   const { data: packs, isLoading, refetch } = trpc.offers.getAll.useQuery(undefined, {
@@ -25,6 +27,40 @@ export default function Admin() {
     },
     onError: () => {
       setMessage({ type: 'error', text: 'Erreur lors de la mise à jour du prix' });
+    },
+  });
+
+  const updateFeatureMutation = trpc.offers.updateFeature.useMutation({
+    onSuccess: () => {
+      setMessage({ type: 'success', text: 'Fonctionnalité mise à jour avec succès!' });
+      refetch();
+      setEditingFeatureId(null);
+      setTimeout(() => setMessage(null), 3000);
+    },
+    onError: () => {
+      setMessage({ type: 'error', text: 'Erreur lors de la mise à jour de la fonctionnalité' });
+    },
+  });
+
+  const removeFeatureMutation = trpc.offers.removeFeature.useMutation({
+    onSuccess: () => {
+      setMessage({ type: 'success', text: 'Fonctionnalité supprimée avec succès!' });
+      refetch();
+      setTimeout(() => setMessage(null), 3000);
+    },
+    onError: () => {
+      setMessage({ type: 'error', text: 'Erreur lors de la suppression de la fonctionnalité' });
+    },
+  });
+
+  const addFeatureMutation = trpc.offers.addFeature.useMutation({
+    onSuccess: () => {
+      setMessage({ type: 'success', text: 'Fonctionnalité ajoutée avec succès!' });
+      refetch();
+      setTimeout(() => setMessage(null), 3000);
+    },
+    onError: () => {
+      setMessage({ type: 'error', text: 'Erreur lors de l\'ajout de la fonctionnalité' });
     },
   });
 
@@ -50,6 +86,23 @@ export default function Admin() {
       updatePriceMutation.mutate({ packId, newPrice });
       setEditingPackId(null);
       setPrices((prev) => ({ ...prev, [packId]: 0 }));
+    }
+  };
+
+  const handleUpdateFeature = (packId: string, featureId: string) => {
+    const edits = featureEdits[`${packId}-${featureId}`];
+    if (edits) {
+      updateFeatureMutation.mutate({
+        packId,
+        featureId,
+        updates: edits,
+      });
+    }
+  };
+
+  const handleRemoveFeature = (packId: string, featureId: string) => {
+    if (confirm('Êtes-vous sûr de vouloir supprimer cette fonctionnalité ?')) {
+      removeFeatureMutation.mutate({ packId, featureId });
     }
   };
 
@@ -159,11 +212,119 @@ export default function Admin() {
             {activeTab === 'features' && (
               <div className="space-y-6">
                 <h2 className="text-2xl font-bold">Gestion des Fonctionnalités</h2>
-                <div className="bg-card rounded-lg p-6 border border-border">
-                  <p className="text-muted-foreground">
-                    La gestion des fonctionnalités est disponible via l'API tRPC. Pour modifier les fonctionnalités, veuillez contacter l'équipe technique.
-                  </p>
-                </div>
+                {isLoading ? (
+                  <div className="text-center text-muted-foreground">Chargement...</div>
+                ) : (
+                  <div className="space-y-8">
+                    {packs?.map((pack) => (
+                      <div key={pack.id} className="bg-card rounded-lg p-6 border border-border">
+                        <h3 className="text-2xl font-bold mb-6">{pack.name}</h3>
+                        <div className="space-y-4">
+                          {pack.features.map((feature) => (
+                            <div key={feature.id} className="bg-background rounded-lg p-4 border border-border">
+                              {editingFeatureId === `${pack.id}-${feature.id}` ? (
+                                <div className="space-y-3">
+                                  <div>
+                                    <label className="block text-sm font-semibold mb-2">Nom</label>
+                                    <Input
+                                      value={featureEdits[`${pack.id}-${feature.id}`]?.name || feature.name}
+                                      onChange={(e) =>
+                                        setFeatureEdits((prev) => ({
+                                          ...prev,
+                                          [`${pack.id}-${feature.id}`]: {
+                                            ...prev[`${pack.id}-${feature.id}`],
+                                            name: e.target.value,
+                                          },
+                                        }))
+                                      }
+                                    />
+                                  </div>
+                                  <div>
+                                    <label className="block text-sm font-semibold mb-2">Description</label>
+                                    <textarea
+                                      value={featureEdits[`${pack.id}-${feature.id}`]?.description || feature.description}
+                                      onChange={(e) =>
+                                        setFeatureEdits((prev) => ({
+                                          ...prev,
+                                          [`${pack.id}-${feature.id}`]: {
+                                            ...prev[`${pack.id}-${feature.id}`],
+                                            description: e.target.value,
+                                          },
+                                        }))
+                                      }
+                                      className="w-full p-2 border border-border rounded-md bg-background"
+                                      rows={2}
+                                    />
+                                  </div>
+                                  <label className="flex items-center gap-2">
+                                    <input
+                                      type="checkbox"
+                                      checked={featureEdits[`${pack.id}-${feature.id}`]?.included ?? feature.included}
+                                      onChange={(e) =>
+                                        setFeatureEdits((prev) => ({
+                                          ...prev,
+                                          [`${pack.id}-${feature.id}`]: {
+                                            ...prev[`${pack.id}-${feature.id}`],
+                                            included: e.target.checked,
+                                          },
+                                        }))
+                                      }
+                                    />
+                                    <span className="text-sm font-semibold">Incluse dans ce pack</span>
+                                  </label>
+                                  <div className="flex gap-2">
+                                    <Button
+                                      onClick={() => handleUpdateFeature(pack.id, feature.id)}
+                                      className="flex-1"
+                                      disabled={updateFeatureMutation.isPending}
+                                    >
+                                      {updateFeatureMutation.isPending ? 'Mise à jour...' : 'Confirmer'}
+                                    </Button>
+                                    <Button
+                                      onClick={() => setEditingFeatureId(null)}
+                                      variant="outline"
+                                      className="flex-1"
+                                    >
+                                      Annuler
+                                    </Button>
+                                  </div>
+                                </div>
+                              ) : (
+                                <div className="flex justify-between items-start">
+                                  <div className="flex-1">
+                                    <h4 className="font-bold mb-1">{feature.name}</h4>
+                                    <p className="text-sm text-muted-foreground mb-2">{feature.description}</p>
+                                    <span className={`text-xs px-2 py-1 rounded ${feature.included ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'}`}>
+                                      {feature.included ? 'Incluse' : 'Non incluse'}
+                                    </span>
+                                  </div>
+                                  <div className="flex gap-2">
+                                    <Button
+                                      onClick={() => setEditingFeatureId(`${pack.id}-${feature.id}`)}
+                                      variant="outline"
+                                      size="sm"
+                                    >
+                                      Modifier
+                                    </Button>
+                                    <Button
+                                      onClick={() => handleRemoveFeature(pack.id, feature.id)}
+                                      variant="outline"
+                                      size="sm"
+                                      className="text-red-600"
+                                      disabled={removeFeatureMutation.isPending}
+                                    >
+                                      <Trash2 size={16} />
+                                    </Button>
+                                  </div>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             )}
 
