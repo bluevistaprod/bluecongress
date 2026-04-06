@@ -48,7 +48,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Simplicité Radicale</h3>
                 <p className="text-muted-foreground mb-4">
-                  Votre application prête en 48h. Envoyez-nous vos données, nous nous occupons du reste. Aucune complexité, aucun stress.
+                  Votre application prête en 7 jours. Utilisez nos gabarits, envoyez-nous vos données, nous nous occupons du reste. Aucune complexité, aucun stress.
                 </p>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
@@ -73,7 +73,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Expérience Participant</h3>
                 <p className="text-muted-foreground mb-4">
-                  Une interface intuitive conçue pour engager vos participants. Programme interactif, favoris, notifications en temps réel.
+                  Une interface intuitive conçue pour engager vos participants. Programme interactif, favoris, notifications en temps réel, sondages et questions en direct.
                 </p>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center gap-2">
@@ -124,7 +124,7 @@ export default function Home() {
           <div className="container">
             <h2 className="text-4xl font-bold text-center mb-4">Choisissez la Formule Qui Vous Ressemble</h2>
             <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-              Que vous organisiez un petit séminaire ou un grand congrès médical international, nous avons le pack adapté à vos besoins et à votre budget.
+              Que vous organisiez un séminaire modeste ou un grand congrès médical international, nous avons le pack adapté à vos besoins et à votre budget.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -139,7 +139,7 @@ export default function Home() {
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-center gap-2">
                     <CheckCircle2 size={20} className="text-accent" />
-                    <span>Programme complet</span>
+                    <span>Programme complet / design personnalisé</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 size={20} className="text-accent" />
@@ -159,7 +159,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 size={20} className="text-accent" />
-                    <span>Design personnalisé</span>
+                    <span>Application disponible 1 an</span>
                   </li>
                 </ul>
                 <Link href="/offres" className="btn-outline w-full text-center">
@@ -170,12 +170,12 @@ export default function Home() {
               {/* Pack Premium */}
               <div className="bg-background rounded-xl p-8 border-2 border-primary shadow-lg">
                 <div className="bg-primary text-primary-foreground px-4 py-2 rounded-full inline-block mb-4 text-sm font-semibold">
-                  Recommandé pour les congrès
+                  Recommandé
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Pack Premium / Médical</h3>
+                <h3 className="text-2xl font-bold mb-2">Pack Premium</h3>
                 <p className="text-muted-foreground mb-6">Pour les congrès de 300 à 1000+ participants</p>
                 <div className="mb-6">
-                  <span className="text-4xl font-bold">1 850€</span>
+                  <span className="text-4xl font-bold">2 850€</span>
                   <span className="text-muted-foreground ml-2">HT</span>
                 </div>
                 <ul className="space-y-3 mb-8">
@@ -197,11 +197,11 @@ export default function Home() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 size={20} className="text-primary" />
-                    <span>Gestion des abstracts</span>
+                    <span>Liens directs pour vos sponsors</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle2 size={20} className="text-primary" />
-                    <span>Statistiques post-event</span>
+                    <span>Statistiques post-évènement</span>
                   </li>
                 </ul>
                 <Link href="/offres" className="btn-primary w-full text-center">
@@ -219,9 +219,9 @@ export default function Home() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-card rounded-xl p-8 border border-border">
-                <p className="text-lg font-semibold mb-4">Nice Shoulder Course 2024</p>
+                <p className="text-lg font-semibold mb-4">Nice Shoulder Course</p>
                 <p className="text-muted-foreground mb-6">
-                  "L'application Bluevista a transformé notre congrès. Nos participants adorent la facilité d'accès au programme et les notifications en temps réel."
+                  "L'application Bluevista a transformé notre congrès. Nos participants adorent les notifications en temps réel et le système de vote."
                 </p>
                 <p className="text-sm text-muted-foreground">Dr. Dupont, Organisateur</p>
               </div>
@@ -229,7 +229,7 @@ export default function Home() {
               <div className="bg-card rounded-xl p-8 border border-border">
                 <p className="text-lg font-semibold mb-4">Congrès ESPOIR Oncologie</p>
                 <p className="text-muted-foreground mb-6">
-                  "Une solution clé en main qui nous a fait gagner un temps précieux. L'équipe Bluevista a géré tous les détails techniques."
+                  "Une solution clé en main qui nous a fait gagner un temps précieux et donné de la visibilité à nos sponsors. L'équipe a géré tous les détails techniques."
                 </p>
                 <p className="text-sm text-muted-foreground">Pr. Martin, Directeur Scientifique</p>
               </div>

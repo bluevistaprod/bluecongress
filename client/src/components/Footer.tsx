@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="font-bold text-lg mb-4">Bluevista</h3>
-            <p className="text-muted-foreground text-sm">L'expertise audiovisuelle au service de vos événements depuis 2004.</p>
+            <p className="text-muted-foreground text-sm">L'expertise interactive au service de vos événements depuis 2004.</p>
           </div>
           <div>
             <h4 className="font-semibold mb-4">Produits</h4>
@@ -26,8 +26,8 @@ export default function Footer() {
           </div>
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
-            <p className="text-muted-foreground text-sm">Email: contact@bluevista.fr</p>
-            <p className="text-muted-foreground text-sm">Tél: +33 (0)X XX XX XX XX</p>
+            <p className="text-muted-foreground text-sm">Email: contact@bluevistaprod.com</p>
+            <p className="text-muted-foreground text-sm">Tél: +33 (0)4 72 34 51 89</p>
           </div>
         </div>
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center">
