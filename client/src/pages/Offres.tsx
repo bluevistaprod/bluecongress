@@ -2,10 +2,10 @@ import { Link } from 'wouter';
 import { CheckCircle2, XCircle } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { getAllPacks } from '@shared/offersData';
+import { trpc } from '@/lib/trpc';
 
 export default function Offres() {
-  const packs = getAllPacks();
+  const { data: packs, isLoading } = trpc.offers.getAll.useQuery();
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -24,8 +24,11 @@ export default function Offres() {
         {/* Detailed Packs Section */}
         <section className="section-padding bg-background">
           <div className="container">
+            {isLoading ? (
+              <div className="text-center text-muted-foreground">Chargement des offres...</div>
+            ) : (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-              {packs.map((pack) => (
+              {packs?.map((pack: any) => (
                 <div
                   key={pack.id}
                   className={
@@ -72,7 +75,7 @@ export default function Offres() {
                   </h3>
 
                   <ul className="space-y-4 mb-8">
-                    {pack.features.map((feature) => (
+                    {pack.features.map((feature: any) => (
                       <li key={feature.id} className="flex items-start gap-3">
                         <CheckCircle2
                           size={24}
@@ -103,6 +106,7 @@ export default function Offres() {
                 </div>
               ))}
             </div>
+            )}
           </div>
         </section>
 
@@ -111,12 +115,15 @@ export default function Offres() {
           <div className="container">
             <h2 className="text-4xl font-bold text-center mb-12">Tableau Comparatif Complet</h2>
 
+            {isLoading ? (
+              <div className="text-center text-muted-foreground">Chargement du tableau comparatif...</div>
+            ) : (
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr className="border-b-2 border-border">
                     <th className="text-left py-4 px-4 font-bold">Fonctionnalités</th>
-                    {packs.map((pack) => (
+                    {packs?.map((pack: any) => (
                       <th key={pack.id} className="text-center py-4 px-4 font-bold">
                         {pack.name}
                       </th>
@@ -127,7 +134,7 @@ export default function Offres() {
                   {/* Prix */}
                   <tr className="border-b border-border">
                     <td className="py-4 px-4 font-semibold">Prix (HT)</td>
-                    {packs.map((pack) => (
+                    {packs?.map((pack: any) => (
                       <td key={pack.id} className="text-center py-4 px-4">
                         {pack.price}€
                       </td>
@@ -135,11 +142,11 @@ export default function Offres() {
                   </tr>
 
                   {/* Features */}
-                  {packs[0].features.map((feature, index) => (
+                  {packs?.[0]?.features?.map((feature: any, index: number) => (
                     <tr key={feature.id} className={index % 2 === 0 ? 'border-b border-border bg-background' : 'border-b border-border'}>
                       <td className="py-4 px-4 font-semibold">{feature.name}</td>
-                      {packs.map((pack) => {
-                        const packFeature = pack.features.find((f) => f.id === feature.id);
+                      {packs?.map((pack: any) => {
+                        const packFeature = pack.features.find((f: any) => f.id === feature.id);
                         return (
                           <td key={pack.id} className="text-center py-4 px-4">
                             {packFeature && packFeature.included ? (
@@ -155,6 +162,7 @@ export default function Offres() {
                 </tbody>
               </table>
             </div>
+            )}
           </div>
         </section>
 
