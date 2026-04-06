@@ -48,12 +48,13 @@ export async function initializeOffers() {
       return;
     }
 
-    console.log('[Init] Clearing existing offers and features...');
-    // Clear existing data
-    await db.delete(features);
-    await db.delete(offers);
-    console.log('[Init] Cleared old data');
-
+    console.log('[Init] Checking if offers exist...');
+    const existingOffers = await db.select().from(offers);
+    
+    if (existingOffers.length > 0) {
+      console.log('[Init] Offers already exist, skipping initialization');
+      return;
+    }
 
     console.log('[Init] Inserting default offers...');
     await db.insert(offers).values(defaultOffers);
