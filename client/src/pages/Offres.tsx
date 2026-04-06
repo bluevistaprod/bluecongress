@@ -109,9 +109,9 @@ export default function Offres() {
 
                   {pack.id === 'premium' && (
                     <div>
-                      <h3 className="text-lg font-bold mb-6 text-primary-foreground">Plus :</h3>
+                      <h3 className="text-lg font-bold mb-6 text-primary-foreground">Fonctionnalités additionnelles :</h3>
                       <ul className="space-y-4 mb-8">
-                        {pack.features.map((feature: any) => (
+                        {pack.features.filter((f: any) => f.id !== 'essential-feature-1' && f.id !== 'essential-feature-2' && f.id !== 'essential-feature-3').map((feature: any) => (
                           <li key={feature.id} className="flex items-start gap-3">
                             <CheckCircle2
                               size={24}
@@ -178,7 +178,11 @@ export default function Offres() {
                   </tr>
 
                   {/* Features */}
-                  {packs?.[0]?.features?.map((feature: any, index: number) => (
+                  {packs && Array.from(
+                    new Set(packs.flatMap((p: any) => p.features.map((f: any) => f.id)))
+                  ).map((featureId: string, index: number) => {
+                    const feature = packs.flatMap((p: any) => p.features).find((f: any) => f.id === featureId);
+                    return (
                     <tr key={feature.id} className={index % 2 === 0 ? 'border-b border-border bg-background' : 'border-b border-border'}>
                       <td className="py-4 px-4 font-semibold">{feature.name}</td>
                       {packs?.map((pack: any) => {
@@ -194,7 +198,8 @@ export default function Offres() {
                         );
                       })}
                     </tr>
-                  ))}
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
