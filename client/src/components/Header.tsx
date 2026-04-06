@@ -9,7 +9,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-background border-b border-border shadow-sm">
       <nav className="container flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2">
-          <div className="text-2xl font-bold gradient-text">Bluevista</div>
+          <img 
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/logo_congress_pulse-Gg5XyFMEtRreaPb6Yrp3Jb.png" 
+            alt="Pulse Logo" 
+            className="h-10 w-10"
+          />
+          <div className="text-2xl font-bold gradient-text">Pulse</div>
         </Link>
         
         {/* Desktop Navigation */}

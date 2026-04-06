@@ -35,6 +35,17 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Congress Visuals Section */}
+        <section className="section-padding bg-background">
+          <div className="container">
+            <img 
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/congress_hero_audience-BJCFzv3iMBLoNg7HDkuDwx.png" 
+              alt="Medical Congress Audience" 
+              className="w-full rounded-xl shadow-lg mb-16 object-cover h-96"
+            />
+          </div>
+        </section>
+
         {/* Why Choose Us Section */}
         <section className="section-padding bg-background">
           <div className="container">
@@ -207,6 +218,39 @@ export default function Home() {
                 <Link href="/offres" className="btn-primary w-full text-center">
                   Découvrir le Pack Premium
                 </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features with Visuals Section */}
+        <section className="section-padding bg-card">
+          <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16">
+              <div>
+                <h2 className="text-4xl font-bold mb-6">Networking & Engagement</h2>
+                <p className="text-lg text-muted-foreground mb-4">
+                  Facilitez les connexions entre participants avec des outils de networking intégrés et des espaces d'interaction.
+                </p>
+              </div>
+              <img 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/congress_networking-HPnEJ4gFxGLKY8ezN45eER.png" 
+                alt="Networking at Congress" 
+                className="w-full rounded-xl shadow-lg object-cover h-80"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <img 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/congress_interactive-ez8NoyhM3xTyEJZNYkqkKa.png" 
+                alt="Interactive Congress Elements" 
+                className="w-full rounded-xl shadow-lg object-cover h-80"
+              />
+              <div>
+                <h2 className="text-4xl font-bold mb-6">Interactivité en Temps Réel</h2>
+                <p className="text-lg text-muted-foreground mb-4">
+                  Sondages, votes en direct, questions/réponses : gardez votre audience engagée et collectez des insights précieux.
+                </p>
               </div>
             </div>
           </div>
