@@ -75,21 +75,21 @@ export default function Offres() {
                   </h3>
 
                   <ul className="space-y-4 mb-8">
-                    {pack.id === 'premium' && packs?.[0]?.features?.map((feature: any) => (
-                      <li key={feature.id} className="flex items-start gap-3">
+                    {pack.id === 'premium' && (
+                      <li className="flex items-start gap-3">
                         <CheckCircle2
                           size={24}
                           className="text-primary-foreground flex-shrink-0 mt-1"
                         />
                         <div>
-                          <p className="font-semibold">{feature.name}</p>
+                          <p className="font-semibold text-primary-foreground">Contient tout du Pack Essentiel</p>
                           <p className="text-sm text-primary-foreground/80">
-                            {feature.description}
+                            Toutes les fonctionnalités du Pack Essentiel, plus :
                           </p>
                         </div>
                       </li>
-                    ))}
-                    {pack.features.map((feature: any) => (
+                    )}
+                    {pack.features.filter((f: any) => pack.id !== 'premium' || !packs[0].features.some((ef: any) => ef.id === f.id)).map((feature: any) => (
                       <li key={feature.id} className="flex items-start gap-3">
                         <CheckCircle2
                           size={24}
@@ -106,28 +106,6 @@ export default function Offres() {
                       </li>
                     ))}
                   </ul>
-
-                  {pack.id === 'premium' && packs?.[0]?.features && (
-                    <div>
-                      <h3 className="text-lg font-bold mb-6 text-primary-foreground">Fonctionnalités additionnelles :</h3>
-                      <ul className="space-y-4 mb-8">
-                        {pack.features.filter((f: any) => !packs[0].features.some((ef: any) => ef.id === f.id)).map((feature: any) => (
-                          <li key={feature.id} className="flex items-start gap-3">
-                            <CheckCircle2
-                              size={24}
-                              className="text-primary-foreground flex-shrink-0 mt-1"
-                            />
-                            <div>
-                              <p className="font-semibold text-primary-foreground">{feature.name}</p>
-                              <p className="text-sm text-primary-foreground/80">
-                                {feature.description}
-                              </p>
-                            </div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
 
                   <Link
                     href="/contact"
