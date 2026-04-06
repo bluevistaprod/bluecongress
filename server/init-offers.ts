@@ -32,6 +32,7 @@ const defaultFeatures = [
   { id: 'app-1year', offerId: 'essential', name: 'Application Disponible 1 an', description: "Accès complet à l'application pendant 12 mois après l'événement", included: 1 },
   
   // Premium-only features
+  { id: 'app-2years', offerId: 'premium', name: 'Application Disponible 2 ans', description: "Accès complet à l'application pendant 24 mois après l'événement", included: 1 },
   { id: 'accompagnement', offerId: 'premium', name: 'Accompagnement Data', description: 'Envoyez-nous vos fichiers bruts, nous les intégrons', included: 1 },
   { id: 'votes', offerId: 'premium', name: 'Votes en Direct', description: 'Dynamisez vos sessions avec sondages en temps réel', included: 1 },
   { id: 'fiches-exposants', offerId: 'premium', name: 'Fiches Exposants Détaillées', description: 'Mise en avant de vos partenaires et sponsors', included: 1 },
