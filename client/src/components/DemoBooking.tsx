@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Calendar, Clock, User, Mail, Phone, Check } from 'lucide-react';
+import { trpc } from '@/lib/trpc';
 
 interface TimeSlot {
   time: string;
@@ -31,6 +32,7 @@ const TIME_SLOTS: TimeSlot[] = [
 ];
 
 export default function DemoBooking({ onSubmit }: DemoBookingProps) {
+  const { data: offers, isLoading } = trpc.offers.getAll.useQuery();
   const [formData, setFormData] = useState<BookingData>({
     name: '',
     email: '',
@@ -43,6 +45,9 @@ export default function DemoBooking({ onSubmit }: DemoBookingProps) {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  
+  const essentialOffer = offers?.find(o => o.id === 'essential');
+  const premiumOffer = offers?.find(o => o.id === 'premium');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -167,34 +172,40 @@ export default function DemoBooking({ onSubmit }: DemoBookingProps) {
           <div>
             <h3 className="text-lg font-bold mb-4">Quel Pack Vous Intéresse ?</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <label className="flex items-center p-4 border-2 rounded-lg cursor-pointer transition" style={{borderColor: formData.packType === 'essential' ? 'var(--color-primary)' : 'var(--color-border)'}}>
-                <input
-                  type="radio"
-                  name="packType"
-                  value="essential"
-                  checked={formData.packType === 'essential'}
-                  onChange={handleChange}
-                  className="w-4 h-4"
-                />
-                <div className="ml-4">
-                  <p className="font-semibold">Pack Essentiel</p>
-                  <p className="text-sm text-muted-foreground">950€ HT</p>
-                </div>
-              </label>
-              <label className="flex items-center p-4 border-2 rounded-lg cursor-pointer transition" style={{borderColor: formData.packType === 'premium' ? 'var(--color-primary)' : 'var(--color-border)'}}>
-                <input
-                  type="radio"
-                  name="packType"
-                  value="premium"
-                  checked={formData.packType === 'premium'}
-                  onChange={handleChange}
-                  className="w-4 h-4"
-                />
-                <div className="ml-4">
-                  <p className="font-semibold">Pack Premium/Médical</p>
-                  <p className="text-sm text-muted-foreground">1 850€ HT</p>
-                </div>
-              </label>
+              {isLoading ? (
+                <p className="text-muted-foreground">Chargement des offres...</p>
+              ) : (
+                <>
+                  <label className="flex items-center p-4 border-2 rounded-lg cursor-pointer transition" style={{borderColor: formData.packType === 'essential' ? 'var(--color-primary)' : 'var(--color-border)'}}>
+                    <input
+                      type="radio"
+                      name="packType"
+                      value="essential"
+                      checked={formData.packType === 'essential'}
+                      onChange={handleChange}
+                      className="w-4 h-4"
+                    />
+                    <div className="ml-4">
+                      <p className="font-semibold">{essentialOffer?.name || 'Pack Essentiel'}</p>
+                      <p className="text-sm text-muted-foreground">{essentialOffer?.price}€ HT</p>
+                    </div>
+                  </label>
+                  <label className="flex items-center p-4 border-2 rounded-lg cursor-pointer transition" style={{borderColor: formData.packType === 'premium' ? 'var(--color-primary)' : 'var(--color-border)'}}>
+                    <input
+                      type="radio"
+                      name="packType"
+                      value="premium"
+                      checked={formData.packType === 'premium'}
+                      onChange={handleChange}
+                      className="w-4 h-4"
+                    />
+                    <div className="ml-4">
+                      <p className="font-semibold">{premiumOffer?.name || 'Pack Premium/Médical'}</p>
+                      <p className="text-sm text-muted-foreground">{premiumOffer?.price}€ HT</p>
+                    </div>
+                  </label>
+                </>
+              )}
             </div>
           </div>
 
