@@ -177,29 +177,34 @@ export default function Offres() {
                     ))}
                   </tr>
 
-                  {/* Features */}
-                  {packs && Array.from(
-                    new Set(packs.flatMap((p: any) => p.features.map((f: any) => f.id)))
-                  ).map((featureId: string, index: number) => {
-                    const feature = packs.flatMap((p: any) => p.features).find((f: any) => f.id === featureId);
-                    return (
-                    <tr key={feature.id} className={index % 2 === 0 ? 'border-b border-border bg-background' : 'border-b border-border'}>
-                      <td className="py-4 px-4 font-semibold">{feature.name}</td>
-                      {packs?.map((pack: any) => {
-                        const packFeature = pack.features.find((f: any) => f.id === feature.id);
-                        return (
-                          <td key={pack.id} className="text-center py-4 px-4">
-                            {packFeature && packFeature.included ? (
-                              <CheckCircle2 className="mx-auto text-primary" size={24} />
-                            ) : (
-                              <XCircle className="mx-auto text-muted" size={24} />
-                            )}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                    );
-                  })}
+                  {/* Features - Get unique features from all packs */}
+                  {packs && (() => {
+                    const uniqueFeatures = new Map();
+                    packs.forEach((pack: any) => {
+                      pack.features.forEach((feature: any) => {
+                        if (!uniqueFeatures.has(feature.id)) {
+                          uniqueFeatures.set(feature.id, feature);
+                        }
+                      });
+                    });
+                    return Array.from(uniqueFeatures.values()).map((feature: any, index: number) => (
+                      <tr key={feature.id} className={index % 2 === 0 ? 'border-b border-border bg-background' : 'border-b border-border'}>
+                        <td className="py-4 px-4 font-semibold">{feature.name}</td>
+                        {packs?.map((pack: any) => {
+                          const packFeature = pack.features.find((f: any) => f.id === feature.id);
+                          return (
+                            <td key={pack.id} className="text-center py-4 px-4">
+                              {packFeature && packFeature.included ? (
+                                <CheckCircle2 className="mx-auto text-primary" size={24} />
+                              ) : (
+                                <XCircle className="mx-auto text-muted" size={24} />
+                              )}
+                            </td>
+                          );
+                        })}
+                      </tr>
+                    ));
+                  })()}
                 </tbody>
               </table>
             </div>
