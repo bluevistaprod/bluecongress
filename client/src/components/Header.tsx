@@ -10,7 +10,7 @@ export default function Header() {
       <nav className="container flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2">
           <img 
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/logo_pulse_wave.png" 
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/logo_pulse_wave_4e654e0c.png" 
             alt="Pulse Logo" 
             className="h-10 w-10"
           />
