@@ -107,11 +107,11 @@ export default function Offres() {
                     ))}
                   </ul>
 
-                  {pack.id === 'premium' && (
+                  {pack.id === 'premium' && packs?.[0]?.features && (
                     <div>
                       <h3 className="text-lg font-bold mb-6 text-primary-foreground">Fonctionnalités additionnelles :</h3>
                       <ul className="space-y-4 mb-8">
-                        {pack.features.filter((f: any) => f.id !== 'essential-feature-1' && f.id !== 'essential-feature-2' && f.id !== 'essential-feature-3').map((feature: any) => (
+                        {pack.features.filter((f: any) => !packs[0].features.some((ef: any) => ef.id === f.id)).map((feature: any) => (
                           <li key={feature.id} className="flex items-start gap-3">
                             <CheckCircle2
                               size={24}

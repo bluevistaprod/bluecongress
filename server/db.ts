@@ -105,7 +105,15 @@ export async function getAllOffers() {
     // Get features for each offer
     const offersWithFeatures = await Promise.all(
       allOffers.map(async (offer) => {
-        const offerFeatures = await db.select().from(features).where(eq(features.offerId, offer.id));
+        let offerFeatures = await db.select().from(features).where(eq(features.offerId, offer.id));
+        
+        // If this is the premium pack, also include essential pack features
+        if (offer.id === 'premium') {
+          const essentialFeatures = await db.select().from(features).where(eq(features.offerId, 'essential'));
+          // Combine: essential first, then premium-only features
+          offerFeatures = [...essentialFeatures, ...offerFeatures];
+        }
+        
         return {
           ...offer,
           features: offerFeatures,
