@@ -37,8 +37,8 @@ export default function Blog() {
     return (
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-12">
-          <Link href="/blog">
-            <a className="text-primary hover:underline mb-6 inline-block">← Retour au blog</a>
+          <Link href="/blog" className="text-primary hover:underline mb-6 inline-block">
+            ← Retour au blog
           </Link>
 
           <article className="max-w-3xl mx-auto">
@@ -92,8 +92,7 @@ export default function Blog() {
                   ?.filter(a => a.category === article.category && a.id !== article.id)
                   .slice(0, 2)
                   .map(relatedArticle => (
-                    <Link key={relatedArticle.id} href={`/blog/${relatedArticle.slug}`}>
-                      <a className="group">
+                    <Link key={relatedArticle.id} href={`/blog/${relatedArticle.slug}`} className="group">
                         <Card className="h-full hover:border-primary transition-colors">
                           <CardHeader>
                             <CardTitle className="text-lg group-hover:text-primary transition-colors">
@@ -102,7 +101,6 @@ export default function Blog() {
                             <CardDescription>{relatedArticle.excerpt}</CardDescription>
                           </CardHeader>
                         </Card>
-                      </a>
                     </Link>
                   ))}
               </div>
@@ -160,8 +158,7 @@ export default function Blog() {
               {articles
                 .filter(a => selectedCategory === null || a.category === selectedCategory)
                 .map(article => (
-                  <Link key={article.id} href={`/blog/${article.slug}`}>
-                    <a className="group">
+                  <Link key={article.id} href={`/blog/${article.slug}`} className="group">
                       <Card className="h-full hover:border-primary transition-colors overflow-hidden">
                         {article.imageUrl && (
                           <div className="h-48 overflow-hidden">
@@ -194,7 +191,6 @@ export default function Blog() {
                           </Button>
                         </CardContent>
                       </Card>
-                    </a>
                   </Link>
                 ))}
             </div>
