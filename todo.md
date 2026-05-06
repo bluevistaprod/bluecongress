@@ -82,3 +82,7 @@
 - [x] Intégrer le blog au menu et optimiser le SEO
 - [x] Tester et valider le blog
 - [x] Corriger l'affichage du contenu complet des articles avec react-markdown
+
+## Phase 12: Correction des Images Cassées
+
+- [x] Corriger l'image cassée pour l'article "Analytics et Données : Mesurer le Succès de Votre Congrès"
