@@ -97,11 +97,12 @@ export async function initializeBlogArticles() {
   }
 
   try {
-    // Check if articles already exist
-    const existing = await db.select().from(blogArticles).limit(1);
-    if (existing.length > 0) {
-      console.log("[Blog] Articles already exist, skipping initialization");
-      return;
+    // Always clear and reinitialize to ensure fresh data
+    try {
+      await db.delete(blogArticles);
+      console.log("[Blog] Cleared existing articles");
+    } catch (e) {
+      // Table might not exist yet, that's ok
     }
 
     // Insert default articles

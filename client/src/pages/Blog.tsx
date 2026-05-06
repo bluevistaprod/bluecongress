@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { Link, useRoute } from 'wouter';
+import ReactMarkdown from 'react-markdown';
 import { trpc } from '@/lib/trpc';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -61,28 +62,28 @@ export default function Blog() {
               />
             )}
 
-            <div className="prose prose-invert max-w-none mb-8">
-              {article.content.split('\n').map((line, idx) => {
-                if (line.startsWith('# ')) {
-                  return <h2 key={idx} className="text-2xl font-bold mt-8 mb-4">{line.substring(2)}</h2>;
-                }
-                if (line.startsWith('## ')) {
-                  return <h3 key={idx} className="text-xl font-bold mt-6 mb-3">{line.substring(3)}</h3>;
-                }
-                if (line.startsWith('### ')) {
-                  return <h4 key={idx} className="text-lg font-semibold mt-4 mb-2">{line.substring(4)}</h4>;
-                }
-                if (line.startsWith('- ')) {
-                  return <li key={idx} className="ml-6 mb-2">{line.substring(2)}</li>;
-                }
-                if (line.startsWith('| ')) {
-                  return <div key={idx} className="overflow-x-auto mb-4">{line}</div>;
-                }
-                if (line === '') {
-                  return <br key={idx} />;
-                }
-                return <p key={idx} className="mb-4 leading-relaxed">{line}</p>;
-              })}
+            <div className="prose prose-invert max-w-none mb-8 prose-headings:text-foreground prose-p:text-foreground prose-li:text-foreground prose-strong:text-foreground prose-em:text-foreground prose-a:text-primary prose-code:text-foreground prose-pre:bg-muted">
+              <ReactMarkdown
+                components={{
+                  h1: ({node, ...props}: any) => <h1 className="text-3xl font-bold mt-8 mb-4 text-foreground" {...props} />,
+                  h2: ({node, ...props}: any) => <h2 className="text-2xl font-bold mt-8 mb-4 text-foreground" {...props} />,
+                  h3: ({node, ...props}: any) => <h3 className="text-xl font-semibold mt-6 mb-3 text-foreground" {...props} />,
+                  h4: ({node, ...props}: any) => <h4 className="text-lg font-semibold mt-4 mb-2 text-foreground" {...props} />,
+                  p: ({node, ...props}: any) => <p className="mb-4 leading-relaxed text-foreground" {...props} />,
+                  ul: ({node, ...props}: any) => <ul className="list-disc list-inside mb-4 ml-4" {...props} />,
+                  ol: ({node, ...props}: any) => <ol className="list-decimal list-inside mb-4 ml-4" {...props} />,
+                  li: ({node, ...props}: any) => <li className="mb-2 text-foreground" {...props} />,
+                  blockquote: ({node, ...props}: any) => <blockquote className="border-l-4 border-primary pl-4 italic my-4 text-muted-foreground" {...props} />,
+                  code: ({node, inline, className, children, ...props}: any) => inline ? 
+                    <code className="bg-muted px-1 py-0.5 rounded text-foreground" {...props}>{children}</code> :
+                    <code className="block bg-muted p-4 rounded mb-4 overflow-x-auto text-foreground" {...props}>{children}</code>,
+                  a: ({node, ...props}: any) => <a className="text-primary hover:underline" {...props} />,
+                  strong: ({node, ...props}: any) => <strong className="font-bold text-foreground" {...props} />,
+                  em: ({node, ...props}: any) => <em className="italic text-foreground" {...props} />,
+                }}
+              >
+                {article.content}
+              </ReactMarkdown>
             </div>
 
             <div className="border-t pt-8">
