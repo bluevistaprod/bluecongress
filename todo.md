@@ -70,3 +70,14 @@
 - [x] Intégrer le nouvel aperçu dans la section galerie de la page d'accueil
 - [x] Tester l'affichage sur mobile et desktop
 - [x] Valider que les images sont lisibles et bien présentées
+
+
+## Phase 11: Section Blog pour SEO
+
+- [ ] Créer les tables de base de données pour les articles
+- [ ] Générer 7 images pour les articles du blog
+- [ ] Rédiger 7 articles longs sur l'engagement et le ROI
+- [ ] Créer le backoffice de gestion des articles
+- [ ] Créer la page blog avec listing et détail des articles
+- [ ] Intégrer le blog au menu et optimiser le SEO
+- [ ] Tester et valider le blog

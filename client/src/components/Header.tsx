@@ -26,6 +26,7 @@ export default function Header() {
           <Link href="/" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Accueil</Link>
           <Link href="/offres" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Nos Offres</Link>
           <Link href="/cas-clients" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Cas Clients</Link>
+          <Link href="/blog" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Blog</Link>
           <Link href="/faq" onClick={handleNavClick} className="text-foreground hover:text-primary transition">FAQ</Link>
           <Link href="/a-propos" onClick={handleNavClick} className="text-foreground hover:text-primary transition">À Propos</Link>
           <Link href="/contact" onClick={handleNavClick} className="btn-primary">Contact</Link>
@@ -48,6 +49,7 @@ export default function Header() {
             <Link href="/" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Accueil</Link>
             <Link href="/offres" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Nos Offres</Link>
             <Link href="/cas-clients" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Cas Clients</Link>
+            <Link href="/blog" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Blog</Link>
             <Link href="/faq" onClick={handleNavClick} className="text-foreground hover:text-primary transition">FAQ</Link>
             <Link href="/a-propos" onClick={handleNavClick} className="text-foreground hover:text-primary transition">À Propos</Link>
             <Link href="/contact" onClick={handleNavClick} className="btn-primary w-full text-center">Contact</Link>
