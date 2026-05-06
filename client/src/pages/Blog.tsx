@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import { Link, useRoute } from 'wouter';
 import { trpc } from '@/lib/trpc';
@@ -154,10 +155,10 @@ export default function Blog() {
                 <Skeleton key={i} className="h-64 w-full" />
               ))}
             </div>
-          ) : (
+          ) : articles && articles.length > 0 ? (
             <div className="grid gap-6">
               {articles
-                ?.filter(a => selectedCategory === null || a.category === selectedCategory)
+                .filter(a => selectedCategory === null || a.category === selectedCategory)
                 .map(article => (
                   <Link key={article.id} href={`/blog/${article.slug}`}>
                     <a className="group">
@@ -196,6 +197,10 @@ export default function Blog() {
                     </a>
                   </Link>
                 ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-muted-foreground">Aucun article trouvé.</p>
             </div>
           )}
         </div>
