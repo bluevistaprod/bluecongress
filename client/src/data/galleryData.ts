@@ -3,21 +3,21 @@ export const niceShoulderCourseGallery = [
     id: 'nsc-1',
     title: 'Écran d\'Accueil',
     description: 'Interface d\'accueil avec navigation principale et programme du jour',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4015_10dc26ea.webp',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4006_c9530cb3.webp',
     placeholder: 'bg-gradient-to-br from-blue-400 to-blue-600'
   },
   {
     id: 'nsc-2',
     title: 'Programme Complet',
     description: 'Vue détaillée du programme avec filtrage par jour et salle',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4017_242cff79.webp',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4007_8d00f2ec.webp',
     placeholder: 'bg-gradient-to-br from-indigo-400 to-indigo-600'
   },
   {
     id: 'nsc-3',
     title: 'Fiches Intervenants',
     description: 'Profils détaillés des orateurs avec biographies et photos',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4019_3341bb0b.webp',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4010_05979fb8.webp',
     placeholder: 'bg-gradient-to-br from-purple-400 to-purple-600'
   },
   {
@@ -48,21 +48,21 @@ export const congreEspoirGallery = [
     id: 'ce-1',
     title: 'Écran d\'Accueil Premium',
     description: 'Interface sophistiquée avec branding personnalisé du congrès',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4006_c9530cb3.webp',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4008_3b5f8f0c.webp',
     placeholder: 'bg-gradient-to-br from-teal-400 to-teal-600'
   },
   {
     id: 'ce-2',
     title: 'Programme Oncologie',
     description: 'Programme complexe avec sessions parallèles et abstracts scientifiques',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4007_8d00f2ec.webp',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4017_242cff79.webp',
     placeholder: 'bg-gradient-to-br from-cyan-400 to-cyan-600'
   },
   {
     id: 'ce-3',
     title: 'Fiches Exposants',
     description: 'Présentation détaillée des sponsors et partenaires du congrès',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4010_05979fb8.webp',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4019_3341bb0b.webp',
     placeholder: 'bg-gradient-to-br from-blue-500 to-blue-700'
   },
   {

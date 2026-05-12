@@ -86,3 +86,4 @@
 ## Phase 12: Correction des Images Cassées
 
 - [x] Corriger l'image cassée pour l'article "Analytics et Données : Mesurer le Succès de Votre Congrès"
+- [x] Réorganiser les images de la section "Nos Réalisations" (Nice Shoulder Course bleu et Congrès ESPOIR rose)
