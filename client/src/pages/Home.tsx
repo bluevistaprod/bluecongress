@@ -25,20 +25,22 @@ export default function Home() {
                   <span className="text-[#00C4B4] text-sm font-semibold">Utilisé par Nice Shoulder Course • ESPOIR Oncologie • +15 congrès médicaux</span>
                 </div>
                 
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                  BlueCongress : L'application <span className="text-[#00C4B4]">tout-en-un</span> pour vos congrès médicaux et pharmaceutiques
+                <h1 className="text-6xl md:text-7xl font-bold mb-8 leading-tight tracking-tight">
+                  BlueCongress<br />
+                  <span className="text-[#00C4B4]">L'application qui fait tout le travail</span> pour vos congrès médicaux
                 </h1>
                 
-                <p className="text-xl text-gray-200 mb-8 leading-relaxed">
-                  Planning interactif, votes en live, abstracts, orateurs et analytics. Soulagez-vous de la logistique pour vous concentrer sur l'excellence scientifique.
+                <p className="text-lg text-gray-100 mb-10 leading-relaxed max-w-xl">
+                  Planning interactif, votes scientifiques en live, abstracts, orateurs et analytics.<br />
+                  Vous vous concentrez sur la science, nous gérons le reste.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/contact" className="bg-[#00C4B4] text-[#0A2540] px-8 py-4 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition text-center">
-                    Demander une démo gratuite en 2 minutes
+                  <Link href="/contact" className="bg-[#00C4B4] text-[#0A2540] px-8 py-4 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition text-center shadow-lg hover:shadow-xl">
+                    Demander une démo gratuite
                   </Link>
                   <Link href="/offres" className="border-2 border-[#00C4B4] text-[#00C4B4] px-8 py-4 rounded-lg font-semibold hover:bg-[#00C4B4]/10 transition text-center">
-                    Voir nos packs
+                    Voir les packs dès 950 €
                   </Link>
                 </div>
               </div>
