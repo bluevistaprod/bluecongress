@@ -87,3 +87,7 @@
 
 - [x] Corriger l'image cassée pour l'article "Analytics et Données : Mesurer le Succès de Votre Congrès"
 - [x] Réorganiser les images de la section "Nos Réalisations" (Nice Shoulder Course bleu et Congrès ESPOIR rose)
+
+## Phase 13: Corrections Futures
+
+- [ ] Corriger l'image d'accueil du Congrès ESPOIR (Écran d'Accueil Premium) - actuellement affiche une image de Nice Shoulder Course
