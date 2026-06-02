@@ -22,25 +22,25 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-block bg-[#00C4B4]/20 border border-[#00C4B4]/50 rounded-full px-4 py-2 mb-6">
-                  <span className="text-[#00C4B4] text-sm font-semibold">Utilisé par Nice Shoulder Course • ESPOIR Oncologie • +15 congrès médicaux</span>
+                  <span className="text-[#00E5C8] text-sm font-semibold">Utilisé par Nice Shoulder Course • ESPOIR Oncologie • +15 congrès médicaux et scientifiques</span>
                 </div>
                 
                 <h1 className="text-6xl md:text-7xl font-bold mb-8 leading-tight tracking-tight">
-                  BlueCongress<br />
-                  <span className="text-[#00C4B4]">L'application qui fait tout le travail</span> pour vos congrès médicaux
+                  Pulse Congress<br />
+                  <span className="text-[#00E5C8]">L'application qui fait battre</span> votre congrès médical
                 </h1>
                 
                 <p className="text-lg text-gray-100 mb-10 leading-relaxed max-w-xl">
-                  Planning interactif, votes scientifiques en live, abstracts, orateurs et analytics.<br />
-                  Vous vous concentrez sur la science, nous gérons le reste.
+                  Planning interactif, votes scientifiques en live, abstracts, orateurs et analytics en temps réel.<br />
+                  Vous vous concentrez sur la science. Nous gérons le reste avec fluidité.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/contact" className="bg-[#00C4B4] text-[#0A2540] px-8 py-4 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition text-center shadow-lg hover:shadow-xl">
+                  <Link href="/contact" className="bg-[#00E5C8] text-[#0A2540] px-8 py-4 rounded-lg font-semibold hover:bg-[#00E5C8]/90 transition text-center shadow-lg hover:shadow-xl">
                     Demander une démo gratuite
                   </Link>
-                  <Link href="/offres" className="border-2 border-[#00C4B4] text-[#00C4B4] px-8 py-4 rounded-lg font-semibold hover:bg-[#00C4B4]/10 transition text-center">
-                    Voir les packs dès 950 €
+                  <Link href="/offres" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition text-center">
+                    Voir nos packs
                   </Link>
                 </div>
               </div>
