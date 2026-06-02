@@ -25,10 +25,16 @@ export default function Home() {
                   <span className="text-[#00E5C8] text-sm font-semibold">Utilisé par Nice Shoulder Course • ESPOIR Oncologie • +15 congrès médicaux et scientifiques</span>
                 </div>
                 
-                <h1 className="text-6xl md:text-7xl font-bold mb-8 leading-tight tracking-tight">
-                  Pulse Congress<br />
-                  <span className="text-[#00E5C8]">L'application qui fait battre</span> votre congrès médical
-                </h1>
+                <div className="mb-8">
+                  <img 
+                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/pulse_congress_logo_hero-ZBPejKDH2kYECmcNyt3AfR.webp" 
+                    alt="Pulse Congress" 
+                    className="h-32 md:h-40 w-auto mb-6"
+                  />
+                  <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight text-white">
+                    <span className="text-[#00E5C8]">L'application qui fait battre</span> votre congrès médical
+                  </h1>
+                </div>
                 
                 <p className="text-lg text-gray-100 mb-10 leading-relaxed max-w-xl">
                   Planning interactif, votes scientifiques en live, abstracts, orateurs et analytics en temps réel.<br />
