@@ -15,7 +15,7 @@ export default function Header() {
       <nav className="container flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2">
           <img 
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/pulse_congress_logo_header.png" 
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/pulse_congress_logo_header_transparent-hjYPRV9UTmK6sEk5tp6sJ5.webp" 
             alt="Pulse Congress" 
             className="h-16 w-auto"
           />
@@ -23,7 +23,6 @@ export default function Header() {
         
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Accueil</Link>
           <Link href="/offres" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Nos Offres</Link>
           <Link href="/cas-clients" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Cas Clients</Link>
           <Link href="/blog" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Blog</Link>
@@ -46,7 +45,6 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden border-t border-border">
           <div className="container py-4 flex flex-col gap-4">
-            <Link href="/" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Accueil</Link>
             <Link href="/offres" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Nos Offres</Link>
             <Link href="/cas-clients" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Cas Clients</Link>
             <Link href="/blog" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Blog</Link>
