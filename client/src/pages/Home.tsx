@@ -27,11 +27,13 @@ export default function Home() {
                 
                 <div className="mb-8">
                   <img 
-                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/pulse_congress_logo_dark_hero-BbWf8VNTmFSVYMFpDPvRSF.webp" 
+                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/pulse_congress_logo_hero_transparent-SJAKRFsEnEci3TbqcJhLD7.png" 
                     alt="Pulse Congress" 
-                    className="h-40 md:h-48 w-auto mb-6"
+                    className="h-48 md:h-56 w-auto mb-8"
                   />
-                  <h1 className="text-5xl md:text-6xl font-bold leading-tight tracking-tight text-white">
+                </div>
+                <div className="mb-8">
+                  <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white">
                     <span className="text-[#00E5C8]">L'application qui fait battre</span> votre congrès médical
                   </h1>
                 </div>

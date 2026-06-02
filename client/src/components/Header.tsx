@@ -15,7 +15,7 @@ export default function Header() {
       <nav className="container flex items-center justify-between h-16">
         <Link href="/" className="flex items-center gap-2">
           <img 
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/pulse_congress_logo_hero-ZBPejKDH2kYECmcNyt3AfR.webp" 
+            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/pulse_congress_logo_header.png" 
             alt="Pulse Congress" 
             className="h-16 w-auto"
           />
