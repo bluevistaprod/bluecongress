@@ -139,3 +139,17 @@
 - [x] Ajouter l'encart rassurant "Réponse sous 24h ouvrées"
 - [x] Mettre à jour le bouton : "Demander une démonstration"
 - [x] Créer checkpoint final après simplification de la page Contact
+
+
+## Phase 18: Optimisation de la Page "Nos Offres"
+
+- [x] Remplacer le titre par "Une solution adaptée à votre congrès"
+- [x] Ajouter le sous-titre sur l'unicité de chaque événement
+- [x] Remplacer "Pack Essentiel" par "Congrès jusqu'à 300 participants"
+- [x] Remplacer "Pack Premium" par "Congrès de 300 à 1000+ participants"
+- [x] Ajouter les mentions "À partir de" avant les prix
+- [x] Ajouter l'encart de disclaimer sur les tarifs personnalisés
+- [x] Remplacer tous les boutons par "Demander une démonstration"
+- [x] Ajouter la section "Inclus dans toutes nos offres" avec 4 points clés
+- [x] Mettre à jour le messaging pour éviter l'effet "low-cost"
+- [x] Créer checkpoint final après optimisation de la page Offres
