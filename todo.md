@@ -32,11 +32,14 @@
 - [x] Page de confirmation après soumission
 
 ## Phase 6: Optimisation et Finalisation
-- [ ] Optimiser le responsive design (mobile-first)
-- [ ] Tester la navigation et les liens
-- [ ] Finaliser les détails visuels et les micro-interactions
-- [ ] Créer le checkpoint final
-- [ ] Livrer le site à Giz
+- [x] Optimiser le responsive design (mobile-first)
+- [x] Tester la navigation et les liens
+- [x] Finaliser les détails visuels et les micro-interactions
+- [x] Refonte du Hero avec branding Pulse Congress
+- [x] Ajouter bande de confiance sous le Hero
+- [x] Créer section 'Comment ça fonctionne ?' avec 5 étapes
+- [x] Créer le checkpoint final
+- [x] Livrer le site à Giz
 
 
 ## Phase 7: Galerie d'Images et Réservation de Démo

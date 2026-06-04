@@ -22,7 +22,7 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-block bg-[#00C4B4]/20 border border-[#00C4B4]/50 rounded-full px-4 py-2 mb-6">
-                  <span className="text-[#00E5C8] text-sm font-semibold">Utilisé par Nice Shoulder Course • ESPOIR Oncologie • +15 congrès médicaux et scientifiques</span>
+                  <span className="text-[#00E5C8] text-sm font-semibold">Déjà utilisée sur plusieurs congrès médicaux et scientifiques</span>
                 </div>
                 
                 <div className="mb-8">
@@ -34,28 +34,66 @@ export default function Home() {
                 </div>
                 <div className="mb-8">
                   <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white">
-                    <span className="text-[#00E5C8]">L'application qui fait battre</span> votre congrès médical
+                    L'application mobile clé en main pour les congrès scientifiques et médicaux
                   </h1>
                 </div>
                 
                 <p className="text-lg text-gray-100 mb-10 leading-relaxed max-w-xl">
-                  Planning interactif, votes scientifiques en live, abstracts, orateurs et analytics en temps réel.<br />
-                  Vous vous concentrez sur la science. Nous gérons le reste avec fluidité.
+                  Programme interactif, intervenants, abstracts, votes en direct, notifications et statistiques. Déployée en quelques jours, sans développement spécifique.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/contact" className="bg-[#00E5C8] text-[#0A2540] px-8 py-4 rounded-lg font-semibold hover:bg-[#00E5C8]/90 transition text-center shadow-lg hover:shadow-xl">
-                    Demander une démo gratuite
+                    Demander une démonstration
                   </Link>
-                  <Link href="/offres" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition text-center">
-                    Voir nos packs
-                  </Link>
+                  <button 
+                    onClick={() => alert('Démo interactive : Consultez nos cas clients pour voir l\'application en action !')}
+                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition text-center cursor-pointer"
+                  >
+                    Voir un exemple réel
+                  </button>
                 </div>
               </div>
               
               {/* Mockups */}
               <div className="flex justify-center">
                 <ImageGalleryPreview images={niceShoulderCourseGallery} maxImages={3} />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ===== TRUST BAND SECTION ===== */}
+        <section className="bg-[#0A2540] text-white py-8">
+          <div className="container">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="flex items-center gap-4">
+                <div className="text-2xl">✓</div>
+                <div>
+                  <p className="font-semibold">Déploiement rapide</p>
+                  <p className="text-sm text-gray-300">En quelques jours seulement</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="text-2xl">✓</div>
+                <div>
+                  <p className="font-semibold">Conforme RGPD</p>
+                  <p className="text-sm text-gray-300">Données sécurisées</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="text-2xl">✓</div>
+                <div>
+                  <p className="font-semibold">Support humain</p>
+                  <p className="text-sm text-gray-300">Disponible pour vous</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="text-2xl">✓</div>
+                <div>
+                  <p className="font-semibold">Expertise congrès médicaux</p>
+                  <p className="text-sm text-gray-300">Spécialistes du secteur</p>
+                </div>
               </div>
             </div>
           </div>
@@ -187,6 +225,87 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ===== HOW IT WORKS SECTION ===== */}
+        <section className="section-padding bg-gray-50">
+          <div className="container">
+            <h2 className="text-4xl font-bold text-center mb-4 text-[#0A2540]">
+              Une mise en place simple et rapide
+            </h2>
+            <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+              5 étapes simples pour déployer votre application de congrès.
+            </p>
+            
+            <div className="max-w-4xl mx-auto">
+              <div className="space-y-8">
+                {/* Step 1 */}
+                <div className="flex gap-6 items-start">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-[#00E5C8] text-[#0A2540] font-bold text-lg">
+                      1
+                    </div>
+                  </div>
+                  <div className="flex-1 pt-1">
+                    <h3 className="text-xl font-bold text-[#0A2540] mb-2">Vous nous transmettez votre programme et vos contenus</h3>
+                    <p className="text-gray-700">Envoyez-nous votre programme, les informations sur les orateurs, les abstracts et tout contenu spécifique.</p>
+                  </div>
+                </div>
+                
+                {/* Step 2 */}
+                <div className="flex gap-6 items-start">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-[#00E5C8] text-[#0A2540] font-bold text-lg">
+                      2
+                    </div>
+                  </div>
+                  <div className="flex-1 pt-1">
+                    <h3 className="text-xl font-bold text-[#0A2540] mb-2">Nous configurons votre application</h3>
+                    <p className="text-gray-700">Notre équipe personnalise l'application avec votre branding, vos couleurs et votre contenu.</p>
+                  </div>
+                </div>
+                
+                {/* Step 3 */}
+                <div className="flex gap-6 items-start">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-[#00E5C8] text-[#0A2540] font-bold text-lg">
+                      3
+                    </div>
+                  </div>
+                  <div className="flex-1 pt-1">
+                    <h3 className="text-xl font-bold text-[#0A2540] mb-2">Nous publions votre application</h3>
+                    <p className="text-gray-700">L'application est publiée sur l'App Store et Google Play, prête à être téléchargée.</p>
+                  </div>
+                </div>
+                
+                {/* Step 4 */}
+                <div className="flex gap-6 items-start">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-[#00E5C8] text-[#0A2540] font-bold text-lg">
+                      4
+                    </div>
+                  </div>
+                  <div className="flex-1 pt-1">
+                    <h3 className="text-xl font-bold text-[#0A2540] mb-2">Vos participants la téléchargent</h3>
+                    <p className="text-gray-700">Les participants reçoivent un lien pour télécharger l'application et accéder à tous les contenus.</p>
+                  </div>
+                </div>
+                
+                {/* Step 5 */}
+                <div className="flex gap-6 items-start">
+                  <div className="flex-shrink-0">
+                    <div className="flex items-center justify-center h-12 w-12 rounded-full bg-[#00E5C8] text-[#0A2540] font-bold text-lg">
+                      5
+                    </div>
+                  </div>
+                  <div className="flex-1 pt-1">
+                    <h3 className="text-xl font-bold text-[#0A2540] mb-2">Vous piloter votre événement sereinement</h3>
+                    <p className="text-gray-700">Gérez les mises à jour en temps réel, suivez l'engagement et accédez aux statistiques en direct.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ===== PACKS SECTION ===== */}
         <section className="section-padding bg-white">
           <div className="container">
@@ -286,7 +405,7 @@ export default function Home() {
                   </p>
                   <blockquote className="border-l-4 border-[#00C4B4] pl-6 mb-6">
                     <p className="text-lg text-gray-700 italic mb-3">
-                      "L'application BlueCongress a transformé notre congrès. Nos participants adorent les notifications en temps réel et le système de vote."
+                      "L'application Pulse Congress a transformé notre congrès. Nos participants adorent les notifications en temps réel et le système de vote."
                     </p>
                     <p className="font-semibold text-[#0A2540]">Coordinateur d'événement</p>
                   </blockquote>
@@ -300,7 +419,7 @@ export default function Home() {
         <section className="section-padding bg-white">
           <div className="container">
             <h2 className="text-4xl font-bold text-center mb-16 text-[#0A2540]">
-              Pourquoi BlueCongress
+              Pourquoi Pulse Congress
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -361,7 +480,7 @@ export default function Home() {
               Prêt à transformer votre congrès ?
             </h2>
             <p className="text-xl text-gray-200 mb-12 max-w-2xl mx-auto">
-              Rejoignez les organisateurs qui font confiance à BlueCongress pour créer des expériences médicales mémorables et mesurables.
+              Rejoignez les organisateurs qui font confiance à Pulse Congress pour créer des expériences médicales mémorables et mesurables.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="bg-[#00C4B4] text-[#0A2540] px-8 py-4 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition">
