@@ -114,3 +114,13 @@
   - Aucun développement spécifique
   - Accompagnement humain
 - [x] Créer checkpoint final après optimisation des bénéfices
+
+
+## Phase 16: Amélioration des Études de Cas
+
+- [x] Ajouter chiffres clés visuels pour Nice Shoulder Course (800+ participants, 50+ sessions, 3 jours)
+- [x] Ajouter bloc "Résultats Obtenus" pour Nice Shoulder Course
+- [x] Ajouter chiffres clés visuels pour ESPOIR Oncologie (600+ participants, 45+ sessions, 2 jours)
+- [x] Ajouter bloc "Résultats Obtenus" pour ESPOIR Oncologie
+- [x] Mettre en avant les résultats plutôt que les fonctionnalités
+- [x] Créer checkpoint final après amélioration des études de cas

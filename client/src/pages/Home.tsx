@@ -379,36 +379,112 @@ export default function Home() {
             
             <div className="space-y-20">
               {/* Nice Shoulder Course */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h3 className="text-3xl font-bold mb-4 text-[#0A2540]">Nice Shoulder Course 2024</h3>
-                  <p className="text-lg text-gray-700 mb-6">
-                    La 12ème édition du congrès le plus important en chirurgie de l'épaule en Europe. Plus de 800 participants, 3 jours, 50+ sessions.
-                  </p>
-                  <blockquote className="border-l-4 border-[#00C4B4] pl-6 mb-6">
-                    <p className="text-lg text-gray-700 italic mb-3">
-                      "Une solution clé en main qui nous a fait gagner un temps précieux et donné de la visibilité à nos sponsors. L'équipe a géré tous les détails techniques."
+              <div className="bg-white rounded-xl p-8 shadow-md">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-8">
+                  <div>
+                    <h3 className="text-3xl font-bold mb-6 text-[#0A2540]">Nice Shoulder Course 2024</h3>
+                    
+                    {/* Chiffres clés */}
+                    <div className="grid grid-cols-3 gap-4 mb-8">
+                      <div className="bg-gradient-to-br from-[#00C4B4]/10 to-[#00C4B4]/5 rounded-lg p-4 text-center">
+                        <p className="text-3xl font-bold text-[#00C4B4]">800+</p>
+                        <p className="text-sm text-gray-600 mt-2">Participants</p>
+                      </div>
+                      <div className="bg-gradient-to-br from-[#00C4B4]/10 to-[#00C4B4]/5 rounded-lg p-4 text-center">
+                        <p className="text-3xl font-bold text-[#00C4B4]">50+</p>
+                        <p className="text-sm text-gray-600 mt-2">Sessions</p>
+                      </div>
+                      <div className="bg-gradient-to-br from-[#00C4B4]/10 to-[#00C4B4]/5 rounded-lg p-4 text-center">
+                        <p className="text-3xl font-bold text-[#00C4B4]">3</p>
+                        <p className="text-sm text-gray-600 mt-2">Jours</p>
+                      </div>
+                    </div>
+                    
+                    <p className="text-lg text-gray-700 mb-6">
+                      La 12ème édition du congrès le plus important en chirurgie de l'épaule en Europe.
                     </p>
-                    <p className="font-semibold text-[#0A2540]">Organisateur de congrès médical</p>
-                  </blockquote>
+                    <blockquote className="border-l-4 border-[#00C4B4] pl-6 mb-8">
+                      <p className="text-lg text-gray-700 italic mb-3">
+                        "Une solution clé en main qui nous a fait gagner un temps précieux et donné de la visibilité à nos sponsors. L'équipe a géré tous les détails techniques."
+                      </p>
+                      <p className="font-semibold text-[#0A2540]">Organisateur de congrès médical</p>
+                    </blockquote>
+                  </div>
+                  <ImageGalleryPreview images={niceShoulderCourseGallery} maxImages={3} />
                 </div>
-                <ImageGalleryPreview images={niceShoulderCourseGallery} maxImages={3} />
+                
+                {/* Résultats */}
+                <div className="bg-gradient-to-r from-[#0A2540] to-[#003087] rounded-lg p-6 text-white">
+                  <h4 className="text-lg font-bold mb-4">✓ Résultats Obtenus</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="flex items-start gap-3">
+                      <span className="text-[#00C4B4] font-bold text-lg">✓</span>
+                      <p>Adoption élevée par les participants</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-[#00C4B4] font-bold text-lg">✓</span>
+                      <p>Réduction du support papier</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-[#00C4B4] font-bold text-lg">✓</span>
+                      <p>Visibilité renforcée pour les sponsors</p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* ESPOIR Oncologie */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <ImageGalleryPreview images={congreEspoirGallery} maxImages={3} />
-                <div>
-                  <h3 className="text-3xl font-bold mb-4 text-[#0A2540]">Congrès ESPOIR Oncologie</h3>
-                  <p className="text-lg text-gray-700 mb-6">
-                    Un congrès médical spécialisé en oncologie avec un focus sur les dernières avancées thérapeutiques. Plus de 600 participants, programme scientifique dense.
-                  </p>
-                  <blockquote className="border-l-4 border-[#00C4B4] pl-6 mb-6">
-                    <p className="text-lg text-gray-700 italic mb-3">
-                      "L'application Pulse Congress a transformé notre congrès. Nos participants adorent les notifications en temps réel et le système de vote."
+              <div className="bg-white rounded-xl p-8 shadow-md">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-8">
+                  <div>
+                    <h3 className="text-3xl font-bold mb-6 text-[#0A2540]">Congrès ESPOIR Oncologie</h3>
+                    
+                    {/* Chiffres clés */}
+                    <div className="grid grid-cols-3 gap-4 mb-8">
+                      <div className="bg-gradient-to-br from-[#00C4B4]/10 to-[#00C4B4]/5 rounded-lg p-4 text-center">
+                        <p className="text-3xl font-bold text-[#00C4B4]">600+</p>
+                        <p className="text-sm text-gray-600 mt-2">Participants</p>
+                      </div>
+                      <div className="bg-gradient-to-br from-[#00C4B4]/10 to-[#00C4B4]/5 rounded-lg p-4 text-center">
+                        <p className="text-3xl font-bold text-[#00C4B4]">45+</p>
+                        <p className="text-sm text-gray-600 mt-2">Sessions</p>
+                      </div>
+                      <div className="bg-gradient-to-br from-[#00C4B4]/10 to-[#00C4B4]/5 rounded-lg p-4 text-center">
+                        <p className="text-3xl font-bold text-[#00C4B4]">2</p>
+                        <p className="text-sm text-gray-600 mt-2">Jours</p>
+                      </div>
+                    </div>
+                    
+                    <p className="text-lg text-gray-700 mb-6">
+                      Un congrès médical spécialisé en oncologie avec un focus sur les dernières avancées thérapeutiques.
                     </p>
-                    <p className="font-semibold text-[#0A2540]">Coordinateur d'événement</p>
-                  </blockquote>
+                    <blockquote className="border-l-4 border-[#00C4B4] pl-6 mb-8">
+                      <p className="text-lg text-gray-700 italic mb-3">
+                        "L'application Pulse Congress a transformé notre congrès. Nos participants adorent les notifications en temps réel et le système de vote."
+                      </p>
+                      <p className="font-semibold text-[#0A2540]">Coordinateur d'événement</p>
+                    </blockquote>
+                  </div>
+                  <ImageGalleryPreview images={congreEspoirGallery} maxImages={3} />
+                </div>
+                
+                {/* Résultats */}
+                <div className="bg-gradient-to-r from-[#0A2540] to-[#003087] rounded-lg p-6 text-white">
+                  <h4 className="text-lg font-bold mb-4">✓ Résultats Obtenus</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="flex items-start gap-3">
+                      <span className="text-[#00C4B4] font-bold text-lg">✓</span>
+                      <p>Engagement accru des participants</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-[#00C4B4] font-bold text-lg">✓</span>
+                      <p>Feedback en temps réel capturé</p>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <span className="text-[#00C4B4] font-bold text-lg">✓</span>
+                      <p>Taux de satisfaction élevé</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
