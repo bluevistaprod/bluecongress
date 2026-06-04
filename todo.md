@@ -165,3 +165,15 @@
 - [x] Mettre à jour le titre de la FAQ : "Foire Aux Questions" → "Questions fréquentes des organisateurs de congrès"
 - [x] Conserver le CTA final
 - [x] Créer checkpoint final après refonte de la page À Propos
+
+
+## Phase 20: Refonte de la Page "Cas Clients" pour Crédibilité Commerciale
+
+- [x] Remplacer le hero : "Ils Nous Font Confiance" → "Des congrès réels. Des résultats mesurables."
+- [x] Ajouter la barre de preuves visuelle (20+ ans, 100+ événements, 10000+ participants, déploiement rapide, RGPD, support)
+- [x] Améliorer la présentation des résultats avec cartes KPI visuelles dominantes
+- [x] Ajouter la section "Pourquoi les organisateurs choisissent Pulse Congress ?" avec 6 cartes
+- [x] Renforcer le CTA final avec deux boutons (Demander une démonstration + Prendre rendez-vous)
+- [x] Uniformiser le vocabulaire : "Bluevista Production" → "Pulse Congress"
+- [x] Corriger les bugs d'affichage des captures d'écran
+- [x] Créer checkpoint final après refonte de la page Cas Clients
