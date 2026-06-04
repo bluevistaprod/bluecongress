@@ -25,7 +25,6 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-8">
           <Link href="/offres" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Nos Offres</Link>
           <Link href="/cas-clients" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Cas Clients</Link>
-          <Link href="/blog" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Blog</Link>
           <Link href="/faq" onClick={handleNavClick} className="text-foreground hover:text-primary transition">FAQ</Link>
           <Link href="/a-propos" onClick={handleNavClick} className="text-foreground hover:text-primary transition">À Propos</Link>
           <Link href="/contact" onClick={handleNavClick} className="btn-primary">Contact</Link>
@@ -47,8 +46,7 @@ export default function Header() {
           <div className="container py-4 flex flex-col gap-4">
             <Link href="/offres" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Nos Offres</Link>
             <Link href="/cas-clients" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Cas Clients</Link>
-            <Link href="/blog" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Blog</Link>
-            <Link href="/faq" onClick={handleNavClick} className="text-foreground hover:text-primary transition">FAQ</Link>
+              <Link href="/faq" onClick={handleNavClick} className="text-foreground hover:text-primary transition">FAQ</Link>
             <Link href="/a-propos" onClick={handleNavClick} className="text-foreground hover:text-primary transition">À Propos</Link>
             <Link href="/contact" onClick={handleNavClick} className="btn-primary w-full text-center">Contact</Link>
           </div>

@@ -93,4 +93,15 @@
 
 ## Phase 13: Corrections Futures
 
-- [ ] Corriger l'image d'accueil du Congrès ESPOIR (Écran d'Accueil Premium) - actuellement affiche une image de Nice Shoulder Course
+- [x] Corriger l'image d'accueil du Congrès ESPOIR (Écran d'Accueil Premium) - actuellement affiche une image de Nice Shoulder Course
+
+
+## Phase 14: Suppression du Blog
+
+- [x] Supprimer le fichier Blog.tsx
+- [x] Supprimer la route /blog du fichier App.tsx
+- [x] Retirer le lien "Blog" du menu principal dans Header.tsx
+- [x] Retirer tous les liens internes pointant vers /blog
+- [x] Réorganiser le menu : Nos Offres → Cas Clients → FAQ → À Propos → Contact
+- [x] Valider que tous les liens sont supprimés
+- [x] Créer checkpoint final après suppression du blog

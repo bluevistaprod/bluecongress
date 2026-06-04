@@ -8,7 +8,7 @@ import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
 import { initializeOffers } from "../init-offers";
-import { initializeBlogArticles } from "../init-blog-articles";
+
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -32,8 +32,7 @@ async function findAvailablePort(startPort: number = 3000): Promise<number> {
 async function startServer() {
   // Initialize default offers on startup
   await initializeOffers();
-  // Initialize blog articles on startup
-  await initializeBlogArticles();
+
   
   const app = express();
   const server = createServer(app);

@@ -11,7 +11,7 @@ import APropos from "./pages/APropos";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import Admin from "./pages/Admin";
-import Blog from "./pages/Blog";
+
 
 function Router() {
   // make sure to consider if you need authentication for certain routes
@@ -22,7 +22,6 @@ function Router() {
       <Route path="/cas-clients" component={CasClients} />
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
-      <Route path="/blog/:slug?" component={Blog} />
       <Route path="/contact" component={Contact} />
       <Route path="/admin" component={Admin} />
       <Route path="/404" component={NotFound} />

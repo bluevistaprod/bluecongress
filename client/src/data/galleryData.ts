@@ -48,7 +48,7 @@ export const congreEspoirGallery = [
     id: 'ce-1',
     title: 'Écran d\'Accueil Premium',
     description: 'Interface sophistiquée avec branding personnalisé du congrès',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4008_3b5f8f0c.webp',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4011_d4c7f9e2.webp',
     placeholder: 'bg-gradient-to-br from-teal-400 to-teal-600'
   },
   {
@@ -69,7 +69,7 @@ export const congreEspoirGallery = [
     id: 'ce-4',
     title: 'Fiches Intervenants',
     description: 'Profils détaillés des orateurs avec biographies et photos',
-    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4008_3b5f8f0c.webp',
+    image: 'https://d2xsxph8kpxj0f.cloudfront.net/310519663405351247/6nnyUPh6Mg74pJbVKFbCeZ/IMG_4020_8e3f6b1d.webp',
     placeholder: 'bg-gradient-to-br from-violet-400 to-violet-600'
   },
   {
