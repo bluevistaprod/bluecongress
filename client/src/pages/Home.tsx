@@ -423,47 +423,47 @@ export default function Home() {
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {/* Avantage 1 */}
+              {/* Bénéfice 1 */}
               <div className="text-center">
                 <div className="bg-[#00C4B4]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Award className="text-[#00C4B4]" size={32} />
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-[#0A2540]">Solution Française</h3>
+                <h3 className="text-lg font-bold mb-3 text-[#0A2540]">Conçu pour les congrès médicaux et scientifiques</h3>
                 <p className="text-gray-700">
-                  Développée en France par des experts du secteur événementiel médical.
+                  Une solution pensée pour les contraintes spécifiques des congrès scientifiques, médicaux et associatifs.
                 </p>
               </div>
               
-              {/* Avantage 2 */}
-              <div className="text-center">
-                <div className="bg-[#00C4B4]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Lock className="text-[#00C4B4]" size={32} />
-                </div>
-                <h3 className="text-lg font-bold mb-3 text-[#0A2540]">RGPD Compliant</h3>
-                <p className="text-gray-700">
-                  Hébergement en France, conformité RGPD garantie, données sécurisées.
-                </p>
-              </div>
-              
-              {/* Avantage 3 */}
+              {/* Bénéfice 2 */}
               <div className="text-center">
                 <div className="bg-[#00C4B4]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Zap className="text-[#00C4B4]" size={32} />
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-[#0A2540]">Mise en Place Rapide</h3>
+                <h3 className="text-lg font-bold mb-3 text-[#0A2540]">Déploiement rapide</h3>
                 <p className="text-gray-700">
-                  Application prête en 7 jours. Pas de développement custom, pas de délai.
+                  Votre application peut être prête en quelques jours après réception des contenus.
                 </p>
               </div>
               
-              {/* Avantage 4 */}
+              {/* Bénéfice 3 */}
+              <div className="text-center">
+                <div className="bg-[#00C4B4]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Lock className="text-[#00C4B4]" size={32} />
+                </div>
+                <h3 className="text-lg font-bold mb-3 text-[#0A2540]">Aucun développement spécifique</h3>
+                <p className="text-gray-700">
+                  Nous adaptons une plateforme éprouvée. Pas de projet informatique complexe.
+                </p>
+              </div>
+              
+              {/* Bénéfice 4 */}
               <div className="text-center">
                 <div className="bg-[#00C4B4]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Headphones className="text-[#00C4B4]" size={32} />
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-[#0A2540]">Support Humain</h3>
+                <h3 className="text-lg font-bold mb-3 text-[#0A2540]">Accompagnement humain</h3>
                 <p className="text-gray-700">
-                  Équipe dédiée avant, pendant et après votre congrès. Support en français.
+                  Une équipe vous accompagne avant, pendant et après votre événement.
                 </p>
               </div>
             </div>
