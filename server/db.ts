@@ -1,6 +1,6 @@
 import { eq, desc, and } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, offers, features, blogArticles, type Offer, type Feature, type InsertOffer, type InsertFeature, type BlogArticle, type InsertBlogArticle } from "../drizzle/schema";
+import { InsertUser, users, offers, features, type Offer, type Feature, type InsertOffer, type InsertFeature } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
@@ -194,52 +194,3 @@ export async function addFeature(offerId: string, feature: InsertFeature) {
 }
 
 
-// Blog Articles Helpers
-export async function getAllBlogArticles() {
-  const db = await getDb();
-  if (!db) return [];
-  return await db.select().from(blogArticles).where(eq(blogArticles.published, 1)).orderBy(desc(blogArticles.publishedAt));
-}
-
-export async function getBlogArticleBySlug(slug: string) {
-  const db = await getDb();
-  if (!db) return null;
-  const result = await db.select().from(blogArticles).where(eq(blogArticles.slug, slug)).limit(1);
-  return result[0] || null;
-}
-
-export async function getBlogArticlesByCategory(category: string) {
-  const db = await getDb();
-  if (!db) return [];
-  return await db.select().from(blogArticles).where(and(eq(blogArticles.category, category), eq(blogArticles.published, 1))).orderBy(desc(blogArticles.publishedAt));
-}
-
-export async function createBlogArticle(article: InsertBlogArticle) {
-  const db = await getDb();
-  if (!db) throw new Error("Database not available");
-  return await db.insert(blogArticles).values(article);
-}
-
-export async function updateBlogArticle(id: string, article: Partial<InsertBlogArticle>) {
-  const db = await getDb();
-  if (!db) throw new Error("Database not available");
-  return await db.update(blogArticles).set(article).where(eq(blogArticles.id, id));
-}
-
-export async function deleteBlogArticle(id: string) {
-  const db = await getDb();
-  if (!db) throw new Error("Database not available");
-  return await db.delete(blogArticles).where(eq(blogArticles.id, id));
-}
-
-export async function publishBlogArticle(id: string) {
-  const db = await getDb();
-  if (!db) throw new Error("Database not available");
-  return await db.update(blogArticles).set({ published: 1, publishedAt: new Date() }).where(eq(blogArticles.id, id));
-}
-
-export async function unpublishBlogArticle(id: string) {
-  const db = await getDb();
-  if (!db) throw new Error("Database not available");
-  return await db.update(blogArticles).set({ published: 0 }).where(eq(blogArticles.id, id));
-}

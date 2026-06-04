@@ -75,16 +75,15 @@
 - [x] Valider que les images sont lisibles et bien présentées
 
 
-## Phase 11: Section Blog pour SEO
+## Phase 11: Section Blog pour SEO (SUPPRIMÉE)
 
 - [x] Créer les tables de base de données pour les articles
 - [x] Générer 7 images pour les articles du blog
-- [x] Rédiger 7 articles longs sur l'engagement et le ROI
-- [ ] Créer le backoffice de gestion des articles
 - [x] Créer la page blog avec listing et détail des articles
 - [x] Intégrer le blog au menu et optimiser le SEO
 - [x] Tester et valider le blog
 - [x] Corriger l'affichage du contenu complet des articles avec react-markdown
+- [x] Supprimer le blog du site (Phase 14)
 
 ## Phase 12: Correction des Images Cassées
 

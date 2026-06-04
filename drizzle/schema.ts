@@ -59,23 +59,3 @@ export const features = mysqlTable("features", {
 export type Feature = typeof features.$inferSelect;
 export type InsertFeature = typeof features.$inferInsert;
 
-/**
- * Table des articles du blog
- */
-export const blogArticles = mysqlTable("blog_articles", {
-  id: varchar("id", { length: 64 }).primaryKey(),
-  title: varchar("title", { length: 255 }).notNull(),
-  slug: varchar("slug", { length: 255 }).notNull().unique(),
-  excerpt: text("excerpt").notNull(),
-  content: text("content").notNull(),
-  imageUrl: text("imageUrl"),
-  category: varchar("category", { length: 64 }).notNull(), // 'engagement' ou 'roi'
-  author: varchar("author", { length: 255 }).default("Bluevista").notNull(),
-  published: int("published").default(0).notNull(),
-  publishedAt: timestamp("publishedAt"),
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
-});
-
-export type BlogArticle = typeof blogArticles.$inferSelect;
-export type InsertBlogArticle = typeof blogArticles.$inferInsert;
