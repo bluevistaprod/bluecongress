@@ -124,3 +124,18 @@
 - [x] Ajouter bloc "Résultats Obtenus" pour ESPOIR Oncologie
 - [x] Mettre en avant les résultats plutôt que les fonctionnalités
 - [x] Créer checkpoint final après amélioration des études de cas
+
+
+## Phase 17: Simplification de la Page Contact
+
+- [x] Supprimer le choix du pack
+- [x] Supprimer la sélection de date
+- [x] Supprimer la sélection d'heure
+- [x] Supprimer le type d'événement
+- [x] Supprimer le nombre de participants
+- [x] Conserver uniquement : Nom, Email, Organisation, Téléphone (optionnel), Message
+- [x] Mettre à jour le titre : "Demandez une démonstration personnalisée"
+- [x] Mettre à jour le sous-titre avec branding Pulse Congress
+- [x] Ajouter l'encart rassurant "Réponse sous 24h ouvrées"
+- [x] Mettre à jour le bouton : "Demander une démonstration"
+- [x] Créer checkpoint final après simplification de la page Contact

@@ -1,23 +1,20 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Send, CheckCircle2 } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import DemoBooking from '@/components/DemoBooking';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    organization: '',
     phone: '',
-    company: '',
-    eventType: '',
-    participants: '',
     message: ''
   });
 
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -34,10 +31,8 @@ export default function Contact() {
       setFormData({
         name: '',
         email: '',
+        organization: '',
         phone: '',
-        company: '',
-        eventType: '',
-        participants: '',
         message: ''
       });
       setSubmitted(false);
@@ -49,220 +44,127 @@ export default function Contact() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="section-padding bg-gradient-to-br from-background via-card to-background">
+        <section className="section-padding bg-gradient-to-br from-[#0A2540] via-[#003087] to-[#0A2540]">
           <div className="container">
-            <h1 className="text-5xl font-bold text-center mb-6">Contactez-Nous</h1>
-            <p className="text-center text-muted-foreground text-xl max-w-2xl mx-auto">
-              Parlons de votre prochain événement. Notre équipe est prête à vous aider.
+            <h1 className="text-5xl font-bold text-center mb-6 text-white">
+              Demandez une démonstration personnalisée
+            </h1>
+            <p className="text-center text-gray-200 text-xl max-w-2xl mx-auto">
+              Découvrez comment Pulse Congress peut simplifier l'organisation de votre prochain congrès.
             </p>
           </div>
         </section>
 
-        {/* Demo Booking Section */}
-        <section className="section-padding bg-card">
+        {/* Contact Form Section */}
+        <section className="section-padding bg-gray-50">
           <div className="container max-w-2xl">
-            <DemoBooking />
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="section-padding bg-background">
-          <div className="container">
-            <h2 className="text-4xl font-bold text-center mb-16">Autres Moyens de Nous Contacter</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-              {/* Contact Info */}
-              <div className="lg:col-span-1">
-                <h2 className="text-2xl font-bold mb-8">Informations de Contact</h2>
-                
-                <div className="space-y-8">
-                  <div className="flex gap-4">
-                    <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="text-primary" size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-2">Email</h3>
-                      <p className="text-muted-foreground">contact@bluevista.fr</p>
-                      <p className="text-muted-foreground">Réponse sous 24h</p>
-                    </div>
+            <div className="bg-white rounded-xl p-8 shadow-md">
+              {submitted ? (
+                <div className="text-center py-12">
+                  <div className="flex justify-center mb-6">
+                    <CheckCircle2 size={64} className="text-[#00C4B4]" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-[#0A2540]">Merci pour votre demande !</h3>
+                  <p className="text-gray-700 mb-2">
+                    Nous avons bien reçu votre message.
+                  </p>
+                  <p className="text-gray-600">
+                    Notre équipe vous contactera dans les 24 heures ouvrées.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Nom */}
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-[#0A2540]">Nom *</label>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#00C4B4] focus:ring-2 focus:ring-[#00C4B4]/20"
+                      placeholder="Votre nom"
+                    />
                   </div>
 
-                  <div className="flex gap-4">
-                    <div className="bg-secondary/10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="text-secondary" size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-2">Téléphone</h3>
-                      <p className="text-muted-foreground">+33 (0)X XX XX XX XX</p>
-                      <p className="text-muted-foreground">Lun-Ven 9h-18h</p>
-                    </div>
+                  {/* Email */}
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-[#0A2540]">Email *</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#00C4B4] focus:ring-2 focus:ring-[#00C4B4]/20"
+                      placeholder="votre@email.com"
+                    />
                   </div>
 
-                  <div className="flex gap-4">
-                    <div className="bg-accent/10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="text-accent" size={24} />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-2">Adresse</h3>
-                      <p className="text-muted-foreground">Bluevista Production</p>
-                      <p className="text-muted-foreground">France</p>
-                    </div>
+                  {/* Organisation */}
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-[#0A2540]">Organisation *</label>
+                    <input
+                      type="text"
+                      name="organization"
+                      value={formData.organization}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#00C4B4] focus:ring-2 focus:ring-[#00C4B4]/20"
+                      placeholder="Votre organisation"
+                    />
                   </div>
-                </div>
 
-                <div className="mt-12 pt-8 border-t border-border">
-                  <h3 className="font-semibold mb-4">Horaires</h3>
-                  <ul className="space-y-2 text-muted-foreground text-sm">
-                    <li>Lundi - Vendredi: 9h00 - 18h00</li>
-                    <li>Samedi - Dimanche: Fermé</li>
-                    <li>Jours fériés: Fermé</li>
-                  </ul>
-                </div>
-              </div>
+                  {/* Téléphone */}
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-[#0A2540]">Téléphone (optionnel)</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#00C4B4] focus:ring-2 focus:ring-[#00C4B4]/20"
+                      placeholder="+33 (0)X XX XX XX XX"
+                    />
+                  </div>
 
-              {/* Contact Form */}
-              <div className="lg:col-span-2">
-                <div className="bg-card rounded-xl p-8 border border-border">
-                  <h2 className="text-2xl font-bold mb-6">Envoyez-Nous un Message</h2>
-                  
-                  {submitted ? (
-                    <div className="bg-accent/10 border-2 border-accent rounded-lg p-8 text-center">
-                      <div className="text-4xl mb-4">✓</div>
-                      <h3 className="text-xl font-bold mb-2 text-accent">Message Envoyé !</h3>
-                      <p className="text-muted-foreground">
-                        Merci pour votre message. Notre équipe vous contactera dans les 24 heures.
-                      </p>
-                    </div>
-                  ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                          <label className="block text-sm font-semibold mb-2">Nom *</label>
-                          <input
-                            type="text"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                            placeholder="Votre nom"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-semibold mb-2">Email *</label>
-                          <input
-                            type="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                            className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                            placeholder="votre@email.com"
-                          />
-                        </div>
-                      </div>
+                  {/* Message */}
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-[#0A2540]">Message *</label>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows={5}
+                      className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#00C4B4] focus:ring-2 focus:ring-[#00C4B4]/20"
+                      placeholder="Décrivez votre projet et vos besoins..."
+                    />
+                  </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                          <label className="block text-sm font-semibold mb-2">Téléphone</label>
-                          <input
-                            type="tel"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                            placeholder="+33 (0)X XX XX XX XX"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-sm font-semibold mb-2">Entreprise</label>
-                          <input
-                            type="text"
-                            name="company"
-                            value={formData.company}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                            placeholder="Votre entreprise"
-                          />
-                        </div>
-                      </div>
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    className="w-full bg-[#00C4B4] hover:bg-[#00C4B4]/90 text-[#0A2540] font-bold py-3 px-6 rounded-lg flex items-center justify-center gap-2 transition"
+                  >
+                    <Send size={20} />
+                    Demander une démonstration
+                  </button>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                          <label className="block text-sm font-semibold mb-2">Type d'Événement</label>
-                          <select
-                            name="eventType"
-                            value={formData.eventType}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                          >
-                            <option value="">Sélectionnez un type</option>
-                            <option value="medical">Congrès Médical</option>
-                            <option value="scientific">Congrès Scientifique</option>
-                            <option value="corporate">Événement Corporate</option>
-                            <option value="seminar">Séminaire</option>
-                            <option value="other">Autre</option>
-                          </select>
-                        </div>
-                        <div>
-                          <label className="block text-sm font-semibold mb-2">Nombre de Participants</label>
-                          <select
-                            name="participants"
-                            value={formData.participants}
-                            onChange={handleChange}
-                            className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                          >
-                            <option value="">Sélectionnez une plage</option>
-                            <option value="50-100">50 - 100</option>
-                            <option value="100-300">100 - 300</option>
-                            <option value="300-500">300 - 500</option>
-                            <option value="500-1000">500 - 1000</option>
-                            <option value="1000+">1000+</option>
-                          </select>
-                        </div>
-                      </div>
+                  {/* Reassurance Message */}
+                  <div className="bg-[#00C4B4]/10 border-l-4 border-[#00C4B4] p-4 rounded">
+                    <p className="text-sm text-gray-700">
+                      <span className="font-semibold text-[#00C4B4]">✓ Réponse sous 24h ouvrées</span>
+                    </p>
+                  </div>
 
-                      <div>
-                        <label className="block text-sm font-semibold mb-2">Message *</label>
-                        <textarea
-                          name="message"
-                          value={formData.message}
-                          onChange={handleChange}
-                          required
-                          rows={5}
-                          className="w-full px-4 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                          placeholder="Décrivez votre projet et vos besoins..."
-                        />
-                      </div>
-
-                      <button
-                        type="submit"
-                        className="btn-primary w-full flex items-center justify-center gap-2"
-                      >
-                        <Send size={20} />
-                        Envoyer le Message
-                      </button>
-
-                      <p className="text-xs text-muted-foreground">
-                        * Champs obligatoires. Nous respectons votre vie privée et ne partagerons jamais vos données.
-                      </p>
-                    </form>
-                  )}
-                </div>
-              </div>
+                  <p className="text-xs text-gray-600">
+                    * Champs obligatoires. Nous respectons votre vie privée et ne partagerons jamais vos données.
+                  </p>
+                </form>
+              )}
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="section-padding bg-gradient-to-r from-primary to-secondary text-primary-foreground">
-          <div className="container text-center">
-            <h2 className="text-4xl font-bold mb-6">Vous Préférez un Appel Téléphonique ?</h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-              Notre équipe est disponible pour discuter directement de votre projet et répondre à toutes vos questions.
-            </p>
-            <a href="tel:+33XXXXXXXXXX" className="inline-block bg-primary-foreground text-primary px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition">
-              Appelez-Nous Maintenant
-            </a>
           </div>
         </section>
       </main>
