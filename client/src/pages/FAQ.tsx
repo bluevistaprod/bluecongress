@@ -142,7 +142,7 @@ export default function FAQ() {
         {/* Hero Section */}
         <section className="section-padding bg-gradient-to-br from-background via-card to-background">
           <div className="container">
-            <h1 className="text-5xl font-bold text-center mb-6">Foire Aux Questions</h1>
+            <h1 className="text-5xl font-bold text-center mb-6">Questions fréquentes des organisateurs de congrès</h1>
             <p className="text-center text-muted-foreground text-xl max-w-2xl mx-auto">
               Trouvez les réponses à vos questions sur notre application de congrès.
             </p>

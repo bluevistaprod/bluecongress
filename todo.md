@@ -153,3 +153,15 @@
 - [x] Ajouter la section "Inclus dans toutes nos offres" avec 4 points clés
 - [x] Mettre à jour le messaging pour éviter l'effet "low-cost"
 - [x] Créer checkpoint final après optimisation de la page Offres
+
+
+## Phase 19: Refonte de la Page "À Propos" pour Crédibilité Commerciale
+
+- [x] Remplacer le hero avec le nouveau titre et sous-titre
+- [x] Ajouter la section chiffres clés (20+ ans, 100+ événements, 10000+ participants, support)
+- [x] Réduire la section histoire aux 4 points clés
+- [x] Remplacer la section équipe par "Notre expertise" avec 4 domaines
+- [x] Ajouter la section "Pourquoi les organisateurs nous choisissent ?" avec 6 points
+- [x] Mettre à jour le titre de la FAQ : "Foire Aux Questions" → "Questions fréquentes des organisateurs de congrès"
+- [x] Conserver le CTA final
+- [x] Créer checkpoint final après refonte de la page À Propos
