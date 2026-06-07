@@ -2,7 +2,7 @@ import { Users, TrendingUp, Leaf, Zap, Award, MessageSquare, BarChart3, Clock } 
 import { Link } from 'wouter';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ImageGalleryMobile from '@/components/ImageGalleryMobile';
+import ImageSlider from '@/components/ImageSlider';
 import { niceShoulderCourseGallery, congreEspoirGallery } from '@/data/galleryData';
 
 export default function CasClients() {
@@ -84,8 +84,8 @@ export default function CasClients() {
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div className="flex justify-center order-2 lg:order-1">
-                <div className="w-full max-w-sm">
-                  <ImageGalleryMobile images={niceShoulderCourseGallery} />
+                <div className="w-full">
+                  <ImageSlider images={niceShoulderCourseGallery} />
                 </div>
               </div>
               <div className="order-1 lg:order-2">
@@ -187,8 +187,8 @@ export default function CasClients() {
                 </Link>
               </div>
               <div className="flex justify-center">
-                <div className="w-full max-w-sm">
-                  <ImageGalleryMobile images={congreEspoirGallery} />
+                <div className="w-full">
+                  <ImageSlider images={congreEspoirGallery} />
                 </div>
               </div>
             </div>
