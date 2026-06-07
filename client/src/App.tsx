@@ -10,6 +10,7 @@ import CasClients from "./pages/CasClients";
 import APropos from "./pages/APropos";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
+import DemandezDemonstration from "./pages/DemandezDemonstration";
 import Admin from "./pages/Admin";
 
 
@@ -23,6 +24,7 @@ function Router() {
       <Route path="/a-propos" component={APropos} />
       <Route path="/faq" component={FAQ} />
       <Route path="/contact" component={Contact} />
+      <Route path="/demander-une-demonstration" component={DemandezDemonstration} />
       <Route path="/admin" component={Admin} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}

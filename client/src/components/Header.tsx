@@ -27,7 +27,7 @@ export default function Header() {
           <Link href="/cas-clients" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Cas Clients</Link>
           <Link href="/faq" onClick={handleNavClick} className="text-foreground hover:text-primary transition">FAQ</Link>
           <Link href="/a-propos" onClick={handleNavClick} className="text-foreground hover:text-primary transition">À Propos</Link>
-          <Link href="/contact" onClick={handleNavClick} className="btn-primary">Contact</Link>
+          <Link href="/demander-une-demonstration" onClick={handleNavClick} className="btn-primary">Demander une démo</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -48,7 +48,7 @@ export default function Header() {
             <Link href="/cas-clients" onClick={handleNavClick} className="text-foreground hover:text-primary transition">Cas Clients</Link>
               <Link href="/faq" onClick={handleNavClick} className="text-foreground hover:text-primary transition">FAQ</Link>
             <Link href="/a-propos" onClick={handleNavClick} className="text-foreground hover:text-primary transition">À Propos</Link>
-            <Link href="/contact" onClick={handleNavClick} className="btn-primary w-full text-center">Contact</Link>
+            <Link href="/demander-une-demonstration" onClick={handleNavClick} className="btn-primary w-full text-center">Demander une démo</Link>
           </div>
         </div>
       )}

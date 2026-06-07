@@ -187,3 +187,19 @@
 - [x] Vérifier la cohérence des deux études de cas (structure, espacements, alignement)
 - [x] Renforcer visuellement les KPI (éléments les plus visibles après le titre)
 - [x] Créer checkpoint final après optimisation finale de la page Cas Clients
+
+
+## Phase 22: Création de la Page "Demander une Démonstration"
+
+- [x] Créer le fichier DemandezDemonstration.tsx avec toutes les sections
+  - [x] Section Hero avec titre et deux boutons
+  - [x] Section Réassurance avec 4 cartes (déploiement rapide, RGPD, support, expérience)
+  - [x] Section "Comment se déroule la démo ?" avec timeline en 4 étapes
+  - [x] Section Témoignage premium
+  - [x] Section Calendrier avec emplacement Calendly
+  - [x] Section FAQ Rapide avec 3 questions
+  - [x] Footer CTA avec bouton d'action
+- [x] Ajouter la route /demander-une-demonstration dans App.tsx
+- [x] Remplacer le bouton "Contact" par "Demander une démo" dans Header
+- [x] Tester la page et vérifier l'affichage de tous les éléments
+- [x] Créer checkpoint final
