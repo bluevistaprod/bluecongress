@@ -54,22 +54,66 @@ export default function CasClients() {
           </div>
         </section>
 
+        {/* Client Logos Section */}
+        <section className="section-padding bg-gray-50 border-b border-gray-200">
+          <div className="container">
+            <h2 className="text-3xl font-bold text-center mb-12 text-[#0A2540]">Ils nous font confiance</h2>
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+              {/* Placeholder logos in monochrome gray */}
+              <div className="w-32 h-16 bg-gray-300 rounded-lg flex items-center justify-center">
+                <span className="text-gray-500 font-semibold text-sm">Client 1</span>
+              </div>
+              <div className="w-32 h-16 bg-gray-300 rounded-lg flex items-center justify-center">
+                <span className="text-gray-500 font-semibold text-sm">Client 2</span>
+              </div>
+              <div className="w-32 h-16 bg-gray-300 rounded-lg flex items-center justify-center">
+                <span className="text-gray-500 font-semibold text-sm">Client 3</span>
+              </div>
+              <div className="w-32 h-16 bg-gray-300 rounded-lg flex items-center justify-center">
+                <span className="text-gray-500 font-semibold text-sm">Client 4</span>
+              </div>
+              <div className="w-32 h-16 bg-gray-300 rounded-lg flex items-center justify-center">
+                <span className="text-gray-500 font-semibold text-sm">Client 5</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Case Study 1: Nice Shoulder Course */}
         <section className="section-padding bg-white">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div className="flex justify-center order-2 lg:order-1">
                 <div className="w-full max-w-sm">
                   <ImageGalleryMobile images={niceShoulderCourseGallery} />
                 </div>
               </div>
               <div className="order-1 lg:order-2">
-                <p className="text-[#00C4B4] font-semibold mb-2">ÉTUDE DE CAS</p>
-                <h2 className="text-4xl font-bold mb-6 text-[#0A2540]">Nice Shoulder Course 2024</h2>
-                <p className="text-gray-600 mb-6">
+                <p className="text-[#00C4B4] font-semibold mb-2 uppercase tracking-wide">Étude de Cas</p>
+                <h2 className="text-4xl font-bold mb-2 text-[#0A2540]">Nice Shoulder Course 2024</h2>
+                <p className="text-gray-600 mb-8">
                   <span className="font-semibold text-[#0A2540]">Secteur :</span> Médical - Orthopédie
                 </p>
                 
+                {/* KPI Section - Most Prominent */}
+                <div className="bg-gradient-to-br from-[#00C4B4]/5 to-[#00C4B4]/10 rounded-xl p-8 mb-8 border border-[#00C4B4]/20">
+                  <p className="text-sm font-semibold text-[#0A2540] mb-6 uppercase tracking-wide">Résultats Obtenus</p>
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="text-center">
+                      <p className="text-4xl font-bold text-[#00C4B4] mb-2">+35%</p>
+                      <p className="text-sm font-semibold text-[#0A2540]">d'engagement</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-4xl font-bold text-[#00C4B4] mb-2">95%</p>
+                      <p className="text-sm font-semibold text-[#0A2540]">de satisfaction</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-4xl font-bold text-[#00C4B4] mb-2">-2T</p>
+                      <p className="text-sm font-semibold text-[#0A2540]">de papier</p>
+                    </div>
+                  </div>
+                </div>
+
                 <h3 className="text-xl font-bold mb-4 text-[#0A2540]">Le Défi</h3>
                 <p className="text-gray-600 mb-6">
                   L'organisateur du Nice Shoulder Course faisait face à des défis majeurs : gestion manuelle du programme papier, difficulté à informer les participants en temps réel des changements de dernière minute, et manque d'interactivité pour engager les participants.
@@ -80,29 +124,13 @@ export default function CasClients() {
                   Nous avons développé une application mobile personnalisée avec un programme interactif, un système de favoris permettant aux participants de composer leur propre agenda, et des notifications push pour les mises à jour en temps réel.
                 </p>
 
-                <h3 className="text-xl font-bold mb-6 text-[#0A2540]">Les Résultats</h3>
-                <div className="grid grid-cols-3 gap-4 mb-8">
-                  <div className="bg-gradient-to-br from-[#00C4B4]/10 to-[#00C4B4]/5 rounded-lg p-6 text-center border border-[#00C4B4]/20">
-                    <p className="text-3xl font-bold text-[#00C4B4] mb-2">+35%</p>
-                    <p className="text-sm font-semibold text-[#0A2540]">d'engagement</p>
-                  </div>
-                  <div className="bg-gradient-to-br from-[#00C4B4]/10 to-[#00C4B4]/5 rounded-lg p-6 text-center border border-[#00C4B4]/20">
-                    <p className="text-3xl font-bold text-[#00C4B4] mb-2">95%</p>
-                    <p className="text-sm font-semibold text-[#0A2540]">de satisfaction</p>
-                  </div>
-                  <div className="bg-gradient-to-br from-[#00C4B4]/10 to-[#00C4B4]/5 rounded-lg p-6 text-center border border-[#00C4B4]/20">
-                    <p className="text-3xl font-bold text-[#00C4B4] mb-2">-2T</p>
-                    <p className="text-sm font-semibold text-[#0A2540]">de papier</p>
-                  </div>
-                </div>
-
                 <blockquote className="border-l-4 border-[#00C4B4] pl-6 py-4 mb-8 italic text-gray-600">
                   "L'application Pulse Congress a transformé notre congrès. Nos participants adorent la facilité d'accès au programme et les notifications en temps réel. C'est devenu un incontournable !"
                   <p className="text-sm text-[#0A2540] font-semibold mt-2">— Dr. Dupont, Organisateur</p>
                 </blockquote>
 
                 <Link href="/contact" className="inline-block bg-[#00C4B4] text-[#0A2540] px-6 py-3 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition">
-                  Découvrir Plus
+                  Demander une démo similaire
                 </Link>
               </div>
             </div>
@@ -112,14 +140,33 @@ export default function CasClients() {
         {/* Case Study 2: Congrès ESPOIR */}
         <section className="section-padding bg-gray-50">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
               <div>
-                <p className="text-[#00C4B4] font-semibold mb-2">ÉTUDE DE CAS</p>
-                <h2 className="text-4xl font-bold mb-6 text-[#0A2540]">Congrès ESPOIR Oncologie</h2>
-                <p className="text-gray-600 mb-6">
+                <p className="text-[#00C4B4] font-semibold mb-2 uppercase tracking-wide">Étude de Cas</p>
+                <h2 className="text-4xl font-bold mb-2 text-[#0A2540]">Congrès ESPOIR Oncologie</h2>
+                <p className="text-gray-600 mb-8">
                   <span className="font-semibold text-[#0A2540]">Secteur :</span> Médical - Oncologie
                 </p>
                 
+                {/* KPI Section - Most Prominent */}
+                <div className="bg-gradient-to-br from-[#0A2540]/5 to-[#0A2540]/10 rounded-xl p-8 mb-8 border border-[#0A2540]/20">
+                  <p className="text-sm font-semibold text-[#0A2540] mb-6 uppercase tracking-wide">Résultats Obtenus</p>
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="text-center">
+                      <p className="text-4xl font-bold text-[#0A2540] mb-2">+50%</p>
+                      <p className="text-sm font-semibold text-[#0A2540]">d'utilisation</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-4xl font-bold text-[#0A2540] mb-2">98%</p>
+                      <p className="text-sm font-semibold text-[#0A2540]">de satisfaction</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-4xl font-bold text-[#0A2540] mb-2">-3.5T</p>
+                      <p className="text-sm font-semibold text-[#0A2540]">de papier</p>
+                    </div>
+                  </div>
+                </div>
+
                 <h3 className="text-xl font-bold mb-4 text-[#0A2540]">Le Défi</h3>
                 <p className="text-gray-600 mb-6">
                   Avec plus de 800 participants, le Congrès ESPOIR Oncologie avait besoin d'une solution robuste pour gérer un programme complexe, des abstracts scientifiques, et des sessions parallèles multiples. La gestion des données était particulièrement chronophage.
@@ -130,29 +177,13 @@ export default function CasClients() {
                   Nous avons implémenté notre Pack Premium/Médical avec accompagnement complet. Notre équipe a pris en charge l'intégration de toutes les données (programme, intervenants, abstracts), permettant à l'organisateur de se concentrer sur le contenu scientifique.
                 </p>
 
-                <h3 className="text-xl font-bold mb-6 text-[#0A2540]">Les Résultats</h3>
-                <div className="grid grid-cols-3 gap-4 mb-8">
-                  <div className="bg-gradient-to-br from-[#0A2540]/10 to-[#0A2540]/5 rounded-lg p-6 text-center border border-[#0A2540]/20">
-                    <p className="text-3xl font-bold text-[#0A2540] mb-2">+50%</p>
-                    <p className="text-sm font-semibold text-[#0A2540]">d'utilisation</p>
-                  </div>
-                  <div className="bg-gradient-to-br from-[#0A2540]/10 to-[#0A2540]/5 rounded-lg p-6 text-center border border-[#0A2540]/20">
-                    <p className="text-3xl font-bold text-[#0A2540] mb-2">98%</p>
-                    <p className="text-sm font-semibold text-[#0A2540]">de satisfaction</p>
-                  </div>
-                  <div className="bg-gradient-to-br from-[#0A2540]/10 to-[#0A2540]/5 rounded-lg p-6 text-center border border-[#0A2540]/20">
-                    <p className="text-3xl font-bold text-[#0A2540] mb-2">-3.5T</p>
-                    <p className="text-sm font-semibold text-[#0A2540]">de papier</p>
-                  </div>
-                </div>
-
                 <blockquote className="border-l-4 border-[#0A2540] pl-6 py-4 mb-8 italic text-gray-600">
                   "Une solution clé en main qui nous a fait gagner un temps précieux. L'équipe Pulse Congress a géré tous les détails techniques, nous permettant de nous concentrer sur la qualité scientifique du congrès."
                   <p className="text-sm text-[#0A2540] font-semibold mt-2">— Pr. Martin, Directeur Scientifique</p>
                 </blockquote>
 
                 <Link href="/contact" className="inline-block bg-[#00C4B4] text-[#0A2540] px-6 py-3 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition">
-                  Découvrir Plus
+                  Demander une démo similaire
                 </Link>
               </div>
               <div className="flex justify-center">

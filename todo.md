@@ -177,3 +177,13 @@
 - [x] Uniformiser le vocabulaire : "Bluevista Production" → "Pulse Congress"
 - [x] Corriger les bugs d'affichage des captures d'écran
 - [x] Créer checkpoint final après refonte de la page Cas Clients
+
+
+## Phase 21: Optimisation Finale de la Page "Cas Clients"
+
+- [x] Ajouter une section "Ils nous font confiance" avec logos clients en gris monochrome
+- [x] Remplacer "Bluevista" par "Pulse Congress" partout dans la page
+- [x] Remplacer "Découvrir Plus" par "Demander une démo similaire"
+- [x] Vérifier la cohérence des deux études de cas (structure, espacements, alignement)
+- [x] Renforcer visuellement les KPI (éléments les plus visibles après le titre)
+- [x] Créer checkpoint final après optimisation finale de la page Cas Clients
