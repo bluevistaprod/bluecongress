@@ -185,37 +185,44 @@ export default function DemandezDemonstration() {
         {/* Calendar Section - Main Focal Point */}
         <section className="section-padding bg-gray-50">
           <div className="container">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-4xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-4 text-[#0A2540]">
                 Choisissez votre créneau
               </h2>
               <p className="text-center text-gray-600 text-lg mb-12">
-                Réservez directement votre démonstration.
+                Réservez directement une démonstration personnalisée de Pulse Congress. Durée : 30 minutes.
               </p>
 
-              {/* Calendly Placeholder */}
-              <div className="bg-white rounded-xl border-2 border-[#00C4B4] p-12 text-center">
-                <div className="mb-6">
-                  <Calendar className="mx-auto text-[#00C4B4]" size={48} />
+              {/* Calendly Widget */}
+              <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-lg">
+                <div 
+                  className="calendly-inline-widget" 
+                  data-url="https://calendly.com/contact-bluevistaprod/30min?hide_event_type_details=1&hide_gdpr_block=1"
+                  style={{ minWidth: '100%', height: '800px' }}
+                ></div>
+              </div>
+
+              {/* Reassurance Line */}
+              <div className="mt-8 flex flex-col md:flex-row justify-center items-center gap-8 text-center">
+                <div className="flex items-center gap-2">
+                  <span className="text-[#00C4B4] font-bold">✓</span>
+                  <p className="text-gray-700 font-semibold">Démonstration gratuite</p>
                 </div>
-                <p className="text-gray-600 mb-4">
-                  Le widget de calendrier Calendly s'affichera ici.
-                </p>
-                <p className="text-sm text-gray-500">
-                  Intégration Calendly en cours de configuration.
-                </p>
-                <div className="mt-8 pt-8 border-t border-gray-200">
-                  <p className="text-sm text-gray-600 mb-4">
-                    En attendant, vous pouvez nous contacter directement :
-                  </p>
-                  <Link href="/contact" className="inline-block bg-[#00C4B4] text-[#0A2540] px-6 py-3 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition">
-                    Demander une démonstration
-                  </Link>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#00C4B4] font-bold">✓</span>
+                  <p className="text-gray-700 font-semibold">Sans engagement</p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#00C4B4] font-bold">✓</span>
+                  <p className="text-gray-700 font-semibold">Réponse à toutes vos questions</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        {/* Script for Calendly */}
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
         {/* Quick FAQ Section */}
         <section className="section-padding bg-white">
