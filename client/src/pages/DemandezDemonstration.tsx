@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export default function DemandezDemonstration() {
+
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
@@ -195,11 +196,13 @@ export default function DemandezDemonstration() {
 
               {/* Calendly Widget */}
               <div className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-lg">
-                <div 
-                  className="calendly-inline-widget" 
-                  data-url="https://calendly.com/contact-bluevistaprod/30min?hide_event_type_details=1&hide_gdpr_block=1"
-                  style={{ minWidth: '100%', height: '800px' }}
-                ></div>
+                <iframe
+                  src="https://calendly.com/contact-bluevistaprod/30min?hide_event_type_details=1&hide_gdpr_block=1"
+                  width="100%"
+                  height="800"
+                  frameBorder="0"
+                  style={{ display: 'block' }}
+                ></iframe>
               </div>
 
               {/* Reassurance Line */}
@@ -221,8 +224,7 @@ export default function DemandezDemonstration() {
           </div>
         </section>
 
-        {/* Script for Calendly */}
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
 
         {/* Quick FAQ Section */}
         <section className="section-padding bg-white">
