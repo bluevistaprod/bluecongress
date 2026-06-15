@@ -106,7 +106,7 @@ export default function Home() {
               Vous organisez un congrès médical ? Vous connaissez ces frustrations…
             </h2>
             <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-              Des défis complexes que nous avons résolus pour des dizaines d'organisateurs.
+              Des défis complexes que nous avons résolus pour d'autres organisateurs comme vous.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -149,7 +149,7 @@ export default function Home() {
         <section className="section-padding bg-gray-50">
           <div className="container">
             <h2 className="text-4xl font-bold text-center mb-4 text-[#0A2540]">
-              Tout ce dont vous avez besoin. Rien dont vous n'avez pas besoin.
+              Tout ce dont vous avez besoin en une seule app.
             </h2>
             <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
               6 fonctionnalités essentielles, intégrées dans une seule application intuitive.
@@ -207,7 +207,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-[#0A2540]">Networking & Participants</h3>
                 <p className="text-gray-700">
-                  Annuaire des participants, système de favoris, facilitation des rencontres entre experts et visiteurs.
+                  Système de favoris, facilitation des rencontres entre experts et visiteurs.
                 </p>
               </div>
               
@@ -216,9 +216,9 @@ export default function Home() {
                 <div className="bg-[#00C4B4]/10 w-14 h-14 rounded-lg flex items-center justify-center mb-6">
                   <BarChart3 className="text-[#00C4B4]" size={28} />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-[#0A2540]">Analytics & Rapports CME</h3>
+                <h3 className="text-xl font-bold mb-3 text-[#0A2540]">Analytics & Rapports</h3>
                 <p className="text-gray-700">
-                  Statistiques détaillées post-événement : taux d'attendance, satisfaction, sessions les plus populaires, ROI.
+                  Statistiques détaillées post-événement : taux d'attendance, satisfaction, sessions les plus populaires.
                 </p>
               </div>
             </div>
@@ -285,7 +285,7 @@ export default function Home() {
                   </div>
                   <div className="flex-1 pt-1">
                     <h3 className="text-xl font-bold text-[#0A2540] mb-2">Vos participants la téléchargent</h3>
-                    <p className="text-gray-700">Les participants reçoivent un lien pour télécharger l'application et accéder à tous les contenus.</p>
+                    <p className="text-gray-700">Les participants reçoivent un lien ou QR code pour télécharger l'application et accéder à tous les contenus.</p>
                   </div>
                 </div>
                 
@@ -391,7 +391,7 @@ export default function Home() {
                         <p className="text-sm text-gray-600 mt-2">Participants</p>
                       </div>
                       <div className="bg-gradient-to-br from-[#00C4B4]/10 to-[#00C4B4]/5 rounded-lg p-4 text-center">
-                        <p className="text-3xl font-bold text-[#00C4B4]">50+</p>
+                        <p className="text-3xl font-bold text-[#00C4B4]">40+</p>
                         <p className="text-sm text-gray-600 mt-2">Sessions</p>
                       </div>
                       <div className="bg-gradient-to-br from-[#00C4B4]/10 to-[#00C4B4]/5 rounded-lg p-4 text-center">
@@ -401,7 +401,7 @@ export default function Home() {
                     </div>
                     
                     <p className="text-lg text-gray-700 mb-6">
-                      La 12ème édition du congrès le plus important en chirurgie de l'épaule en Europe.
+                      Un des congrès majeurs de la chirurgie de l'épaule en Europe.
                     </p>
                     <blockquote className="border-l-4 border-[#00C4B4] pl-6 mb-8">
                       <p className="text-lg text-gray-700 italic mb-3">
@@ -446,7 +446,7 @@ export default function Home() {
                         <p className="text-sm text-gray-600 mt-2">Participants</p>
                       </div>
                       <div className="bg-gradient-to-br from-[#00C4B4]/10 to-[#00C4B4]/5 rounded-lg p-4 text-center">
-                        <p className="text-3xl font-bold text-[#00C4B4]">45+</p>
+                        <p className="text-3xl font-bold text-[#00C4B4]">15+</p>
                         <p className="text-sm text-gray-600 mt-2">Sessions</p>
                       </div>
                       <div className="bg-gradient-to-br from-[#00C4B4]/10 to-[#00C4B4]/5 rounded-lg p-4 text-center">
