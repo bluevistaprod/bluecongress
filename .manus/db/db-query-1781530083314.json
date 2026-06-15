@@ -1,0 +1,94 @@
+{
+  "query": "SELECT f.id, f.offerId, f.name, f.included, o.name as offerName FROM features f JOIN offers o ON f.offerId = o.id ORDER BY o.name, f.name;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 88yLpdrkBbhoMQ3.2b954da8d273 --database 6nnyUPh6Mg74pJbVKFbCeZ --execute SELECT f.id, f.offerId, f.name, f.included, o.name as offerName FROM features f JOIN offers o ON f.offerId = o.id ORDER BY o.name, f.name;",
+  "rows": [
+    {
+      "id": "app-1year",
+      "offerId": "essential",
+      "name": "Application Disponible 1 an",
+      "included": "1",
+      "offerName": "Pack Essentiel"
+    },
+    {
+      "id": "fiches",
+      "offerId": "essential",
+      "name": "Fiches Intervenants",
+      "included": "1",
+      "offerName": "Pack Essentiel"
+    },
+    {
+      "id": "notifications",
+      "offerId": "essential",
+      "name": "Notifications Push",
+      "included": "1",
+      "offerName": "Pack Essentiel"
+    },
+    {
+      "id": "plan",
+      "offerId": "essential",
+      "name": "Plan du Salon",
+      "included": "1",
+      "offerName": "Pack Essentiel"
+    },
+    {
+      "id": "programme",
+      "offerId": "essential",
+      "name": "Programme Complet / Design Personnalisé",
+      "included": "1",
+      "offerName": "Pack Essentiel"
+    },
+    {
+      "id": "favoris",
+      "offerId": "essential",
+      "name": "Système de Favoris",
+      "included": "1",
+      "offerName": "Pack Essentiel"
+    },
+    {
+      "id": "accompagnement",
+      "offerId": "premium",
+      "name": "Accompagnement Data",
+      "included": "1",
+      "offerName": "Pack Premium"
+    },
+    {
+      "id": "app-2years",
+      "offerId": "premium",
+      "name": "Application Disponible 2 ans",
+      "included": "1",
+      "offerName": "Pack Premium"
+    },
+    {
+      "id": "fiches-exposants",
+      "offerId": "premium",
+      "name": "Fiches Exposants Détaillées",
+      "included": "1",
+      "offerName": "Pack Premium"
+    },
+    {
+      "id": "liens-sponsors",
+      "offerId": "premium",
+      "name": "Liens Directs pour vos Sponsors",
+      "included": "1",
+      "offerName": "Pack Premium"
+    },
+    {
+      "id": "stats",
+      "offerId": "premium",
+      "name": "Statistiques Post-Événement",
+      "included": "1",
+      "offerName": "Pack Premium"
+    },
+    {
+      "id": "votes",
+      "offerId": "premium",
+      "name": "Votes en Direct",
+      "included": "1",
+      "offerName": "Pack Premium"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tofferId\tname\tincluded\tofferName\napp-1year\tessential\tApplication Disponible 1 an\t1\tPack Essentiel\nfiches\tessential\tFiches Intervenants\t1\tPack Essentiel\nnotifications\tessential\tNotifications Push\t1\tPack Essentiel\nplan\tessential\tPlan du Salon\t1\tPack Essentiel\nprogramme\tessential\tProgramme Complet / Design Personnalisé\t1\tPack Essentiel\nfavoris\tessential\tSystème de Favoris\t1\tPack Essentiel\naccompagnement\tpremium\tAccompagnement Data\t1\tPack Premium\napp-2years\tpremium\tApplication Disponible 2 ans\t1\tPack Premium\nfiches-exposants\tpremium\tFiches Exposants Détaillées\t1\tPack Premium\nliens-sponsors\tpremium\tLiens Directs pour vos Sponsors\t1\tPack Premium\nstats\tpremium\tStatistiques Post-Événement\t1\tPack Premium\nvotes\tpremium\tVotes en Direct\t1\tPack Premium\n",
+  "stderr": "",
+  "execution_time_ms": 310
+}
