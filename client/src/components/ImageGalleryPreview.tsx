@@ -77,8 +77,8 @@ export default function ImageGalleryPreview({ images, title, maxImages = 3 }: Im
             
             {/* Image Info Below Phone */}
             <div className="mt-3 text-center">
-              <p className="text-sm font-semibold text-foreground truncate">{image.title}</p>
-              <p className="text-xs text-muted-foreground line-clamp-1">{image.description}</p>
+              <p className="text-sm font-semibold text-white truncate">{image.title}</p>
+              <p className="text-xs text-white line-clamp-1">{image.description}</p>
             </div>
           </div>
         ))}
