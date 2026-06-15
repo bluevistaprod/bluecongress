@@ -52,6 +52,7 @@ export const features = mysqlTable("features", {
   name: varchar("name", { length: 255 }).notNull(),
   description: text("description"),
   included: int("included").default(1).notNull(),
+  displayOrder: int("displayOrder").default(0).notNull(),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
   updatedAt: timestamp("updatedAt").defaultNow().onUpdateNow().notNull(),
 });

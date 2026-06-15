@@ -1,4 +1,4 @@
-import { eq, desc, and } from "drizzle-orm";
+import { eq, desc, and, asc } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
 import { InsertUser, users, offers, features, type Offer, type Feature, type InsertOffer, type InsertFeature } from "../drizzle/schema";
 import { ENV } from './_core/env';
@@ -105,8 +105,8 @@ export async function getAllOffers() {
     // Get features for each offer
     const offersWithFeatures = await Promise.all(
       allOffers.map(async (offer) => {
-        // Each pack displays only its own features
-        const offerFeatures = await db.select().from(features).where(eq(features.offerId, offer.id));
+        // Each pack displays only its own features, sorted by displayOrder
+        const offerFeatures = await db.select().from(features).where(eq(features.offerId, offer.id)).orderBy(asc(features.displayOrder));
         
         return {
           ...offer,

@@ -1,0 +1,38 @@
+{
+  "query": "SELECT id, name FROM features WHERE offerId = 'premium' ORDER BY id;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 88yLpdrkBbhoMQ3.2b954da8d273 --database 6nnyUPh6Mg74pJbVKFbCeZ --execute SELECT id, name FROM features WHERE offerId = 'premium' ORDER BY id;",
+  "rows": [
+    {
+      "id": "accompagnement",
+      "name": "Accompagnement Data"
+    },
+    {
+      "id": "app-2years",
+      "name": "Application Disponible 2 ans"
+    },
+    {
+      "id": "fiches-exposants",
+      "name": "Fiches Exposants Détaillées"
+    },
+    {
+      "id": "liens-sponsors",
+      "name": "Liens Directs pour vos Sponsors"
+    },
+    {
+      "id": "pack-essentiel",
+      "name": "Tout le pack essentiel"
+    },
+    {
+      "id": "stats",
+      "name": "Statistiques Post-Événement"
+    },
+    {
+      "id": "votes",
+      "name": "Votes en Direct"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\naccompagnement\tAccompagnement Data\napp-2years\tApplication Disponible 2 ans\nfiches-exposants\tFiches Exposants Détaillées\nliens-sponsors\tLiens Directs pour vos Sponsors\npack-essentiel\tTout le pack essentiel\nstats\tStatistiques Post-Événement\nvotes\tVotes en Direct\n",
+  "stderr": "",
+  "execution_time_ms": 269
+}
