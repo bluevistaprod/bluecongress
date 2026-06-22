@@ -182,7 +182,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-[#0A2540]">Votes & Interactions en Live</h3>
                 <p className="text-gray-700">
-                  Sondages, votes en direct, questions des participants. Transformez votre audience passive en communauté engagée.
+                  Sondages, votes en direct, questions des participants. Engagez votre audience et collectez du feedback en temps réel.
                 </p>
               </div>
               
@@ -193,7 +193,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-[#0A2540]">Abstracts & E-Posters</h3>
                 <p className="text-gray-700">
-                  Plateforme centralisée pour les abstracts, e-posters et communications. Tout accessible depuis l'application.
+                  Plateforme centralisée pour les abstracts, e-posters et communications. Valorisez votre contenu scientifique.
                 </p>
               </div>
               
@@ -204,7 +204,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-[#0A2540]">Networking & Participants</h3>
                 <p className="text-gray-700">
-                  Système de favoris, facilitation des rencontres entre experts et visiteurs.
+                  Système de favoris et facilitation des rencontres entre experts et visiteurs pour enrichir l'expérience.
                 </p>
               </div>
               
@@ -215,7 +215,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-[#0A2540]">Analytics & Rapports</h3>
                 <p className="text-gray-700">
-                  Statistiques détaillées post-événement : taux d'attendance, satisfaction, sessions les plus populaires.
+                  Statistiques détaillées post-événement pour mesurer l'impact et optimiser les futures éditions.
                 </p>
               </div>
             </div>

@@ -78,7 +78,7 @@ export default function Offres() {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Programme interactif</span>
+                      <span className="text-gray-700">Programme interactif permettant aux participants de retrouver facilement leurs sessions</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
@@ -90,11 +90,11 @@ export default function Offres() {
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Notifications push</span>
+                      <span className="text-gray-700">Notifications push pour informer instantanément les participants des changements</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Statistiques d'utilisation</span>
+                      <span className="text-gray-700">Statistiques d'utilisation pour mesurer l'engagement</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
@@ -107,7 +107,7 @@ export default function Offres() {
                   href="/contact"
                   className="w-full block text-center border-2 border-[#00C4B4] text-[#00C4B4] px-6 py-3 rounded-lg font-semibold hover:bg-[#00C4B4]/10 transition"
                 >
-                  Demander une démonstration
+                  Réserver une démonstration
                 </Link>
               </div>
 
@@ -162,7 +162,7 @@ export default function Offres() {
                   href="/contact"
                   className="w-full block text-center bg-[#00C4B4] text-[#0A2540] px-6 py-3 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition"
                 >
-                  Demander une démonstration
+                  Réserver une démonstration
                 </Link>
               </div>
             </div>

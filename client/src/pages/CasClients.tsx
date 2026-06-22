@@ -130,7 +130,7 @@ export default function CasClients() {
                 </blockquote>
 
                 <Link href="/contact" className="inline-block bg-[#00C4B4] text-[#0A2540] px-6 py-3 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition">
-                  Demander une démo similaire
+                  Réserver une démonstration
                 </Link>
               </div>
             </div>
@@ -169,12 +169,12 @@ export default function CasClients() {
 
                 <h3 className="text-xl font-bold mb-4 text-[#0A2540]">Le Défi</h3>
                 <p className="text-gray-600 mb-6">
-                  Avec plus de 800 participants, le Congrès ESPOIR Oncologie avait besoin d'une solution robuste pour gérer un programme complexe, des abstracts scientifiques, et des sessions parallèles multiples. La gestion des données était particulièrement chronophage.
+                  Avec plus de 600 participants, le Congrès ESPOIR Oncologie avait besoin d'une solution robuste pour gérer un programme complexe, des abstracts scientifiques, et des sessions parallèles multiples. La gestion des données était particulièrement chronophage.
                 </p>
 
                 <h3 className="text-xl font-bold mb-4 text-[#0A2540]">La Solution Pulse Congress</h3>
                 <p className="text-gray-600 mb-8">
-                  Nous avons implémenté notre Pack Premium/Médical avec accompagnement complet. Notre équipe a pris en charge l'intégration de toutes les données (programme, intervenants, abstracts), permettant à l'organisateur de se concentrer sur le contenu scientifique.
+                  Nous avons implémenté Pulse Congress Premium avec accompagnement complet. Notre équipe a pris en charge l'intégration de toutes les données (programme, intervenants, abstracts), permettant à l'organisateur de se concentrer sur le contenu scientifique.
                 </p>
 
                 <blockquote className="border-l-4 border-[#0A2540] pl-6 py-4 mb-8 italic text-gray-600">
@@ -183,7 +183,7 @@ export default function CasClients() {
                 </blockquote>
 
                 <Link href="/contact" className="inline-block bg-[#00C4B4] text-[#0A2540] px-6 py-3 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition">
-                  Demander une démo similaire
+                  Réserver une démonstration
                 </Link>
               </div>
               <div className="flex justify-center">

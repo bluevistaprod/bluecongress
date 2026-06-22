@@ -15,7 +15,7 @@ export default function APropos() {
               20 ans d'expérience au service des événements professionnels
             </h1>
             <p className="text-center text-gray-200 text-xl max-w-3xl mx-auto">
-              Depuis 2004, Bluevista accompagne les organisateurs d'événements avec des solutions audiovisuelles, digitales et interactives conçues pour améliorer l'expérience des participants.
+              Depuis 2004, Bluevista accompagne les organisateurs de congrès médicaux et scientifiques. Forts de cette expertise, nous avons créé Pulse Congress, une solution digitale clé en main pour transformer vos événements.
             </p>
           </div>
         </section>
@@ -34,7 +34,7 @@ export default function APropos() {
               </div>
               <div className="text-center">
                 <div className="text-5xl font-bold text-[#00C4B4] mb-2">10000+</div>
-                <p className="text-gray-700 font-semibold">participants utilisateurs</p>
+                <p className="text-gray-700 font-semibold">participants</p>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-[#0A2540] mb-2">✓</div>
@@ -86,9 +86,9 @@ export default function APropos() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-[#0A2540] mb-2">Lancement des solutions digitales et applications événementielles</h3>
+                    <h3 className="text-xl font-bold text-[#0A2540] mb-2">Lancement de Pulse Congress</h3>
                     <p className="text-gray-600">
-                      Développement de Pulse Congress, notre plateforme propriétaire pour applications mobiles événementielles.
+                      Développement de Pulse Congress, notre solution propriétaire pour applications mobiles de congrès.
                     </p>
                   </div>
                 </div>
@@ -131,9 +131,9 @@ export default function APropos() {
                 <div className="bg-[#00C4B4]/10 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                   <Zap className="text-[#00C4B4]" size={32} />
                 </div>
-                <h3 className="text-xl font-bold text-[#0A2540] mb-3">Applications mobiles événementielles</h3>
+                <h3 className="text-xl font-bold text-[#0A2540] mb-3">Applications mobiles pour congrès</h3>
                 <p className="text-gray-600">
-                  Développement et déploiement d'applications mobiles pour congrès et événements.
+                  Développement et déploiement d'applications mobiles pour congrès médicaux et scientifiques.
                 </p>
               </div>
 

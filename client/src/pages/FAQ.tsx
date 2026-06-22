@@ -20,7 +20,7 @@ const faqData: FAQCategory[] = [
     items: [
       {
         question: "Quelles sont les fonctionnalités incluses dans l'application ?",
-        answer: "Notre Pack Essentiel inclut un programme complet, des fiches intervenants, un système de favoris, des notifications push, un plan du salon interactif et un design personnalisé. Le Pack Premium/Médical ajoute l'accompagnement data, les votes en direct, les fiches exposants détaillées, la gestion des abstracts et les statistiques post-événement."
+        answer: "Pulse Congress Standard inclut un programme complet, des fiches intervenants, un système de favoris, des notifications push, un plan du salon interactif et un design personnalisé. Pulse Congress Premium ajoute l'accompagnement data, les votes en direct, les fiches exposants détaillées, la gestion des abstracts et les statistiques post-événement."
       },
       {
         question: "L'application est-elle disponible sur iOS et Android ?",
@@ -41,7 +41,7 @@ const faqData: FAQCategory[] = [
     items: [
       {
         question: "Comment vous fournissons-nous les données du congrès ?",
-        answer: "Vous pouvez nous envoyer vos données sous forme de fichiers Excel, PDF ou tout autre format structuré. Pour le Pack Premium, notre équipe prend en charge l'intégration complète des données. Pour le Pack Essentiel, nous vous guidons dans le processus de structuration."
+        answer: "Vous pouvez nous envoyer vos données sous forme de fichiers Excel, PDF ou tout autre format structuré. Pour Pulse Congress Premium, notre équipe prend en charge l'intégration complète des données. Pour Pulse Congress Standard, nous vous guidons dans le processus de structuration."
       },
       {
         question: "Quels formats de fichiers acceptez-vous ?",
@@ -61,12 +61,12 @@ const faqData: FAQCategory[] = [
     title: "Tarifs et Offres",
     items: [
       {
-        question: "Quelle est la différence entre le Pack Essentiel et le Pack Premium ?",
-        answer: "Le Pack Essentiel (950€) inclut les fonctionnalités de base pour un événement réussi. Le Pack Premium/Médical (1850€) ajoute l'accompagnement complet de nos experts pour l'intégration des données, les votes en direct, et les statistiques détaillées post-événement."
+        question: "Quelle est la différence entre Pulse Congress Standard et Pulse Congress Premium ?",
+        answer: "Pulse Congress Standard inclut les fonctionnalités de base pour un événement réussi. Pulse Congress Premium ajoute l'accompagnement complet de nos experts pour l'intégration des données, les votes en direct, et les statistiques détaillées post-événement. Les tarifs sont adaptés à votre événement et présentés lors de la démonstration."
       },
       {
         question: "Y a-t-il des coûts cachés ?",
-        answer: "Non, nos tarifs sont transparents et tout-inclus. Le prix que nous vous proposons couvre tous les services mentionnés. Pas de frais supplémentaires, pas de surprises."
+        answer: "Non, nos tarifs sont transparents et tout-inclus. Chaque proposition est adaptée à votre événement et couvre tous les services mentionnés. Pas de frais supplémentaires, pas de surprises."
       },
       {
         question: "Proposez-vous des réductions pour les événements récurrents ?",
@@ -144,7 +144,7 @@ export default function FAQ() {
           <div className="container">
             <h1 className="text-5xl font-bold text-center mb-6">Questions fréquentes des organisateurs de congrès</h1>
             <p className="text-center text-muted-foreground text-xl max-w-2xl mx-auto">
-              Trouvez les réponses à vos questions sur notre application de congrès.
+              Trouvez les réponses à vos questions sur notre application mobile pour congrès.
             </p>
           </div>
         </section>
