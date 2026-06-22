@@ -34,24 +34,21 @@ export default function Home() {
                 </div>
                 <div className="mb-8">
                   <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white">
-                    L'application mobile clé en main pour les congrès scientifiques et médicaux
+                    La solution digitale clé en main pour les congrès médicaux et scientifiques
                   </h1>
                 </div>
                 
                 <p className="text-lg text-gray-100 mb-10 leading-relaxed max-w-xl">
-                  Programme interactif, intervenants, abstracts, votes en direct, notifications et statistiques. Déployée en quelques jours, sans développement spécifique.
+                  Simplifiez l'organisation de votre congrès, améliorez l'expérience des participants et centralisez toutes les informations de votre événement dans une plateforme moderne et intuitive.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/contact" className="bg-[#00E5C8] text-[#0A2540] px-8 py-4 rounded-lg font-semibold hover:bg-[#00E5C8]/90 transition text-center shadow-lg hover:shadow-xl">
-                    Demander une démonstration
+                    Réserver une démonstration
                   </Link>
-                  <button 
-                    onClick={() => alert('Démo interactive : Consultez nos cas clients pour voir l\'application en action !')}
-                    className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition text-center cursor-pointer"
-                  >
-                    Voir un exemple réel
-                  </button>
+                  <Link href="/cas-clients" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition text-center">
+                    Voir les cas clients
+                  </Link>
                 </div>
               </div>
               
@@ -149,10 +146,10 @@ export default function Home() {
         <section className="section-padding bg-gray-50">
           <div className="container">
             <h2 className="text-4xl font-bold text-center mb-4 text-[#0A2540]">
-              Tout ce dont vous avez besoin en une seule app.
+              Tout ce dont votre congrès a besoin
             </h2>
             <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-              6 fonctionnalités essentielles, intégrées dans une seule application intuitive.
+              Pulse Congress regroupe l'ensemble des outils nécessaires au bon déroulement d'un congrès scientifique ou médical.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -229,10 +226,10 @@ export default function Home() {
         <section className="section-padding bg-gray-50">
           <div className="container">
             <h2 className="text-4xl font-bold text-center mb-4 text-[#0A2540]">
-              Une mise en place simple et rapide
+              De votre programme à une application prête à l'emploi
             </h2>
             <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-              5 étapes simples pour déployer votre application de congrès.
+              Nous adaptons Pulse Congress à votre événement sans projet informatique complexe ni développement spécifique.
             </p>
             
             <div className="max-w-4xl mx-auto">
@@ -306,66 +303,19 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ===== PACKS SECTION ===== */}
+        {/* ===== OFFERS SECTION ===== */}
         <section className="section-padding bg-white">
           <div className="container">
-            <h2 className="text-4xl font-bold text-center mb-4 text-[#0A2540]">
-              Choisissez la formule adaptée à votre congrès
-            </h2>
-            <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
-              Des packs flexibles pour tous les types de congrès, du séminaire au grand congrès international.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {isLoading ? (
-                <div className="col-span-3 text-center text-gray-600">Chargement des offres...</div>
-              ) : (
-                offers?.map((offer: any) => (
-                  <div
-                    key={offer.id}
-                    className={`rounded-xl p-8 transition ${
-                      offer.recommended 
-                        ? 'bg-gradient-to-br from-[#0A2540] to-[#003087] text-white shadow-lg scale-105' 
-                        : 'bg-gray-50 border-2 border-gray-200 hover:border-[#00C4B4]'
-                    }`}
-                  >
-                    {offer.badge && (
-                      <div className={`px-4 py-2 rounded-full inline-block mb-4 text-sm font-semibold ${
-                        offer.recommended 
-                          ? 'bg-[#00C4B4]/20 text-[#00C4B4]' 
-                          : 'bg-[#00C4B4]/10 text-[#00C4B4]'
-                      }`}>
-                        {offer.badge}
-                      </div>
-                    )}
-                    <h3 className={`text-2xl font-bold mb-2 ${offer.recommended ? 'text-white' : 'text-[#0A2540]'}`}>
-                      {offer.name}
-                    </h3>
-                    <p className={`mb-6 ${offer.recommended ? 'text-gray-200' : 'text-gray-600'}`}>
-                      {offer.targetAudience}
-                    </p>
-                    <div className="mb-6">
-                      <span className="text-4xl font-bold">{offer.price}€</span>
-                      <span className={`ml-2 ${offer.recommended ? 'text-gray-300' : 'text-gray-600'}`}>HT</span>
-                    </div>
-                    <ul className={`space-y-3 mb-8 ${offer.recommended ? 'text-gray-100' : 'text-gray-700'}`}>
-                      {offer.features?.map((feature: any) => (
-                        <li key={feature.id} className="flex items-center gap-2">
-                          <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0" />
-                          <span>{feature.name}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link href="/offres" className={`w-full text-center block py-3 px-4 rounded-lg font-semibold transition ${
-                      offer.recommended 
-                        ? 'bg-[#00C4B4] text-[#0A2540] hover:bg-[#00C4B4]/90' 
-                        : 'border-2 border-[#00C4B4] text-[#00C4B4] hover:bg-[#00C4B4]/10'
-                    }`}>
-                      Découvrir {offer.name}
-                    </Link>
-                  </div>
-                ))
-              )}
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-4xl font-bold mb-4 text-[#0A2540]">
+                Une solution adaptée à chaque congrès
+              </h2>
+              <p className="text-lg text-gray-600 mb-10">
+                Chaque événement possède ses propres contraintes, son programme scientifique et ses objectifs. Pulse Congress s'adapte à votre contexte et à vos besoins.
+              </p>
+              <Link href="/offres" className="inline-block bg-[#00C4B4] text-[#0A2540] px-8 py-4 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition shadow-lg hover:shadow-xl">
+                Découvrir les offres
+              </Link>
             </div>
           </div>
         </section>
@@ -553,19 +503,14 @@ export default function Home() {
           
           <div className="container relative z-10 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Prêt à transformer votre congrès ?
+              Voyons ensemble comment simplifier votre prochain congrès
             </h2>
             <p className="text-xl text-gray-200 mb-12 max-w-2xl mx-auto">
-              Rejoignez les organisateurs qui font confiance à Pulse Congress pour créer des expériences médicales mémorables et mesurables.
+              Réservez une démonstration personnalisée et découvrez comment Pulse Congress peut s'adapter à votre événement.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-[#00C4B4] text-[#0A2540] px-8 py-4 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition">
-                Demander une démo gratuite
-              </Link>
-              <Link href="/offres" className="border-2 border-[#00C4B4] text-[#00C4B4] px-8 py-4 rounded-lg font-semibold hover:bg-[#00C4B4]/10 transition">
-                Voir les tarifs
-              </Link>
-            </div>
+            <Link href="/contact" className="inline-block bg-[#00C4B4] text-[#0A2540] px-8 py-4 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition shadow-lg hover:shadow-xl">
+              Réserver une démonstration
+            </Link>
           </div>
         </section>
       </main>
