@@ -92,7 +92,10 @@
 
 ## Phase 13: Corrections Futures
 
-- [x] Corriger l'image d'accueil du Congrès ESPOIR (Écran d'Accueil Premium) - actuellement affiche une image de Nice Shoulder Course
+- [x] Corriger la section "Nos Réalisations" : les galeries Nice Shoulder Course et ESPOIR Oncologie utilisaient les mêmes images (captures NSC dupliquées + images ESPOIR mélangées dans la galerie NSC)
+  - [x] Intégrer les vraies captures ESPOIR Oncologie (fournies à l'origine, jamais utilisées par Manus)
+  - [x] Importer et structurer les 19 captures dans `client/public/realisations/` (nice-shoulder-course/ et espoir-oncologie/) + 3 logos dans `client/public/brand/`
+  - [x] Reconstruire `client/src/data/galleryData.ts` avec les bonnes images locales pour les deux congrès (corrige la page d'accueil ET la page Cas Clients)
 
 
 ## Phase 14: Suppression du Blog
