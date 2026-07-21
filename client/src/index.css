@@ -115,7 +115,7 @@
 }
 
 @layer base {
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
   * {
     @apply border-border outline-ring/50;
@@ -206,6 +206,27 @@
 
   .gradient-text {
     @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  /* V2 prototype — SaaS Tech moderne */
+  .font-display {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  @keyframes v2-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-16px); }
+  }
+  @keyframes v2-gradient-pan {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .v2-aurora {
+    background: linear-gradient(120deg, #0A2540, #003087, #0A2540, #00C4B4);
+    background-size: 300% 300%;
+    animation: v2-gradient-pan 14s ease infinite;
   }
 
   .card-hover {

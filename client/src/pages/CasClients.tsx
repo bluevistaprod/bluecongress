@@ -90,7 +90,7 @@ export default function CasClients() {
               </div>
               <div className="order-1 lg:order-2">
                 <p className="text-[#00C4B4] font-semibold mb-2 uppercase tracking-wide">Étude de Cas</p>
-                <h2 className="text-4xl font-bold mb-2 text-[#0A2540]">Nice Shoulder Course 2024</h2>
+                <h2 className="text-4xl font-bold mb-2 text-[#0A2540]">Nice Shoulder Course</h2>
                 <p className="text-gray-600 mb-8">
                   <span className="font-semibold text-[#0A2540]">Secteur :</span> Médical - Orthopédie
                 </p>

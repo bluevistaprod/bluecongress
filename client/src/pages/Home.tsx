@@ -332,7 +332,7 @@ export default function Home() {
               <div className="bg-white rounded-xl p-8 shadow-md">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-8">
                   <div>
-                    <h3 className="text-3xl font-bold mb-6 text-[#0A2540]">Nice Shoulder Course 2024</h3>
+                    <h3 className="text-3xl font-bold mb-6 text-[#0A2540]">Nice Shoulder Course</h3>
                     
                     {/* Chiffres clés */}
                     <div className="grid grid-cols-3 gap-4 mb-8">
