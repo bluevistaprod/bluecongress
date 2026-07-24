@@ -5,7 +5,6 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-import HomeV2 from "./pages/HomeV2";
 import Offres from "./pages/Offres";
 import CasClients from "./pages/CasClients";
 import APropos from "./pages/APropos";
@@ -20,7 +19,6 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/v2" component={HomeV2} />
       <Route path="/offres" component={Offres} />
       <Route path="/cas-clients" component={CasClients} />
       <Route path="/a-propos" component={APropos} />

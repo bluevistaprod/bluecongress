@@ -35,7 +35,7 @@ export default function Header() {
     >
       <nav className="container flex items-center justify-between h-16">
         <Link href="/" onClick={handleNavClick} className="flex items-center">
-          <img src="/brand/pulse-logo-white.png" alt="Pulse Congress" className="h-8 w-auto" />
+          <img src="/brand/pulse-logo-dark.png" alt="Pulse Congress" className="h-9 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
