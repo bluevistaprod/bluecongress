@@ -1,259 +1,226 @@
-import { CheckCircle2, Zap } from 'lucide-react';
+import { CheckCircle2, Zap, ArrowRight } from 'lucide-react';
 import { Link } from 'wouter';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { Reveal, DEMO_PATH } from '@/components/Reveal';
+
+const STANDARD = [
+  'Application iOS et Android',
+  'Programme interactif permettant aux participants de retrouver facilement leurs sessions',
+  'Intervenants',
+  'Sponsors et partenaires',
+  'Notifications push pour informer instantanément les participants des changements',
+  "Statistiques d'utilisation pour mesurer l'engagement",
+  'Support standard',
+];
+
+const PREMIUM = [
+  'Toutes les fonctionnalités Standard',
+  'Gestion des abstracts',
+  'Gestion des e-posters',
+  'Contenus scientifiques avancés',
+  'Accompagnement renforcé',
+  'Paramétrages spécifiques',
+  'Reporting avancé',
+];
+
+const OPTIONS = [
+  { title: 'Networking participants', description: 'Faciliter les rencontres entre experts et visiteurs' },
+  { title: 'Galerie photo événement', description: 'Partager et archiver les photos de votre congrès' },
+  { title: 'Traductions multilingues', description: 'Supporter plusieurs langues pour une audience internationale' },
+  { title: 'Assistance sur site', description: 'Équipe technique présente pendant votre événement' },
+  { title: 'Notifications avancées', description: 'Campagnes de notifications personnalisées et ciblées' },
+  { title: 'Personnalisations spécifiques', description: 'Adaptations sur mesure selon vos besoins uniques' },
+];
+
+const INCLUDED = [
+  'Déploiement rapide',
+  'Application native iOS et Android',
+  'Conforme RGPD',
+  'Accompagnement humain',
+  "Support avant, pendant et après l'événement",
+  'Hébergement sécurisé',
+  "Statistiques d'utilisation",
+];
+
+const PRICING_FACTORS = [
+  'Du nombre de participants',
+  'Du volume de contenu',
+  'Des fonctionnalités souhaitées',
+  "Du niveau d'accompagnement",
+];
 
 export default function Offres() {
-  const complementaryOptions = [
-    { title: 'Networking participants', description: 'Faciliter les rencontres entre experts et visiteurs' },
-    { title: 'Galerie photo événement', description: 'Partager et archiver les photos de votre congrès' },
-    { title: 'Traductions multilingues', description: 'Supporter plusieurs langues pour une audience internationale' },
-    { title: 'Assistance sur site', description: 'Équipe technique présente pendant votre événement' },
-    { title: 'Notifications avancées', description: 'Campagnes de notifications personnalisées et ciblées' },
-    { title: 'Personnalisations spécifiques', description: 'Adaptations sur mesure selon vos besoins uniques' },
-  ];
-
-  const includedInAll = [
-    'Déploiement rapide',
-    'Application native iOS et Android',
-    'Conforme RGPD',
-    'Accompagnement humain',
-    'Support avant, pendant et après l\'événement',
-    'Hébergement sécurisé',
-    'Statistiques d\'utilisation',
-  ];
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-[#071A2F] text-white">
       <Header />
       <main className="flex-1">
-        {/* HERO SECTION */}
-        <section className="section-padding bg-gradient-to-br from-[#0A2540] via-[#003087] to-[#0A2540] text-white">
+        {/* HERO */}
+        <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28">
+          <div className="absolute inset-0 -z-10 v2-aurora opacity-40" />
+          <div className="absolute -z-10 top-[-20%] left-1/2 -translate-x-1/2 w-[46rem] h-[46rem] rounded-full bg-[#00C4B4]/15 blur-[130px]" />
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Une solution adaptée à chaque congrès
-              </h1>
-              <p className="text-xl text-gray-100 mb-10 leading-relaxed">
-                Chaque événement possède ses propres contraintes, son programme scientifique et ses objectifs. Pulse Congress s'adapte à votre organisation pour offrir une expérience fluide aux participants et aux organisateurs.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-block bg-[#00E5C8] text-[#0A2540] px-8 py-4 rounded-lg font-semibold hover:bg-[#00E5C8]/90 transition shadow-lg hover:shadow-xl"
-              >
-                Demander une démonstration
-              </Link>
+              <Reveal>
+                <h1 className="font-display text-4xl md:text-6xl font-bold mb-6 leading-[1.05]">
+                  Une solution adaptée à chaque congrès
+                </h1>
+                <p className="text-lg text-slate-300 mb-10 leading-relaxed">
+                  Chaque événement possède ses propres contraintes, son programme scientifique et ses objectifs.
+                  Pulse Congress s'adapte à votre organisation pour offrir une expérience fluide aux participants
+                  et aux organisateurs.
+                </p>
+                <div className="flex justify-center">
+                  <Link href={DEMO_PATH} className="group inline-flex items-center gap-2 bg-[#00E5C8] text-[#0A2540] px-7 py-4 rounded-xl font-semibold shadow-[0_8px_30px_rgba(0,229,200,0.35)] hover:shadow-[0_12px_40px_rgba(0,229,200,0.55)] hover:-translate-y-0.5 transition-all duration-300">
+                    Demander une démonstration
+                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </Reveal>
             </div>
           </div>
         </section>
 
-        {/* SECTION 1: TWO OFFERS */}
-        <section className="section-padding bg-white">
+        {/* DEUX OFFRES */}
+        <section className="py-20 md:py-28">
           <div className="container">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-[#0A2540] mb-4">
-                Deux niveaux d'accompagnement
-              </h2>
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                Choisissez l'offre qui correspond à vos besoins et à la complexité de votre événement.
-              </p>
-            </div>
+            <Reveal>
+              <div className="text-center mb-16">
+                <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">Deux niveaux d'accompagnement</h2>
+                <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+                  Choisissez l'offre qui correspond à vos besoins et à la complexité de votre événement.
+                </p>
+              </div>
+            </Reveal>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-              {/* OFFER 1: STANDARD */}
-              <div className="bg-white rounded-2xl p-10 border-2 border-gray-200 hover:border-[#00C4B4] transition">
-                <h3 className="text-3xl font-bold text-[#0A2540] mb-3">
-                  Pulse Congress Standard
-                </h3>
-                <p className="text-gray-600 mb-8 leading-relaxed">
-                  Pour les congrès et journées scientifiques souhaitant digitaliser leur événement avec une application professionnelle simple à déployer.
-                </p>
-
-                <div className="bg-gray-50 rounded-xl p-6 mb-8">
-                  <h4 className="font-semibold text-[#0A2540] mb-4">Inclus :</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Application iOS et Android</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Programme interactif permettant aux participants de retrouver facilement leurs sessions</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Intervenants</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Sponsors et partenaires</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Notifications push pour informer instantanément les participants des changements</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Statistiques d'utilisation pour mesurer l'engagement</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">Support standard</span>
-                    </li>
-                  </ul>
+              {/* STANDARD */}
+              <Reveal>
+                <div className="h-full rounded-3xl p-10 bg-white/[0.04] border border-white/10 hover:border-[#00C4B4]/40 transition-colors">
+                  <h3 className="font-display text-2xl md:text-3xl font-bold mb-3">Pulse Congress Standard</h3>
+                  <p className="text-slate-400 mb-8 leading-relaxed">
+                    Pour les congrès et journées scientifiques souhaitant digitaliser leur événement avec une
+                    application professionnelle simple à déployer.
+                  </p>
+                  <div className="rounded-2xl p-6 mb-8 bg-white/[0.03] border border-white/10">
+                    <h4 className="font-semibold mb-4 text-slate-200">Inclus :</h4>
+                    <ul className="space-y-3">
+                      {STANDARD.map((f) => (
+                        <li key={f} className="flex items-start gap-3">
+                          <CheckCircle2 size={20} className="text-[#00E5C8] shrink-0 mt-0.5" />
+                          <span className="text-slate-300 text-sm">{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <Link href={DEMO_PATH} className="block text-center border border-[#00C4B4]/60 text-[#00E5C8] px-6 py-3 rounded-xl font-semibold hover:bg-[#00C4B4]/10 transition-colors">
+                    Réserver une démonstration
+                  </Link>
                 </div>
+              </Reveal>
 
-                <Link
-                  href="/contact"
-                  className="w-full block text-center border-2 border-[#00C4B4] text-[#00C4B4] px-6 py-3 rounded-lg font-semibold hover:bg-[#00C4B4]/10 transition"
-                >
-                  Réserver une démonstration
-                </Link>
-              </div>
-
-              {/* OFFER 2: PREMIUM */}
-              <div className="bg-gradient-to-br from-[#0A2540] to-[#003087] rounded-2xl p-10 text-white shadow-xl relative">
-                <div className="absolute -top-4 -right-4 bg-[#00C4B4] text-[#0A2540] px-4 py-2 rounded-full text-sm font-bold">
-                  Le plus choisi
+              {/* PREMIUM */}
+              <Reveal delay={0.1}>
+                <div className="relative h-full rounded-3xl p-10 bg-gradient-to-br from-[#0A2540] to-[#062038] border border-[#00C4B4]/40 shadow-[0_0_60px_rgba(0,196,180,0.15)]">
+                  <div className="absolute -top-3 right-6 bg-[#00E5C8] text-[#0A2540] px-4 py-1.5 rounded-full text-xs font-bold shadow-lg">
+                    Le plus choisi
+                  </div>
+                  <h3 className="font-display text-2xl md:text-3xl font-bold mb-3">Pulse Congress Premium</h3>
+                  <p className="text-slate-300 mb-8 leading-relaxed">
+                    Pour les congrès nécessitant des fonctionnalités scientifiques avancées et un accompagnement renforcé.
+                  </p>
+                  <div className="rounded-2xl p-6 mb-8 bg-white/[0.06] border border-white/10 backdrop-blur">
+                    <h4 className="font-semibold mb-4">Inclus :</h4>
+                    <ul className="space-y-3">
+                      {PREMIUM.map((f) => (
+                        <li key={f} className="flex items-start gap-3">
+                          <CheckCircle2 size={20} className="text-[#00E5C8] shrink-0 mt-0.5" />
+                          <span className="text-slate-200 text-sm">{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <Link href={DEMO_PATH} className="block text-center bg-[#00E5C8] text-[#0A2540] px-6 py-3 rounded-xl font-semibold hover:shadow-[0_8px_30px_rgba(0,229,200,0.45)] hover:-translate-y-0.5 transition-all duration-300">
+                    Réserver une démonstration
+                  </Link>
                 </div>
-
-                <h3 className="text-3xl font-bold mb-3">
-                  Pulse Congress Premium
-                </h3>
-                <p className="text-gray-100 mb-8 leading-relaxed">
-                  Pour les congrès nécessitant des fonctionnalités scientifiques avancées et un accompagnement renforcé.
-                </p>
-
-                <div className="bg-white/10 rounded-xl p-6 mb-8 backdrop-blur">
-                  <h4 className="font-semibold mb-4">Inclus :</h4>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-100">Toutes les fonctionnalités Standard</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-100">Gestion des abstracts</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-100">Gestion des e-posters</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-100">Contenus scientifiques avancés</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-100">Accompagnement renforcé</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-100">Paramétrages spécifiques</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 size={20} className="text-[#00C4B4] flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-100">Reporting avancé</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <Link
-                  href="/contact"
-                  className="w-full block text-center bg-[#00C4B4] text-[#0A2540] px-6 py-3 rounded-lg font-semibold hover:bg-[#00C4B4]/90 transition"
-                >
-                  Réserver une démonstration
-                </Link>
-              </div>
+              </Reveal>
             </div>
           </div>
         </section>
 
-        {/* SECTION 2: COMPLEMENTARY OPTIONS */}
-        <section className="section-padding bg-gray-50">
+        {/* OPTIONS COMPLÉMENTAIRES */}
+        <section className="py-20 md:py-28 bg-white/[0.02]">
           <div className="container">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-[#0A2540] mb-4">
-                Options complémentaires
-              </h2>
-              <p className="text-gray-600 text-lg">
-                Les options sont activées selon les besoins de votre événement.
-              </p>
-            </div>
-
+            <Reveal>
+              <div className="text-center mb-16">
+                <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">Options complémentaires</h2>
+                <p className="text-slate-400 text-lg">Les options sont activées selon les besoins de votre événement.</p>
+              </div>
+            </Reveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              {complementaryOptions.map((option, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-[#00C4B4] transition">
-                  <div className="flex items-start gap-3 mb-3">
-                    <Zap size={24} className="text-[#00C4B4] flex-shrink-0" />
-                    <h3 className="text-lg font-bold text-[#0A2540]">{option.title}</h3>
+              {OPTIONS.map((o, i) => (
+                <Reveal key={o.title} delay={(i % 3) * 0.1}>
+                  <div className="h-full rounded-2xl p-6 bg-white/[0.04] border border-white/10 hover:border-[#00C4B4]/40 transition-colors">
+                    <div className="flex items-start gap-3 mb-3">
+                      <Zap size={22} className="text-[#00E5C8] shrink-0" />
+                      <h3 className="font-display text-lg font-semibold">{o.title}</h3>
+                    </div>
+                    <p className="text-slate-400 text-sm">{o.description}</p>
                   </div>
-                  <p className="text-gray-600 text-sm">{option.description}</p>
-                </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        {/* SECTION 3: WHAT'S INCLUDED IN ALL OFFERS */}
-        <section className="section-padding bg-white">
+        {/* INCLUS DANS TOUTES LES OFFRES */}
+        <section className="py-20 md:py-28">
           <div className="container">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-[#0A2540] mb-4">
+            <Reveal>
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-16">
                 Ce qui est inclus dans toutes les offres
               </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {includedInAll.map((item, index) => (
-                <div key={index} className="flex items-start gap-4 p-4">
-                  <CheckCircle2 size={24} className="text-[#00C4B4] flex-shrink-0 mt-1" />
-                  <span className="text-lg text-gray-700 font-medium">{item}</span>
-                </div>
+            </Reveal>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+              {INCLUDED.map((item, i) => (
+                <Reveal key={item} delay={(i % 2) * 0.08}>
+                  <div className="flex items-start gap-4 p-4 rounded-xl bg-white/[0.03] border border-white/10">
+                    <CheckCircle2 size={22} className="text-[#00E5C8] shrink-0 mt-0.5" />
+                    <span className="text-slate-200 font-medium">{item}</span>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        {/* SECTION 4: PRICING CONSULTATIVE */}
-        <section className="section-padding bg-gradient-to-br from-[#0A2540] via-[#003087] to-[#0A2540] text-white">
+        {/* TARIF CONSULTATIF */}
+        <section className="relative overflow-hidden py-20 md:py-28">
+          <div className="absolute inset-0 -z-10 v2-aurora opacity-40" />
+          <div className="absolute -z-10 top-[-30%] left-1/2 -translate-x-1/2 w-[46rem] h-[46rem] rounded-full bg-[#00C4B4]/15 blur-[130px]" />
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-4xl font-bold mb-6">
-                Combien coûte Pulse Congress ?
-              </h2>
-              <p className="text-xl text-gray-100 mb-8 leading-relaxed">
-                Chaque congrès est unique.
-              </p>
-              <p className="text-lg text-gray-200 mb-10 leading-relaxed">
-                Le tarif dépend notamment :
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 text-left max-w-2xl mx-auto">
-                <div className="bg-white/10 rounded-lg p-6 backdrop-blur">
-                  <p className="text-gray-100">• Du nombre de participants</p>
+              <Reveal>
+                <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">Combien coûte Pulse Congress ?</h2>
+                <p className="text-xl text-slate-200 mb-2">Chaque congrès est unique.</p>
+                <p className="text-slate-400 mb-10">Le tarif dépend notamment :</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 text-left max-w-2xl mx-auto">
+                  {PRICING_FACTORS.map((f) => (
+                    <div key={f} className="rounded-xl p-5 bg-white/[0.05] border border-white/10 backdrop-blur flex items-center gap-3">
+                      <span className="text-[#00E5C8]">•</span>
+                      <p className="text-slate-200">{f}</p>
+                    </div>
+                  ))}
                 </div>
-                <div className="bg-white/10 rounded-lg p-6 backdrop-blur">
-                  <p className="text-gray-100">• Du volume de contenu</p>
+                <p className="text-slate-300 mb-10">Nous vous présentons une proposition adaptée lors de la démonstration.</p>
+                <div className="flex justify-center">
+                  <Link href={DEMO_PATH} className="group inline-flex items-center gap-2 bg-[#00E5C8] text-[#0A2540] px-7 py-4 rounded-xl font-semibold shadow-[0_8px_30px_rgba(0,229,200,0.35)] hover:shadow-[0_12px_40px_rgba(0,229,200,0.55)] hover:-translate-y-0.5 transition-all duration-300">
+                    Réserver une démonstration
+                    <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
-                <div className="bg-white/10 rounded-lg p-6 backdrop-blur">
-                  <p className="text-gray-100">• Des fonctionnalités souhaitées</p>
-                </div>
-                <div className="bg-white/10 rounded-lg p-6 backdrop-blur">
-                  <p className="text-gray-100">• Du niveau d'accompagnement</p>
-                </div>
-              </div>
-
-              <p className="text-lg text-gray-200 mb-10 leading-relaxed">
-                Nous vous présentons une proposition adaptée lors de la démonstration.
-              </p>
-
-              <Link
-                href="/contact"
-                className="inline-block bg-[#00E5C8] text-[#0A2540] px-8 py-4 rounded-lg font-semibold hover:bg-[#00E5C8]/90 transition shadow-lg hover:shadow-xl"
-              >
-                Réserver une démonstration
-              </Link>
+              </Reveal>
             </div>
           </div>
         </section>
