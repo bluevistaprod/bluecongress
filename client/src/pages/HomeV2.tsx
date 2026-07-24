@@ -83,7 +83,7 @@ const STATS = [
   { n: 945, s: '', label: 'Participants touchés' },
   { n: 118, s: '', label: 'Sessions gérées' },
   { n: 134, s: '', label: 'Intervenants valorisés' },
-  { n: 4, s: '', label: 'Applications livrées' },
+  { n: 5, s: '', label: 'Applications livrées' },
 ];
 
 const PROBLEMS = [
