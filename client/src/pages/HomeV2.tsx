@@ -78,11 +78,12 @@ const MOCKUPS = [
   '/realisations/nice-shoulder-course/intervenants.webp',
 ];
 
-// [à confirmer] — chiffres placeholder en attendant les vrais (Giz y travaille)
+// Chiffres vérifiables (NSC 2024 sourcé + réf. cerveau : 2 clients / 4 applis).
+// [à confirmer] participants ESPOIR non publics — bande volontairement conservatrice.
 const STATS = [
-  { n: 1400, s: '+', label: 'Participants touchés' },
-  { n: 55, s: '+', label: 'Sessions gérées' },
-  { n: 2, s: '', label: 'Congrès déployés' },
+  { n: 800, s: '+', label: 'Participants touchés' },
+  { n: 180, s: '+', label: 'Présentations gérées' },
+  { n: 4, s: '', label: 'Applications livrées' },
   { n: 100, s: '%', label: 'Conforme RGPD' },
 ];
 
@@ -115,8 +116,8 @@ const CASES = [
   {
     key: 'nsc',
     title: 'Nice Shoulder Course',
-    tagline: "Un des congrès majeurs de la chirurgie de l'épaule en Europe.",
-    stats: [{ n: '800+', l: 'Participants' }, { n: '40+', l: 'Sessions' }, { n: '3', l: 'Jours' }],
+    tagline: "Un des congrès majeurs de la chirurgie de l'épaule en Europe — 800+ participants venus de 74 pays.",
+    stats: [{ n: '800+', l: 'Participants' }, { n: '74', l: 'Pays' }, { n: '180', l: 'Présentations' }],
     gallery: niceShoulderCourseGallery,
     quote: 'Application fonctionnelle, avec des mises à jour rapides. Fluidité au rendez-vous.',
     author: 'Martin Rolland',
@@ -127,8 +128,9 @@ const CASES = [
   {
     key: 'espoir',
     title: 'Congrès ESPOIR Oncologie',
-    tagline: 'Un congrès médical spécialisé en oncologie, centré sur les dernières avancées thérapeutiques.',
-    stats: [{ n: '600+', l: 'Participants' }, { n: '15+', l: 'Sessions' }, { n: '2', l: 'Jours' }],
+    tagline: '« Ensemble Sein et Prostate pour une Oncologie Innovante et Responsable » — un congrès dédié aux cancers hormonodépendants.',
+    // [à confirmer] Nombre de participants ESPOIR non public — chiffre à valider avec Giz
+    stats: [{ n: '2', l: 'Jours' }, { n: '16', l: 'Comité scientifique' }, { n: '2', l: 'Cancers ciblés' }],
     gallery: congreEspoirGallery,
     quote: "Je ne mets jamais 10 car on peut toujours s'améliorer, mais l'appli est aujourd'hui un outil quasi systématique en congrès. Celle-ci est très facile d'utilisation, au design parfaitement adapté à la dimension de l'événement : conviviale, bienveillante et simple.",
     author: 'Pr Pierre Cornillon',

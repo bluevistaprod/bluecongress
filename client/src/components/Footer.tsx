@@ -16,12 +16,10 @@ export default function Footer() {
             <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-xs">
               La solution digitale clé en main pour les congrès médicaux et scientifiques.
             </p>
-            {/* Signature Bluevista — TODO: remplacer le wordmark par le vrai logo Bluevista (asset à fournir) */}
-            <div className="flex items-center gap-2">
+            {/* Signature Bluevista */}
+            <div className="flex items-center gap-2.5">
               <span className="text-slate-500 text-xs">Un produit</span>
-              <span className="font-display font-bold tracking-tight text-white/90">
-                BLUE<span className="text-[#00C4B4]">VISTA</span>
-              </span>
+              <img src="/brand/bluevista-logo-white.png" alt="Bluevista" className="h-5 w-auto opacity-90" />
             </div>
           </div>
 
