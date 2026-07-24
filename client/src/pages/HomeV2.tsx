@@ -78,13 +78,12 @@ const MOCKUPS = [
   '/realisations/nice-shoulder-course/intervenants.webp',
 ];
 
-// Chiffres vérifiables (NSC 2024 sourcé + réf. cerveau : 2 clients / 4 applis).
-// [à confirmer] participants ESPOIR non publics — bande volontairement conservatrice.
+// Chiffres réels (relevés dans les applis NSC + ESPOIR par Giz). Sommes des deux congrès.
 const STATS = [
-  { n: 800, s: '+', label: 'Participants touchés' },
-  { n: 180, s: '+', label: 'Présentations gérées' },
+  { n: 945, s: '', label: 'Participants touchés' },
+  { n: 118, s: '', label: 'Sessions gérées' },
+  { n: 134, s: '', label: 'Intervenants valorisés' },
   { n: 4, s: '', label: 'Applications livrées' },
-  { n: 100, s: '%', label: 'Conforme RGPD' },
 ];
 
 const PROBLEMS = [
@@ -117,7 +116,7 @@ const CASES = [
     key: 'nsc',
     title: 'Nice Shoulder Course',
     tagline: "Un des congrès majeurs de la chirurgie de l'épaule en Europe — 800+ participants venus de 74 pays.",
-    stats: [{ n: '800+', l: 'Participants' }, { n: '74', l: 'Pays' }, { n: '180', l: 'Présentations' }],
+    stats: [{ n: '800+', l: 'Participants' }, { n: '89', l: 'Intervenants' }, { n: '93', l: 'Sessions' }],
     gallery: niceShoulderCourseGallery,
     quote: 'Application fonctionnelle, avec des mises à jour rapides. Fluidité au rendez-vous.',
     author: 'Martin Rolland',
@@ -129,8 +128,7 @@ const CASES = [
     key: 'espoir',
     title: 'Congrès ESPOIR Oncologie',
     tagline: '« Ensemble Sein et Prostate pour une Oncologie Innovante et Responsable » — un congrès dédié aux cancers hormonodépendants.',
-    // [à confirmer] Nombre de participants ESPOIR non public — chiffre à valider avec Giz
-    stats: [{ n: '2', l: 'Jours' }, { n: '16', l: 'Comité scientifique' }, { n: '2', l: 'Cancers ciblés' }],
+    stats: [{ n: '145', l: 'Participants' }, { n: '45', l: 'Intervenants' }, { n: '25', l: 'Sessions' }],
     gallery: congreEspoirGallery,
     quote: "Je ne mets jamais 10 car on peut toujours s'améliorer, mais l'appli est aujourd'hui un outil quasi systématique en congrès. Celle-ci est très facile d'utilisation, au design parfaitement adapté à la dimension de l'événement : conviviale, bienveillante et simple.",
     author: 'Pr Pierre Cornillon',
