@@ -8,6 +8,7 @@ import {
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ImageGalleryPreview from '@/components/ImageGalleryPreview';
+import HeroAppShowcase from '@/components/HeroAppShowcase';
 import { niceShoulderCourseGallery, congreEspoirGallery } from '@/data/galleryData';
 import { Link } from 'wouter';
 
@@ -71,12 +72,6 @@ function CtaGhost({ href, children }: { href: string; children: React.ReactNode 
 }
 
 /* ---------- Données ---------- */
-
-const MOCKUPS = [
-  '/realisations/nice-shoulder-course/accueil.webp',
-  '/realisations/nice-shoulder-course/programme.webp',
-  '/realisations/nice-shoulder-course/intervenants.webp',
-];
 
 // Chiffres réels (relevés dans les applis NSC + ESPOIR par Giz). Sommes des deux congrès.
 const STATS = [
@@ -207,27 +202,15 @@ export default function Home() {
                 </motion.div>
               </div>
 
-              {/* Mockups flottants + parallax */}
-              <motion.div style={{ y: mockupsY }} className="relative flex justify-center items-end h-[460px] md:h-[520px]">
-                {MOCKUPS.map((src, i) => {
-                  const positions = [
-                    'z-20 translate-y-0',
-                    'z-10 -translate-x-[58%] translate-y-8 scale-90 hidden sm:block',
-                    'z-10 translate-x-[58%] translate-y-8 scale-90 hidden sm:block',
-                  ];
-                  return (
-                    <motion.div
-                      key={src}
-                      initial={{ opacity: 0, y: 60, rotate: i === 0 ? 0 : i === 1 ? -6 : 6 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.8, delay: 0.3 + i * 0.15 }}
-                      className={`absolute ${positions[i]}`}
-                      style={{ animation: `v2-float ${6 + i}s ease-in-out ${i * 0.6}s infinite` }}
-                    >
-                      <img src={src} alt="" className="w-[220px] md:w-[250px] rounded-[2rem] border-[6px] border-slate-800 shadow-2xl shadow-black/50" />
-                    </motion.div>
-                  );
-                })}
+              {/* Démo animée de l'appli (remplace les mockups statiques) */}
+              <motion.div
+                style={{ y: mockupsY }}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="relative h-[460px] md:h-[520px]"
+              >
+                <HeroAppShowcase />
               </motion.div>
             </div>
           </div>
