@@ -2,6 +2,7 @@ import { CheckCircle, Clock, Lock, Users, Zap, ArrowRight, Quote } from 'lucide-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Reveal } from '@/components/Reveal';
+import { useSeo, SEO } from '@/lib/seo';
 
 // TODO Calendly : remplacer par le lien de l'événement ROUND-ROBIN (Bertrand/Giz/Célestin)
 // une fois créé dans le compte Calendly. Règles à régler côté Calendly (voir notes).
@@ -32,6 +33,7 @@ function scrollToCal() {
 }
 
 export default function DemandezDemonstration() {
+  useSeo(SEO.demo);
   return (
     <div className="min-h-screen flex flex-col bg-[#071A2F] text-white">
       <Header />

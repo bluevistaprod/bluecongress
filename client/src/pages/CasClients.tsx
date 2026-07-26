@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import ImageGalleryPreview from '@/components/ImageGalleryPreview';
 import { niceShoulderCourseGallery, congreEspoirGallery } from '@/data/galleryData';
 import { Reveal, Counter, DEMO_PATH } from '@/components/Reveal';
+import { useSeo, SEO } from '@/lib/seo';
 
 const TRUST = [
   { n: 20, s: '+', label: "années d'expérience" },
@@ -66,6 +67,7 @@ function CaseContent({
 }
 
 export default function CasClients() {
+  useSeo(SEO.casClients);
   return (
     <div className="min-h-screen flex flex-col bg-[#071A2F] text-white">
       <Header />

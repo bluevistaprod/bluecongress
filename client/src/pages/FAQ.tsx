@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Link } from 'wouter';
 import { Reveal, DEMO_PATH } from '@/components/Reveal';
+import { useSeo, SEO } from '@/lib/seo';
 
 interface FAQItem { question: string; answer: string; }
 interface FAQCategory { title: string; items: FAQItem[]; }
@@ -75,6 +76,7 @@ function FAQAccordion({ category }: { category: FAQCategory }) {
 }
 
 export default function FAQ() {
+  useSeo(SEO.faq);
   return (
     <div className="min-h-screen flex flex-col bg-[#071A2F] text-white">
       <Header />

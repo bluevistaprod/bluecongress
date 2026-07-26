@@ -3,6 +3,7 @@ import { Link } from 'wouter';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Reveal, DEMO_PATH } from '@/components/Reveal';
+import { useSeo, SEO } from '@/lib/seo';
 
 const STANDARD = [
   'Application iOS et Android',
@@ -51,6 +52,7 @@ const PRICING_FACTORS = [
 ];
 
 export default function Offres() {
+  useSeo(SEO.offres);
   return (
     <div className="min-h-screen flex flex-col bg-[#071A2F] text-white">
       <Header />

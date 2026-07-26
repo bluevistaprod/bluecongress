@@ -1,26 +1,92 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Pulse Congress — Application mobile pour congrès médicaux et scientifiques</title>
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Bluevista Congress App - Site Web</title>    
-    <!-- THIS IS THE START OF A COMMENT BLOCK, BLOCK TO BE DELETED: Google Fonts here, example:
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    THIS IS THE END OF A COMMENT BLOCK, BLOCK TO BE DELETED -->
+      name="description"
+      content="Application mobile clé en main pour vos congrès médicaux et scientifiques : programme interactif, fiches intervenants, notifications en temps réel, votes en direct. Déployée en quelques jours, conforme RGPD." />
+    <link rel="canonical" href="https://pulsecongress.com/" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Bluevista Production" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#0A2540" />
+
+    <!-- Partage sur réseaux sociaux et messageries -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pulse Congress" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="https://pulsecongress.com/" />
+    <meta property="og:title" content="Pulse Congress — L'application de vos congrès médicaux et scientifiques" />
+    <meta
+      property="og:description"
+      content="Programme interactif, intervenants, notifications en temps réel, votes en direct. Une application personnalisée, prête en quelques jours." />
+    <meta property="og:image" content="https://pulsecongress.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Pulse Congress — L'application de vos congrès médicaux et scientifiques" />
+    <meta
+      name="twitter:description"
+      content="Programme interactif, intervenants, notifications en temps réel, votes en direct. Prête en quelques jours." />
+    <meta name="twitter:image" content="https://pulsecongress.com/og-image.png" />
+
+    <!-- Identité organisation / produit pour les moteurs -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://pulsecongress.com/#organisation",
+            "name": "Bluevista Production",
+            "url": "https://pulsecongress.com/",
+            "logo": "https://pulsecongress.com/icon-512.png",
+            "description": "Depuis 2004, Bluevista accompagne les organisateurs de congrès médicaux et scientifiques.",
+            "telephone": "+33472345189",
+            "email": "contact@bluevistaprod.com"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "https://pulsecongress.com/#application",
+            "name": "Pulse Congress",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "iOS, Android",
+            "url": "https://pulsecongress.com/",
+            "description": "Application mobile clé en main pour congrès médicaux et scientifiques : programme interactif, fiches intervenants, notifications en temps réel, votes en direct, plan du salon et statistiques post-événement.",
+            "publisher": { "@id": "https://pulsecongress.com/#organisation" },
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://pulsecongress.com/offres"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://pulsecongress.com/#site",
+            "url": "https://pulsecongress.com/",
+            "name": "Pulse Congress",
+            "inLanguage": "fr-FR",
+            "publisher": { "@id": "https://pulsecongress.com/#organisation" }
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
   </body>
 
 </html>

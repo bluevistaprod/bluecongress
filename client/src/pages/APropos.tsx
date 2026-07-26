@@ -3,6 +3,7 @@ import { Link } from 'wouter';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Reveal, Counter, DEMO_PATH } from '@/components/Reveal';
+import { useSeo, SEO } from '@/lib/seo';
 
 const METRICS = [
   { n: 20, s: '+', label: "années d'expérience" },
@@ -34,6 +35,7 @@ const WHY = [
 ];
 
 export default function APropos() {
+  useSeo(SEO.aPropos);
   return (
     <div className="min-h-screen flex flex-col bg-[#071A2F] text-white">
       <Header />

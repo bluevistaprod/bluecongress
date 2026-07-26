@@ -5,12 +5,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Reveal, DEMO_PATH } from '@/components/Reveal';
 import { trpc } from '@/lib/trpc';
+import { useSeo, SEO } from '@/lib/seo';
 
 const EMPTY = { name: '', email: '', organization: '', phone: '', message: '', website: '' };
 const inputCls =
   'w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder:text-slate-500 focus:outline-none focus:border-[#00C4B4] focus:ring-2 focus:ring-[#00C4B4]/20 transition';
 
 export default function Contact() {
+  useSeo(SEO.contact);
   const [form, setForm] = useState(EMPTY);
   const mutation = trpc.contact.send.useMutation();
 

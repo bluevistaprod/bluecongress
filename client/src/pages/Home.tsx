@@ -12,6 +12,7 @@ import HeroAppShowcase from '@/components/HeroAppShowcase';
 import PulseLogo from '@/components/PulseLogo';
 import { niceShoulderCourseGallery, congreEspoirGallery } from '@/data/galleryData';
 import { Link } from 'wouter';
+import { useSeo, SEO } from '@/lib/seo';
 
 /* Chemin canonique de prise de démo (vrai Calendly) — surtout PAS /contact (formulaire mort). */
 const DEMO_PATH = '/demander-une-demonstration';
@@ -144,6 +145,7 @@ const WHY = [
 /* ---------- Page ---------- */
 
 export default function Home() {
+  useSeo(SEO.home);
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] });
   const mockupsY = useTransform(scrollYProgress, [0, 1], [0, 120]);

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Espace d'administration : hors index
+Disallow: /admin
+
+Sitemap: https://pulsecongress.com/sitemap.xml
