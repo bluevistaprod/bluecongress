@@ -51,8 +51,6 @@ export default function ImageGalleryMobile({ images, title }: ImageGalleryMobile
             {/* Mobile Phone Frame */}
             <div className="relative w-48 h-96 rounded-3xl border-8 border-gray-800 bg-gray-900 shadow-2xl overflow-hidden">
               {/* Phone Notch */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-6 bg-gray-800 rounded-b-3xl z-10"></div>
-              
               {/* Screen Content */}
               <div className={`${image.placeholder} w-full h-full flex items-center justify-center relative overflow-hidden`}>
                 {image.image ? (
@@ -103,8 +101,6 @@ export default function ImageGalleryMobile({ images, title }: ImageGalleryMobile
             {/* Mobile Phone Frame - Large */}
             <div className="relative w-full max-w-sm mx-auto rounded-3xl border-8 border-gray-800 bg-gray-900 shadow-2xl overflow-hidden">
               {/* Phone Notch */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-7 bg-gray-800 rounded-b-3xl z-10"></div>
-              
               {/* Screen Content */}
               <div className={`${images[selectedIndex].placeholder} w-full aspect-[9/16] flex items-center justify-center relative overflow-hidden`}>
                 {images[selectedIndex].image ? (

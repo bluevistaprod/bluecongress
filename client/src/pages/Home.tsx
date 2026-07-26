@@ -9,6 +9,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ImageGalleryPreview from '@/components/ImageGalleryPreview';
 import HeroAppShowcase from '@/components/HeroAppShowcase';
+import PulseLogo from '@/components/PulseLogo';
 import { niceShoulderCourseGallery, congreEspoirGallery } from '@/data/galleryData';
 import { Link } from 'wouter';
 
@@ -162,12 +163,12 @@ export default function Home() {
           <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <motion.img
-                  src="/brand/pulse-logo-dark.png"
-                  alt="Pulse Congress"
+                <motion.div
                   initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}
-                  className="h-20 md:h-28 w-auto mb-8"
-                />
+                  className="mb-8"
+                >
+                  <PulseLogo variant="dark" className="h-20 md:h-28 w-auto" />
+                </motion.div>
                 <motion.div
                   initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.05 }}
                   className="inline-flex items-center gap-2 bg-white/5 border border-[#00C4B4]/40 rounded-full px-4 py-2 mb-8 backdrop-blur-sm"

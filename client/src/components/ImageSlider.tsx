@@ -44,8 +44,6 @@ export default function ImageSlider({ images }: ImageSliderProps) {
               {/* Mobile Phone Frame */}
               <div className="relative w-40 h-72 rounded-3xl border-6 border-gray-800 bg-gray-900 shadow-2xl overflow-hidden flex-shrink-0">
                 {/* Phone Notch */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-5 bg-gray-800 rounded-b-2xl z-10"></div>
-                
                 {/* Screen Content */}
                 <div className={`${image.placeholder} w-full h-full flex items-center justify-center relative overflow-hidden`}>
                   {image.image ? (

@@ -1,6 +1,7 @@
 import { Link } from 'wouter';
 import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import PulseLogo from './PulseLogo';
 
 const NAV = [
   { href: '/offres', label: 'Nos Offres' },
@@ -35,7 +36,7 @@ export default function Header() {
     >
       <nav className="container flex items-center justify-between h-16">
         <Link href="/" onClick={handleNavClick} className="flex items-center">
-          <img src="/brand/pulse-logo-dark.png" alt="Pulse Congress" className="h-9 w-auto" />
+          <PulseLogo variant="dark" className="h-9 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}

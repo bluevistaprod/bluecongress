@@ -1,5 +1,6 @@
 import { Link } from 'wouter';
 import { Mail, Phone } from 'lucide-react';
+import PulseLogo from './PulseLogo';
 
 export default function Footer() {
   return (
@@ -8,11 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Marque */}
           <div>
-            <img
-              src="/brand/pulse-logo-white.png"
-              alt="Pulse Congress"
-              className="h-9 w-auto mb-5"
-            />
+            <PulseLogo variant="dark" className="h-10 w-auto mb-5" />
             <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-xs">
               La solution digitale clé en main pour les congrès médicaux et scientifiques.
             </p>

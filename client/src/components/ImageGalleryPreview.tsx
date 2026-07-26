@@ -52,9 +52,9 @@ export default function ImageGalleryPreview({ images, title, maxImages = 3 }: Im
           >
             {/* Compact Mobile Phone Frame */}
             <div className="relative w-full aspect-[9/16] rounded-3xl border-6 border-gray-800 bg-gray-900 shadow-lg overflow-hidden mx-auto max-w-xs">
-              {/* Phone Notch */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-5 bg-gray-800 rounded-b-2xl z-10"></div>
-              
+              {/* Pas d'encoche dessinée : les captures contiennent déjà la vraie
+                  barre d'état du téléphone, une encoche en plus masquait le titre de l'écran. */}
+
               {/* Screen Content */}
               <div className={`${image.placeholder} w-full h-full flex items-center justify-center relative overflow-hidden`}>
                 {image.image ? (
@@ -104,9 +104,8 @@ export default function ImageGalleryPreview({ images, title, maxImages = 3 }: Im
 
             {/* Mobile Phone Frame - Large */}
             <div className="relative w-full max-w-sm mx-auto rounded-3xl border-8 border-gray-800 bg-gray-900 shadow-2xl overflow-hidden">
-              {/* Phone Notch */}
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-7 bg-gray-800 rounded-b-3xl z-10"></div>
-              
+              {/* Pas d'encoche dessinée (voir plus haut) */}
+
               {/* Screen Content */}
               <div className={`${images[selectedIndex].placeholder} w-full aspect-[9/16] flex items-center justify-center relative overflow-hidden`}>
                 {images[selectedIndex].image ? (
