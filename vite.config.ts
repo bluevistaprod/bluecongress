@@ -150,7 +150,16 @@ function vitePluginManusDebugCollector(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
+// Les outils Manus (runtime, jsx-loc, collecteur de logs) servent UNIQUEMENT au
+// développement : embarqués en production ils ajoutaient ~360 ko à index.html et
+// exposaient du tooling de debug aux visiteurs.
+const isDev = process.env.NODE_ENV !== "production";
+
+const plugins = [
+  react(),
+  tailwindcss(),
+  ...(isDev ? [jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()] : []),
+];
 
 export default defineConfig({
   plugins,
