@@ -12,7 +12,11 @@ import APropos from "./pages/APropos";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import DemandezDemonstration from "./pages/DemandezDemonstration";
+import MentionsLegales from "./pages/MentionsLegales";
+import Confidentialite from "./pages/Confidentialite";
+import CGV from "./pages/CGV";
 import Admin from "./pages/Admin";
+import CookieBanner from "./components/CookieBanner";
 
 
 // Remet la page en haut à chaque changement de route (menu, CTA, footer…)
@@ -35,6 +39,9 @@ function Router() {
       <Route path="/faq" component={FAQ} />
       <Route path="/contact" component={Contact} />
       <Route path="/demander-une-demonstration" component={DemandezDemonstration} />
+      <Route path="/mentions-legales" component={MentionsLegales} />
+      <Route path="/politique-de-confidentialite" component={Confidentialite} />
+      <Route path="/cgv" component={CGV} />
       <Route path="/admin" component={Admin} />
       <Route path="/404" component={NotFound} />
       {/* Final fallback route */}
@@ -59,6 +66,7 @@ function App() {
           <Toaster />
           <ScrollToTop />
           <Router />
+          <CookieBanner />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

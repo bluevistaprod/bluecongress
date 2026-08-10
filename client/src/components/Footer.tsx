@@ -63,9 +63,9 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-slate-500 text-sm">© 2004–2026 Bluevista Production. Tous droits réservés.</p>
           <div className="flex gap-6 text-sm text-slate-500">
-            <Link href="#" className="hover:text-[#00E5C8] transition-colors">Mentions légales</Link>
-            <Link href="#" className="hover:text-[#00E5C8] transition-colors">Confidentialité</Link>
-            <Link href="#" className="hover:text-[#00E5C8] transition-colors">CGV</Link>
+            <Link href="/mentions-legales" className="hover:text-[#00E5C8] transition-colors">Mentions légales</Link>
+            <Link href="/politique-de-confidentialite" className="hover:text-[#00E5C8] transition-colors">Confidentialité</Link>
+            <Link href="/cgv" className="hover:text-[#00E5C8] transition-colors">CGV</Link>
           </div>
         </div>
       </div>

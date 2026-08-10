@@ -6,7 +6,11 @@ import { useSeo, SEO } from '@/lib/seo';
 
 // TODO Calendly : remplacer par le lien de l'événement ROUND-ROBIN (Bertrand/Giz/Célestin)
 // une fois créé dans le compte Calendly. Règles à régler côté Calendly (voir notes).
-const CALENDLY_URL = 'https://calendly.com/contact-bluevistaprod/30min?hide_event_type_details=1&hide_gdpr_block=1&background_color=071a2f&text_color=e2e8f0&primary_color=00c4b4';
+//
+// ⛔ Ne pas remettre `hide_gdpr_block=1` : ce paramètre masque l'avis de Calendly sur
+// les cookies qu'il dépose. C'est le seul traceur tiers du site, et la politique de
+// confidentialité s'appuie sur cet avis.
+const CALENDLY_URL = 'https://calendly.com/contact-bluevistaprod/30min?hide_event_type_details=1&background_color=071a2f&text_color=e2e8f0&primary_color=00c4b4';
 
 const REASSURANCE = [
   { icon: Zap, title: 'Déploiement rapide', desc: 'Application disponible en quelques jours.' },

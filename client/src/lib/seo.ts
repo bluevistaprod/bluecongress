@@ -101,4 +101,22 @@ export const SEO = {
       "Une question sur votre congrès ? Écrivez-nous : notre équipe vous répond sous 24 h ouvrées. Vous pouvez aussi réserver directement une démonstration.",
     path: '/contact',
   },
+  mentionsLegales: {
+    title: 'Mentions légales',
+    description:
+      "Mentions légales du site pulsecongress.com : éditeur Bluevista Production, hébergeur, propriété intellectuelle et droit applicable.",
+    path: '/mentions-legales',
+  },
+  confidentialite: {
+    title: 'Politique de confidentialité',
+    description:
+      "Quelles données pulsecongress.com collecte, pourquoi, combien de temps elles sont conservées et comment exercer vos droits (RGPD).",
+    path: '/politique-de-confidentialite',
+  },
+  cgv: {
+    title: 'Conditions générales de vente',
+    description:
+      "Conditions générales de vente des prestations Pulse Congress : commande, délais, prix et paiement, propriété des contenus, données des participants.",
+    path: '/cgv',
+  },
 } as const;
