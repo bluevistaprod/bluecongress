@@ -1,5 +1,6 @@
 import "dotenv/config";
 import express from "express";
+import compression from "compression";
 import { createServer } from "http";
 import net from "net";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
@@ -37,6 +38,17 @@ async function startServer() {
   
   const app = express();
   const server = createServer(app);
+
+  // Compression gzip/brotli — AVANT toute route, sinon les réponses partent déjà écrites.
+  //
+  // Ni Infomaniak ni le proxy devant l'app ne compressent quoi que ce soit : sans ça, le
+  // bundle JavaScript part en ~678 ko au lieu de ~202 ko. Repéré par le Site Audit Ahrefs
+  // du 11/08/2026, qui le signalait sur les 10 pages du site.
+  // ⚠️ Contrôle (pas à l'œil) :
+  //   curl -s -o /dev/null -D - -H "Accept-Encoding: gzip, br" URL | grep -i content-encoding
+  // Pas de ligne en retour = pas de compression.
+  app.use(compression());
+
   // Configure body parser with larger size limit for file uploads
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
