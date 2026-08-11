@@ -5,6 +5,7 @@ import {
   chargerMesureAudience,
   ecrireConsentement,
   lireConsentement,
+  EVT_ROUVRIR_CONSENTEMENT,
 } from '@/lib/analytics';
 
 /**
@@ -26,14 +27,28 @@ export default function CookieBanner() {
     const choix = lireConsentement();
     if (choix === 'accepte') chargerMesureAudience();
     else if (choix === null) setVisible(true);
+
+    // Rouverture depuis le pied de page (« Cookies »).
+    const rouvrir = () => setVisible(true);
+    window.addEventListener(EVT_ROUVRIR_CONSENTEMENT, rouvrir);
+    return () => window.removeEventListener(EVT_ROUVRIR_CONSENTEMENT, rouvrir);
   }, []);
 
   if (!ANALYTICS_ACTIF || !visible) return null;
 
   const repondre = (valeur: 'accepte' | 'refuse') => {
+    const mesureDejaChargee = !!document.querySelector('script[src*="googletagmanager"]');
     ecrireConsentement(valeur);
-    if (valeur === 'accepte') chargerMesureAudience();
     setVisible(false);
+
+    if (valeur === 'accepte') {
+      chargerMesureAudience();
+    } else if (mesureDejaChargee) {
+      // Le visiteur revient sur un « oui » : le script est déjà en place et ne se décharge
+      // pas. On recharge la page pour repartir sans lui — un refus doit être effectif tout
+      // de suite, pas à la visite suivante.
+      window.location.reload();
+    }
   };
 
   return (

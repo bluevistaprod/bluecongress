@@ -54,6 +54,24 @@ export function ecrireConsentement(valeur: Exclude<Consentement, null>) {
   }
 }
 
+/**
+ * Événement interne qui rouvre le bandeau.
+ *
+ * ⛔ Sans ça, la politique de confidentialité mentirait : retirer son consentement doit
+ * être aussi simple que le donner, or le bandeau disparaît dès qu'un choix est fait.
+ * D'où le lien « Cookies » du pied de page.
+ */
+export const EVT_ROUVRIR_CONSENTEMENT = 'pc:rouvrir-consentement';
+
+export function rouvrirConsentement() {
+  try {
+    localStorage.removeItem(CLE_CONSENTEMENT);
+  } catch {
+    /* stockage indisponible : le bandeau se rouvre quand même pour cette visite */
+  }
+  window.dispatchEvent(new Event(EVT_ROUVRIR_CONSENTEMENT));
+}
+
 let charge = false;
 
 /** Charge le script de mesure. À n'appeler QU'APRÈS un consentement explicite. */

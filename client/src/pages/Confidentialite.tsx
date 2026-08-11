@@ -149,6 +149,15 @@ export default function Confidentialite() {
               'Fourniture des polices de caractères du site ; votre adresse IP est transmise lors du chargement',
               'États-Unis / réseau de diffusion mondial',
             ],
+            ...(ANALYTICS_ACTIF
+              ? [
+                  [
+                    'Google LLC (Google Analytics)',
+                    "Mesure d'audience, uniquement si vous y avez consenti ; adresse IP anonymisée",
+                    'États-Unis (clauses contractuelles types de la Commission européenne)',
+                  ],
+                ]
+              : []),
           ]}
         />
       </LegalSection>
@@ -157,10 +166,13 @@ export default function Confidentialite() {
         <p>
           {ANALYTICS_ACTIF ? (
             <>
-              Ce site utilise un outil de mesure d'audience afin de comprendre comment ses pages sont
-              consultées et de les améliorer. Ces traceurs ne sont déposés qu'après votre consentement,
-              exprimé via le bandeau affiché à votre première visite. Vous pouvez modifier ou retirer
-              ce choix à tout moment depuis ce même bandeau.
+              Ce site utilise un outil de mesure d'audience (Google Analytics) afin de comprendre
+              comment ses pages sont consultées et de les améliorer. Ces traceurs ne sont déposés
+              qu'<strong>après votre consentement</strong>, exprimé via le bandeau affiché à votre
+              première visite. Aucune donnée n'est transmise si vous refusez, et refuser est aussi
+              simple qu'accepter. Vous pouvez revenir sur votre choix à tout moment avec le lien{' '}
+              <strong>« Cookies »</strong> en bas de chaque page. L'adresse IP est anonymisée et les
+              signaux publicitaires de Google sont désactivés.
             </>
           ) : (
             <>

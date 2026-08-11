@@ -1,6 +1,7 @@
 import { Link } from 'wouter';
 import { Mail, Phone } from 'lucide-react';
 import PulseLogo from './PulseLogo';
+import { ANALYTICS_ACTIF, rouvrirConsentement } from '@/lib/analytics';
 
 export default function Footer() {
   return (
@@ -66,6 +67,16 @@ export default function Footer() {
             <Link href="/mentions-legales" className="hover:text-[#00E5C8] transition-colors">Mentions légales</Link>
             <Link href="/politique-de-confidentialite" className="hover:text-[#00E5C8] transition-colors">Confidentialité</Link>
             <Link href="/cgv" className="hover:text-[#00E5C8] transition-colors">CGV</Link>
+            {/* N'apparaît que s'il y a réellement un traceur à accepter ou refuser. */}
+            {ANALYTICS_ACTIF && (
+              <button
+                type="button"
+                onClick={rouvrirConsentement}
+                className="hover:text-[#00E5C8] transition-colors"
+              >
+                Cookies
+              </button>
+            )}
           </div>
         </div>
       </div>
