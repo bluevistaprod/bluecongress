@@ -20,8 +20,12 @@
  * AVANT le consentement, ce qui est précisément ce que la CNIL sanctionne.
  */
 
-/** Identifiant de mesure GA4 du site (format `G-XXXXXXXXXX`). Vide = mesure désactivée. */
-const ID_MESURE = '';
+/**
+ * Identifiant de mesure GA4 du site. Vide = mesure désactivée.
+ * Propriété « Pulse Congress - pulsecongress.com », compte Analytics `www.bluevistaprod.com`
+ * (celui qui porte déjà bluevistaprod et virtualshowroom). Créée le 10/08/2026.
+ */
+const ID_MESURE = 'G-GH7LKZD2JW';
 
 export const GA_ID: string = (import.meta.env.VITE_GA_ID as string | undefined) ?? ID_MESURE;
 
