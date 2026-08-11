@@ -60,39 +60,39 @@ export function useSeo({
 /** Métadonnées de chaque page, au même endroit pour rester cohérentes. */
 export const SEO = {
   home: {
-    title: 'Application mobile pour congrès médicaux et scientifiques',
+    title: 'Application mobile pour congrès médicaux',
     description:
-      "Application mobile clé en main pour vos congrès médicaux et scientifiques : programme interactif, fiches intervenants, notifications en temps réel, votes en direct. Prête en quelques jours, conforme RGPD.",
+      "Application mobile clé en main pour vos congrès médicaux et scientifiques : programme, intervenants, notifications, votes en direct. Prête en quelques jours.",
     path: '/',
   },
   offres: {
     title: 'Offres et tarifs',
     description:
-      "Deux niveaux d'accompagnement pour votre congrès : Standard (programme, intervenants, notifications) et Premium (abstracts, e-posters, accompagnement renforcé). Tarif adapté à votre événement.",
+      "Deux niveaux pour votre congrès : Standard (programme, intervenants, notifications) et Premium (abstracts, e-posters, accompagnement). Tarif sur mesure.",
     path: '/offres',
   },
   casClients: {
-    title: 'Cas clients — congrès médicaux et scientifiques',
+    title: 'Cas clients — congrès médicaux',
     description:
-      "Nice Shoulder Course (800+ participants, 74 pays) et Congrès ESPOIR Oncologie : comment des organisateurs utilisent Pulse Congress pour simplifier leur événement et engager leurs participants.",
+      "Nice Shoulder Course (800+ participants, 74 pays) et Congrès ESPOIR Oncologie : comment ils utilisent Pulse Congress pour engager leurs participants.",
     path: '/cas-clients',
   },
   demo: {
-    title: 'Réserver une démonstration (30 min, gratuite)',
+    title: 'Réserver une démonstration gratuite',
     description:
       "Découvrez Pulse Congress en 30 minutes : démonstration personnalisée, adaptée à votre congrès. Gratuite et sans engagement.",
     path: '/demander-une-demonstration',
   },
   faq: {
-    title: 'Questions fréquentes des organisateurs de congrès',
+    title: 'Questions fréquentes',
     description:
-      "Fonctionnalités, délais de déploiement, formats de données acceptés, tarifs, support pendant l'événement : les réponses aux questions des organisateurs de congrès.",
+      "Fonctionnalités, délais de déploiement, formats de données acceptés, tarifs, support pendant l'événement : les réponses des organisateurs de congrès.",
     path: '/faq',
   },
   aPropos: {
-    title: 'À propos — 20 ans au service des événements professionnels',
+    title: 'À propos de Pulse Congress et de Bluevista',
     description:
-      "Depuis 2004, Bluevista accompagne les organisateurs de congrès médicaux et scientifiques : audiovisuel événementiel, applications mobiles, contenus digitaux et accompagnement terrain.",
+      "Depuis 2004, Bluevista accompagne les organisateurs de congrès médicaux et scientifiques : audiovisuel événementiel, applications mobiles, accompagnement.",
     path: '/a-propos',
   },
   contact: {
