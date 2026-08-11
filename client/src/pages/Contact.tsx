@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import { Reveal, DEMO_PATH } from '@/components/Reveal';
 import { trpc } from '@/lib/trpc';
 import { useSeo, SEO } from '@/lib/seo';
+import { evenement } from '@/lib/analytics';
 
 const EMPTY = { name: '', email: '', organization: '', phone: '', message: '', website: '' };
 const inputCls =
@@ -23,7 +24,12 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    mutation.mutate(form, { onSuccess: () => setForm(EMPTY) });
+    mutation.mutate(form, {
+      onSuccess: () => {
+        setForm(EMPTY);
+        evenement('generate_lead', { method: 'formulaire_contact' });
+      },
+    });
   };
 
   return (

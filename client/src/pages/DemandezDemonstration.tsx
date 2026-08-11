@@ -1,8 +1,10 @@
+import { useEffect } from 'react';
 import { CheckCircle, Clock, Lock, Users, Zap, ArrowRight, Quote } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Reveal } from '@/components/Reveal';
 import { useSeo, SEO } from '@/lib/seo';
+import { evenement } from '@/lib/analytics';
 
 // TODO Calendly : remplacer par le lien de l'événement ROUND-ROBIN (Bertrand/Giz/Célestin)
 // une fois créé dans le compte Calendly. Règles à régler côté Calendly (voir notes).
@@ -36,8 +38,34 @@ function scrollToCal() {
   document.getElementById('reserver')?.scrollIntoView({ behavior: 'smooth' });
 }
 
+/**
+ * Calendly vit dans une iframe : on ne peut pas savoir de l'intérieur qu'un créneau a été
+ * réservé. Il prévient la page parente par `postMessage` — c'est le seul signal disponible,
+ * et c'est ce qui permet de compter la prise de rendez-vous comme une conversion.
+ */
+function useConversionCalendly() {
+  useEffect(() => {
+    const onMessage = (e: MessageEvent) => {
+      // `e.origin` peut valoir "null" (iframe bac à sable, extension) : URL() lèverait.
+      let hote = '';
+      try {
+        hote = new URL(e.origin).hostname;
+      } catch {
+        return;
+      }
+      if (!/(^|\.)calendly\.com$/.test(hote)) return;
+      if (e.data?.event === 'calendly.event_scheduled') {
+        evenement('schedule_demo', { method: 'calendly' });
+      }
+    };
+    window.addEventListener('message', onMessage);
+    return () => window.removeEventListener('message', onMessage);
+  }, []);
+}
+
 export default function DemandezDemonstration() {
   useSeo(SEO.demo);
+  useConversionCalendly();
   return (
     <div className="min-h-screen flex flex-col bg-[#071A2F] text-white">
       <Header />
