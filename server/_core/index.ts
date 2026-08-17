@@ -49,6 +49,21 @@ async function startServer() {
   // Pas de ligne en retour = pas de compression.
   app.use(compression());
 
+  // www → sans www, en 301.
+  //
+  // Le site n'a qu'une adresse canonique : pulsecongress.com. Sans cette redirection, le jour
+  // où le DNS répond sur www, on aurait deux fois le même site à deux adresses — Google
+  // choisit alors lui-même, et le référencement se partage entre les deux.
+  // ⚠️ Ne cible QUE les hôtes en `www.` : l'URL de préversion de l'hébergeur doit continuer
+  // de répondre normalement.
+  app.use((req, res, next) => {
+    const hote = req.headers.host;
+    if (hote && hote.startsWith("www.")) {
+      return res.redirect(301, `https://${hote.slice(4)}${req.originalUrl}`);
+    }
+    next();
+  });
+
   // Configure body parser with larger size limit for file uploads
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));

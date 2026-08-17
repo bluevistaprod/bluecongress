@@ -146,7 +146,14 @@ export default function HeroAppShowcase() {
                   <div className="pcs-count">◉ {votes} votes en direct</div>
                 </div>
               ) : (
-                <img src={beat.img} alt="" loading="lazy" decoding="async" />
+                <img
+                  src={beat.img}
+                  alt={`${beat.k} — écran de l'application Pulse Congress`}
+                  width={480}
+                  height={1040}
+                  loading="lazy"
+                  decoding="async"
+                />
               )}
             </div>
             <div className="pcs-edge" key={`e${i}`} />

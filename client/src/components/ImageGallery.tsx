@@ -50,7 +50,7 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
           >
             <div className={`${image.placeholder} rounded-lg h-64 flex items-center justify-center overflow-hidden relative`}>
               {image.image ? (
-                <img src={image.image} alt={image.title} className="w-full h-full object-cover" />
+                <img src={image.image} alt={image.title} width={480} height={1040} loading="lazy" decoding="async" className="w-full h-full object-cover" />
               ) : null}
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity">
@@ -87,7 +87,7 @@ export default function ImageGallery({ images, title }: ImageGalleryProps) {
             {/* Image Container */}
             <div className={`${images[selectedIndex].placeholder} rounded-lg h-96 md:h-[500px] flex items-center justify-center relative overflow-hidden`}>
               {images[selectedIndex].image ? (
-                <img src={images[selectedIndex].image} alt={images[selectedIndex].title} className="w-full h-full object-cover" />
+                <img src={images[selectedIndex].image} alt={images[selectedIndex].title} width={480} height={1040} decoding="async" className="w-full h-full object-cover" />
               ) : (
                 <p className="text-white text-center px-4 font-semibold text-xl">
                   {images[selectedIndex].title}

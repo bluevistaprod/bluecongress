@@ -17,7 +17,7 @@ export default function Footer() {
             {/* Signature Bluevista */}
             <div className="flex items-center gap-2.5">
               <span className="text-slate-500 text-xs">Un produit</span>
-              <img src="/brand/bluevista-logo-white.png" alt="Bluevista" className="h-5 w-auto opacity-90" />
+              <img src="/brand/bluevista-logo-white.png" alt="Bluevista" width={180} height={60} loading="lazy" decoding="async" className="h-5 w-auto opacity-90" />
             </div>
           </div>
 

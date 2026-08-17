@@ -54,7 +54,7 @@ export default function ImageGalleryMobile({ images, title }: ImageGalleryMobile
               {/* Screen Content */}
               <div className={`${image.placeholder} w-full h-full flex items-center justify-center relative overflow-hidden`}>
                 {image.image ? (
-                  <img src={image.image} alt={image.title} className="w-full h-full object-cover" />
+                  <img src={image.image} alt={image.title} width={480} height={1040} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                 ) : null}
                 
                 {/* Hover Overlay */}
@@ -104,7 +104,7 @@ export default function ImageGalleryMobile({ images, title }: ImageGalleryMobile
               {/* Screen Content */}
               <div className={`${images[selectedIndex].placeholder} w-full aspect-[9/16] flex items-center justify-center relative overflow-hidden`}>
                 {images[selectedIndex].image ? (
-                  <img src={images[selectedIndex].image} alt={images[selectedIndex].title} className="w-full h-full object-cover" />
+                  <img src={images[selectedIndex].image} alt={images[selectedIndex].title} width={480} height={1040} decoding="async" className="w-full h-full object-cover" />
                 ) : (
                   <p className="text-white text-center px-4 font-semibold text-xl">
                     {images[selectedIndex].title}

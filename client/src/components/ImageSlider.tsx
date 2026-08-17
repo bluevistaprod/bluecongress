@@ -47,7 +47,7 @@ export default function ImageSlider({ images }: ImageSliderProps) {
                 {/* Screen Content */}
                 <div className={`${image.placeholder} w-full h-full flex items-center justify-center relative overflow-hidden`}>
                   {image.image ? (
-                    <img src={image.image} alt={image.title} className="w-full h-full object-cover" />
+                    <img src={image.image} alt={image.title} width={480} height={1040} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                   ) : null}
                 </div>
                 
