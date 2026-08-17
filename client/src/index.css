@@ -120,6 +120,12 @@
   * {
     @apply border-border outline-ring/50;
   }
+  /* Le site est sombre, mais le thème par défaut peint le document en clair : au-delà du bas
+     de page (rebond du défilement sur Mac et iPhone), une bande blanche apparaissait. On peint
+     donc la racine du document en navy — les pages gardent leur propre fond. */
+  html {
+    background-color: #071A2F;
+  }
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', sans-serif;
